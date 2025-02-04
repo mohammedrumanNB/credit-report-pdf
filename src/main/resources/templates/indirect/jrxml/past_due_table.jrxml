@@ -1,0 +1,618 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="past_due_table" language="java" columnCount="1" pageWidth="483" pageHeight="802" columnWidth="483" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="23fd9234-13a1-4453-9097-74e270a244d7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="yStyle" mode="Opaque" backcolor="#F7F9FA">
+		<box>
+			<pen lineWidth="0.75" lineColor="#E6E6E6"/>
+			<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#E6E6E6"/>
+			<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#E6E6E6"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#F7F9FA">
+		<box>
+			<pen lineWidth="0.75" lineColor="#E6E6E6"/>
+			<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#E6E6E6"/>
+			<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#E6E6E6"/>
+			<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#E6E6E6"/>
+			<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#E6E6E6"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.75" lineColor="#E6E6E6"/>
+			<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#E6E6E6"/>
+			<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#E6E6E6"/>
+		</box>
+	</style>
+	<style name="boldTextJan" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{janDue}.equals("SUB") ||
+$F{janDue}.equals("SMA") ||
+$F{janDue}.equals("###") ||
+$F{janDue}.equals("DBT") ||
+$F{janDue}.equals("LSS") ||
+($F{janDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{janDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{janDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{janDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextSep" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{sepDue}.equals("SUB") ||
+$F{sepDue}.equals("SMA") ||
+$F{sepDue}.equals("###") ||
+$F{sepDue}.equals("DBT") ||
+$F{sepDue}.equals("LSS") ||
+($F{sepDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{sepDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{sepDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{sepDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextAug" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{augDue}.equals("SUB") ||
+$F{augDue}.equals("SMA") ||
+$F{augDue}.equals("###") ||
+$F{augDue}.equals("DBT") ||
+$F{augDue}.equals("LSS") ||
+($F{augDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{augDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{augDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{augDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextDec" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{decDue}.equals("SUB") ||
+$F{decDue}.equals("SMA") ||
+$F{decDue}.equals("###") ||
+$F{decDue}.equals("DBT") ||
+$F{decDue}.equals("LSS") ||
+($F{decDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{decDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{decDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{decDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextNov" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{novDue}.equals("SUB") ||
+$F{novDue}.equals("SMA") ||
+$F{novDue}.equals("###") ||
+$F{novDue}.equals("DBT") ||
+$F{novDue}.equals("LSS") ||
+($F{novDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{novDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{novDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{novDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextOct" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{octDue}.equals("SUB") ||
+$F{octDue}.equals("SMA") ||
+$F{octDue}.equals("###") ||
+$F{octDue}.equals("DBT") ||
+$F{octDue}.equals("LSS") ||
+($F{octDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{octDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{octDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{octDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextJul" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{julDue}.equals("SUB") ||
+$F{julDue}.equals("SMA") ||
+$F{julDue}.equals("###") ||
+$F{julDue}.equals("DBT") ||
+$F{julDue}.equals("LSS") ||
+($F{julDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{julDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{julDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{julDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextJun" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{junDue}.equals("SUB") ||
+$F{junDue}.equals("SMA") ||
+$F{junDue}.equals("###") ||
+$F{junDue}.equals("DBT") ||
+$F{junDue}.equals("LSS") ||
+($F{junDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{junDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{junDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{junDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextMay" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{mayDue}.equals("SUB") ||
+$F{mayDue}.equals("SMA") ||
+$F{mayDue}.equals("###") ||
+$F{mayDue}.equals("DBT") ||
+$F{mayDue}.equals("LSS") ||
+($F{mayDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{mayDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{mayDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{mayDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextApr" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{aprDue}.equals("SUB") ||
+$F{aprDue}.equals("SMA") ||
+$F{aprDue}.equals("###") ||
+$F{aprDue}.equals("DBT") ||
+$F{aprDue}.equals("LSS") ||
+($F{aprDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{aprDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{aprDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{aprDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextMar" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{marDue}.equals("SUB") ||
+$F{marDue}.equals("SMA") ||
+$F{marDue}.equals("###") ||
+$F{marDue}.equals("DBT") ||
+$F{marDue}.equals("LSS") ||
+($F{marDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{marDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{marDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{marDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="boldTextFeb" hTextAlign="Center" vTextAlign="Middle" fontName="Intro" fontSize="8.0">
+		<conditionalStyle forecolor="#005F8D" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{febDue}.equals("SUB") ||
+$F{febDue}.equals("SMA") ||
+$F{febDue}.equals("###") ||
+$F{febDue}.equals("DBT") ||
+$F{febDue}.equals("LSS") ||
+($F{febDue}.matches("-?\\d+(\\.\\d+)?") && Double.parseDouble($F{febDue}) > 0)
+]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#262626" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{febDue}.equals("STD")]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle forecolor="#888888" hTextAlign="Center" vTextAlign="Middle" fontName="Roboto - 400" fontSize="8.0" bold="false">
+			<conditionExpression><![CDATA[$F{febDue}.equals("XXX")]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<dataset name="PastDueDataSet" uuid="a0ee5de5-c8b7-4373-98be-7b0f91b3cb01">
+		<query language="sql"><![CDATA[]]></query>
+		<field name="janDue" class="java.lang.String"/>
+		<field name="febDue" class="java.lang.String"/>
+		<field name="marDue" class="java.lang.String"/>
+		<field name="aprDue" class="java.lang.String"/>
+		<field name="mayDue" class="java.lang.String"/>
+		<field name="junDue" class="java.lang.String"/>
+		<field name="julDue" class="java.lang.String"/>
+		<field name="augDue" class="java.lang.String"/>
+		<field name="sepDue" class="java.lang.String"/>
+		<field name="octDue" class="java.lang.String"/>
+		<field name="novDue" class="java.lang.String"/>
+		<field name="decDue" class="java.lang.String"/>
+		<field name="year" class="java.lang.Integer"/>
+	</dataset>
+	<parameter name="pastDueMonthlyDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<background splitType="Stretch"/>
+	<detail>
+		<band height="99" splitType="Immediate">
+			<element kind="component" uuid="a750b680-ae90-4f00-b8d6-cad620a6d3dc" x="0" y="0" width="481" height="42" removeLineWhenBlank="true">
+				<component kind="table">
+					<datasetRun uuid="ab0fc2b3-7c9d-46ea-b070-ec406e3fbcc9" subDataset="PastDueDataSet">
+						<dataSourceExpression><![CDATA[$P{pastDueMonthlyDataSource}]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="single" uuid="2a049d44-188f-4e91-b59d-75f7544248e0" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="frame" uuid="39bb164e-cf9b-4b2c-9f57-d45317328bd2" x="0" y="0" width="37" height="22">
+								<element kind="line" uuid="c265dfbd-b3f2-4aaa-be08-c16beb8a1471" x="0" y="0" width="37" height="22">
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<pen lineColor="#E6E6E6"/>
+								</element>
+								<element kind="staticText" uuid="ca639dab-8d35-4f9f-814d-53e407e30f5f" x="12" y="0" width="25" height="10" fontName="Roboto - 400" fontSize="7.0" bold="false" hTextAlign="Right" vTextAlign="Top">
+									<text><![CDATA[Month]]></text>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</element>
+								<element kind="staticText" uuid="def0f20b-32c7-4319-a380-1d1adce2c758" x="2" y="12" width="25" height="10" fontName="Roboto - 400" fontSize="7.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+									<text><![CDATA[Year]]></text>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								</element>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="yStyle">
+							<element kind="textField" uuid="638e95cc-d7e7-4296-9d91-8e2da9cafa66" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<expression><![CDATA[$F{year}]]></expression>
+							</element>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+					</column>
+					<column kind="single" uuid="cad90bc2-6e5e-454c-a8e4-9480b9cf1470" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="810a535d-f583-4bee-bb62-7ec041546c3e" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Dec]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="e679952c-f7e6-44be-9d80-aca5938b9bc8" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextDec">
+								<expression><![CDATA[$F{decDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+					</column>
+					<column kind="single" uuid="43d62bc2-6e4e-4f96-b4e4-36b90875fc8a" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="43b493db-ef2f-4f95-ba1a-e7aab962e330" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Nov]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="3a4fb062-d1e7-428d-b800-689fbb6c6190" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextNov">
+								<expression><![CDATA[$F{novDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+					</column>
+					<column kind="single" uuid="18190b79-d4ae-4e56-bf77-6b9fd5d79196" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="fa13e215-f016-4c8c-8014-eab5a53c04b5" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Oct]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="d6c5154d-ace3-4384-b943-3b383840508e" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextOct">
+								<expression><![CDATA[$F{octDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+					</column>
+					<column kind="single" uuid="a4e3fbad-e9e8-4ed4-a284-969f836f5205" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="5736c884-6ebf-47de-b6ac-f0a1c958f13d" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Sep]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="61a0448b-0d8d-40d4-9bbc-2a559030f933" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextSep">
+								<expression><![CDATA[$F{sepDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+					</column>
+					<column kind="single" uuid="be2b3080-ba14-4343-8861-0474ffd5b03c" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="770ea13a-366a-4a35-a0e5-c3b5fd315348" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Aug]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="99d1db89-9861-4507-92f9-3b09ebb7aa88" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextAug">
+								<expression><![CDATA[$F{augDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+					</column>
+					<column kind="single" uuid="bd9d369c-27d1-4b31-a992-d84d58aeda41" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="047dd1aa-ac54-411f-b6ff-0829ea7d45b1" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Jul]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="cdd9537a-bbec-4920-a729-bd5a6d29809e" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextJul">
+								<expression><![CDATA[$F{julDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+					</column>
+					<column kind="single" uuid="dfddd57d-58d4-40e1-acc4-f5230c89cd41" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="7a3dbb5e-e4de-4c72-9997-e6dc26d32cc1" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Jun]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="d09e1299-85d3-4274-a096-90c2f7f16297" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextJun">
+								<expression><![CDATA[$F{junDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+					</column>
+					<column kind="single" uuid="fe93f7e9-33ca-42e2-9d67-8734415eafc1" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="57e3d6b2-9aeb-4e7c-84e8-479101c4b2d0" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[May]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="cdc1c850-b05f-424c-867d-9d0ca118c6f6" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextMay">
+								<expression><![CDATA[$F{mayDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+					</column>
+					<column kind="single" uuid="363a045f-a969-46c0-b94a-38f2c31f7198" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="14541908-1584-4518-b7ba-95a81f94c548" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Apr]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="1953e45a-3945-46ab-b968-080fa752fc98" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextApr">
+								<expression><![CDATA[$F{aprDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+					</column>
+					<column kind="single" uuid="fb832c45-e1fe-44c2-953f-5f5eba024b1e" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="8cef4713-11b2-4389-ac7c-ba48c434e303" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Mar]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="f3863c8d-c1e1-4d6e-8438-d4ae0ffcc5d3" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextMar">
+								<expression><![CDATA[$F{marDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column11"/>
+					</column>
+					<column kind="single" uuid="9b7d9bc0-e848-41a9-8201-df14d7b08dae" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="a3cc4583-5310-4b9b-9f9f-220d6a3bbdec" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Feb]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="712aa581-b0e5-48f7-8722-0f93ff52e142" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextFeb">
+								<expression><![CDATA[$F{febDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column12"/>
+					</column>
+					<column kind="single" uuid="ccf1f57e-0b85-4603-b7e6-70dfe668d440" width="37">
+						<columnHeader height="22" rowSpan="1" style="Table 1_CH">
+							<element kind="staticText" uuid="61554319-22af-4c09-8052-539350109323" x="0" y="0" width="37" height="22" fontName="Roboto - 400" fontSize="8.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+								<text><![CDATA[Jan]]></text>
+							</element>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</columnHeader>
+						<detailCell height="20" style="Table 1_TD">
+							<element kind="textField" uuid="34578e6f-194e-4c56-97aa-b3107ac21211" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextJan">
+								<expression><![CDATA[$F{janDue}]]></expression>
+							</element>
+						</detailCell>
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column13"/>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="line" uuid="3adfff14-fab8-496e-8725-388065dee6f4" positionType="Float" x="0" y="42" width="483" height="1">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<pen lineWidth="0.75" lineColor="#E6E6E6"/>
+			</element>
+			<element kind="frame" uuid="226a884a-7533-49e5-96e7-ce92c7b1aa26" positionType="Float" x="0" y="55" width="483" height="44">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<element kind="staticText" uuid="bfc27145-326a-4bdc-a66a-d3ea60bcaaea" x="0" y="0" width="150" height="12" forecolor="#004364" fontName="Roboto - 600" fontSize="7.0" vTextAlign="Middle">
+					<text><![CDATA[LEGEND]]></text>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</element>
+				<element kind="frame" uuid="6ff77ddf-734d-4428-8085-9ef57b4364ce" x="0" y="16" width="483" height="28">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<element kind="frame" uuid="eec33c6a-a428-4440-9ef5-d8f5797d2ed6" x="0" y="0" width="118" height="12">
+						<element kind="staticText" uuid="4a60a430-4df3-4bf9-864f-1151a8cf0233" x="0" y="0" width="15" height="12" forecolor="#005F8D" fontName="Roboto - 700" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[###]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="staticText" uuid="92990f45-caf5-482f-838e-33970d059b56" x="18" y="0" width="100" height="12" forecolor="#005F8D" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[Number of days past due]]></text>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+					<element kind="frame" uuid="896543e0-e978-49a0-b53c-e77a6d2619dd" x="124" y="0" width="118" height="12">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<element kind="staticText" uuid="5ae66e84-b7ac-487a-9076-1e4e749347bb" x="0" y="0" width="16" height="12" forecolor="#005F8D" fontName="Roboto - 700" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[SUB]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="staticText" uuid="407d30cf-53eb-4aad-9cee-c431250c3304" x="19" y="0" width="92" height="12" forecolor="#005F8D" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[Substandard]]></text>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+					<element kind="frame" uuid="c50da581-5331-4d75-8c7d-ccdbaaca5a9f" x="248" y="0" width="118" height="12">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<element kind="staticText" uuid="1b3a9343-b243-4114-8871-0777c510e16e" x="0" y="0" width="18" height="12" forecolor="#005F8D" fontName="Roboto - 700" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[SMA]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="staticText" uuid="8226e14e-7338-4fc3-a6c8-4d05e6ffd8ab" x="21" y="0" width="92" height="12" forecolor="#005F8D" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[Special mention account]]></text>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+					<element kind="frame" uuid="e21f2f54-a808-4304-b418-592c5275e91d" x="372" y="0" width="111" height="12">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<element kind="staticText" uuid="46a8032f-7a73-4fc8-8e7e-205aef0faedd" x="0" y="0" width="16" height="12" forecolor="#005F8D" fontName="Roboto - 700" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[DBT]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="staticText" uuid="7c3550dd-3a7e-4399-bdca-f8cd4a2baca4" x="19" y="0" width="92" height="12" forecolor="#005F8D" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[Doubtful]]></text>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+					<element kind="frame" uuid="f13f83a7-18bd-4c2a-8478-696d52dc3aa0" x="0" y="16" width="111" height="12">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<element kind="staticText" uuid="d6560ce5-d17d-4777-9e06-2a5d58ddc20d" x="0" y="0" width="16" height="12" forecolor="#005F8D" fontName="Roboto - 700" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[LSS]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="staticText" uuid="5829959c-d87b-446a-b2cf-a1e5b15e1446" x="19" y="0" width="92" height="12" forecolor="#005F8D" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[Loss]]></text>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+					<element kind="frame" uuid="5158a668-0a50-4a3d-975a-1cc659aae913" x="124" y="16" width="111" height="12">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<element kind="staticText" uuid="902054c3-362a-4cac-92d3-7a5dfcaaac2b" x="0" y="0" width="16" height="12" forecolor="#262626" fontName="Roboto - 700" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[STD]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="staticText" uuid="f4e87cf4-2972-431a-aa5c-9c5e3183b0e7" x="19" y="0" width="92" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[Standard]]></text>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+					<element kind="frame" uuid="07d8f286-8bf5-4c66-bd38-9ce566f8b816" x="248" y="16" width="118" height="12">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<element kind="staticText" uuid="624cfea8-92cb-47b2-8939-bf1387118657" x="0" y="0" width="16" height="12" forecolor="#888888" fontName="Roboto - 700" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[XXX]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="staticText" uuid="751ae464-1478-47a4-85ce-0ff448abfd92" x="19" y="0" width="99" height="12" forecolor="#888888" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[Not reported]]></text>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+				</element>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+</jasperReport>

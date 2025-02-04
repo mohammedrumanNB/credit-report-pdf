@@ -1,0 +1,40 @@
+package com.transunion.pdf.dto;
+
+import com.transunion.pdf.constant.ApplicationConstant;
+import com.transunion.pdf.model.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class PDFData {
+    private String controlNumber ; // Send in this format 123 456 789 or 987 654 3211
+    private String reportGeneratedDate; // Send in this format 12 Dec 2024
+    private String cibilScoreDate; // Send in this format 11 Nov 2024
+    private Integer cibilScore; //Send 0 for NH Case
+    private PersonalInfo personalInfo;
+    private List<IdentificationInfo> identificationInfoList;
+    private List<EmailInfo> emailInfoList;
+    private List<ContactInfo> contactInfoList;
+    private List<AddressInfo> addressInfoList;
+    private int totalEnquiries;
+    private int totalDisputes;
+    private BigDecimal currentBalance;
+    private BigDecimal amountOverDue;
+    private int closedCreditCards;
+    private int closedLoans;
+    private int openCreditCards;
+    private int openLoans;
+    private TwelveMonthLatePaymentInfo twelveMonthLatePaymentInfo;
+    private ThirtySixMonthLatePaymentInfo thirtySixMonthLatePaymentInfo;
+    private EmploymentInfo employmentInfo;
+    private List<OpenAccountInfo> openAccountInfoList;
+    private List<ClosedAccountInfo> closedAccountInfoList;
+    private List<EnquiryInfo> enquiryInfoList;
+
+}
