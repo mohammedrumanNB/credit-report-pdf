@@ -1,6 +1,5 @@
 package com.transunion.pdf.dto;
 
-import com.transunion.pdf.constant.ApplicationConstant;
 import com.transunion.pdf.model.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +12,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PDFData {
-    private String controlNumber ; // Send in this format 123 456 789 or 987 654 3211
+    private String copyrightYear;
+    private String controlNumber; // Send in this format 123 456 789 or 987 654 3211
     private String reportGeneratedDate; // Send in this format 12 Dec 2024
     private String cibilScoreDate; // Send in this format 11 Nov 2024
     private Integer cibilScore; //Send 0 for NH Case
@@ -22,7 +22,6 @@ public class PDFData {
     private List<EmailInfo> emailInfoList;
     private List<ContactInfo> contactInfoList;
     private List<AddressInfo> addressInfoList;
-    private int totalEnquiries;
     private int totalDisputes;
     private BigDecimal currentBalance;
     private BigDecimal amountOverDue;
@@ -35,6 +34,5 @@ public class PDFData {
     private EmploymentInfo employmentInfo;
     private List<OpenAccountInfo> openAccountInfoList;
     private List<ClosedAccountInfo> closedAccountInfoList;
-    private List<EnquiryInfo> enquiryInfoList;
-
+    private List<EnquiryInfo> enquiryInfoList; // First Object should contain enquiry information of present year i.e last12 Months, thereafter last24 and last36 Months
 }

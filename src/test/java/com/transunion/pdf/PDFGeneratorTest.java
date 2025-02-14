@@ -32,7 +32,7 @@ class PDFGeneratorTest {
 //            pdfData.getOpenAccountInfoList().get(1).getAccountDetails().setAccountUnderDispute(true);
 //
 //            // Call the generatePdf method for the PAID version
-//            byte[] pdfBytes = pdfGenerator.generatePdf(PdfVersion.INDIRECT, pdfData, false, "password");
+//            byte[] pdfBytes = pdfGenerator.generatePdf(PdfVersion.INDIRECT, pdfData, true, "password");
 //
 //            // Validate that the PDF byte array is not null or empty
 //            AssertionErrors.assertNotNull(Arrays.toString(pdfBytes), "PDF byte array should not be null");
@@ -49,7 +49,7 @@ class PDFGeneratorTest {
 //    @Test
 //    void testCompileJrxmlToJasper(){
 //        try {
-//             JasperCompileManager.compileReportToFile(ApplicationConstant.ENQUIRY_TABLE_JRXML_PATH,"enquiry_table.jasper");
+//             JasperCompileManager.compileReportToFile(ApplicationConstant.INDIRECT_ACCOUNTINFO_JRXML_PATH,"account_information.jasper");
 //
 //        }catch (Exception e){
 //            e.printStackTrace();
@@ -60,6 +60,7 @@ class PDFGeneratorTest {
     //Create Mock Data - PDFData
     private PDFData getPdfData() {
         PDFData pdfData = new PDFData();
+        pdfData.setCopyrightYear("2026");
         pdfData.setControlNumber("3214589045");
         pdfData.setCibilScore(738);
         pdfData.setReportGeneratedDate("17 Dec 2024");
@@ -69,7 +70,6 @@ class PDFGeneratorTest {
         pdfData.setEmailInfoList(getEmailInfoList());
         pdfData.setContactInfoList(getContactInfoList());
         pdfData.setAddressInfoList(getAddressInfoList());
-        pdfData.setTotalEnquiries(2);
         pdfData.setTotalDisputes(1);
         pdfData.setCurrentBalance(BigDecimal.valueOf(150));
         pdfData.setAmountOverDue(BigDecimal.valueOf(50));

@@ -41,12 +41,14 @@ public class PDFGenerator {
     @Autowired
     private EnquiryInfoReportService enquiryInfoReportService;
 
+    @Autowired
+    private GlossaryReportService glossaryReportService;
 
     public byte[] generatePdf(PdfVersion pdfVersion, PDFData pdfData, boolean encryptPdf, String userPassword) throws JRException {
 
         JasperReport mainReport;
         HashMap<String, Object> parameters = new HashMap<>();
-
+        parameters.put("copyrightYear", pdfData.getCopyrightYear());
 
         switch (pdfVersion) {
             case INDIRECT:
@@ -66,6 +68,30 @@ public class PDFGenerator {
                 parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
                 parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
 
+                break;
+            case NH:
+                // Generate PDF for free version
+                mainReport = mainReportService.getMainReport(pdfVersion);
+
+                //Prepare map of parameter for all sub report
+                parameters.put("cibilSummaryReport", cibilSummaryReportService.getCibilSummaryReport(pdfVersion));
+                parameters.put("cibilSummaryParam", cibilSummaryReportService.getCibilSummaryParam(pdfData));
+
+                parameters.put("indexReport", indexReportService.getIndexReport(pdfVersion));
+                parameters.put("indexParam", indexReportService.getIndexParam(pdfData));
+
+                parameters.put("personalInformationReport", personalInfoReportService.getPersonalInfoReport(pdfVersion));
+                parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
+
+                parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData));
+
+                parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
+                parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
+
+                parameters.put("glossaryReport1", glossaryReportService.getGlossaryReport1());
+                parameters.put("glossaryReport2", glossaryReportService.getGlossaryReport2());
+                parameters.put("glossaryParam", glossaryReportService.getGlossaryParam(pdfData));
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported PDF version: " + pdfVersion);
@@ -126,7 +152,7 @@ public class PDFGenerator {
 
 
     private JasperPrint setPageNumbers(JasperPrint jasperPrint) {
-        List<String> subreportMarkers = List.of("CSP", "PIP", "AIP", "EIP");
+        List<String> subreportMarkers = List.of("CSP", "PIP", "AIP", "EIP", "GIP");
 
         // Get page numbers of each subreport
         Map<String, Integer> subreportPageNumbers = Indexer.getSubreportPageNumbers(jasperPrint, subreportMarkers);
@@ -138,7 +164,8 @@ public class PDFGenerator {
             // Iterate over the elements on the first page
             for (JRPrintElement element : firstPage.getElements()) {
                 // Check if the element is a text element
-                if (element instanceof JRPrintText textElement) {
+                if (element instanceof JRPrintText) {
+                    JRPrintText textElement = (JRPrintText) element;
                     String text = (String) textElement.getValue();
 
                     // Check if the text matches any subreport marker

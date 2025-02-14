@@ -4,7 +4,6 @@ import net.sf.jasperreports.engine.JRPrintElement;
 import net.sf.jasperreports.engine.JRPrintPage;
 import net.sf.jasperreports.engine.JRPrintText;
 import net.sf.jasperreports.engine.JasperPrint;
-import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +20,8 @@ public class Indexer {
 
             // Check each element on the page to see if it contains a subreport marker
             for (JRPrintElement element : page.getElements()) {
-                if (element instanceof JRPrintText textElement) {
+                if (element instanceof JRPrintText) {
+                    JRPrintText textElement = (JRPrintText) element;
                     String text = (String) textElement.getValue();
 
                     // Check if the text matches any subreport marker

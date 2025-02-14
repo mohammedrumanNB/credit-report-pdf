@@ -1,5 +1,8 @@
 package com.transunion.pdf.exception;
 
+import lombok.Getter;
+
+@Getter
 public class FileNotFoundException extends RuntimeException {
 
     private final int errorCode;
@@ -9,7 +12,4 @@ public class FileNotFoundException extends RuntimeException {
         this.errorCode = errorCode;
     }
 
-    public int getErrorCode() {
-        return errorCode;
-    }
 }

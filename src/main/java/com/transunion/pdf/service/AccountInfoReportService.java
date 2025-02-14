@@ -8,34 +8,32 @@ import com.transunion.pdf.exception.FileNotFoundException;
 import com.transunion.pdf.model.*;
 import com.transunion.pdf.util.CommonUtil;
 import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.util.JRLoader;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class AccountInfoReportService {
     public JasperReport getAccountInfoReport(PdfVersion pdfVersion) throws JRException {
-        String filePath="";
+        String filePath;
         switch (pdfVersion) {
             case INDIRECT:
                 //Get AccountInfo Report jrxml and compile it
-                filePath= ApplicationConstant.INDIRECT_ACCOUNTINFO_JASPER_PATH;
+                filePath = ApplicationConstant.INDIRECT_ACCOUNTINFO_JASPER_PATH;
+                break;
+            case NH:
+                //Get AccountInfo Report jrxml and compile it
+                filePath = ApplicationConstant.NH_ACCOUNTINFO_JASPER_PATH;
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported PDF version: " + pdfVersion);
         }
-//        InputStream jrxmlInput = getClass().getClassLoader().getResourceAsStream(filePath);
-//
-//        return ( (JasperReport) net.sf.jasperreports.engine.util.JRLoader.loadObject(jrxmlInput) );
-
-        return  (JasperReport) JRLoader.loadObject(new File(filePath));
+        return (JasperReport) JRLoader.loadObject(new File(filePath));
 
     }
 
@@ -56,7 +54,8 @@ public class AccountInfoReportService {
             accountInformation.setAccountInformationPresent(false);
         } else {
             accountInformation.setAccountInformationPresent(true);
-            accountInformation.setAccountSummaryDataSource(getAccountSummaryDataSource(openAccountInfoList,closedAccountInfoList));
+            assert openAccountInfoList != null;
+            accountInformation.setAccountSummaryDataSource(getAccountSummaryDataSource(openAccountInfoList, closedAccountInfoList));
 
             if (hasOpenAccounts) {
                 accountInformation.setOpenAccountInformationPresent(true);
@@ -67,7 +66,7 @@ public class AccountInfoReportService {
             if (hasClosedAccounts) {
                 accountInformation.setClosedAccountInformationPresent(true);
                 accountInformation.setClosedAccountReport(getClosedAccountReport());
-                accountInformation.setClosedAccountInfoDataSource(new JRBeanCollectionDataSource(getClosedAccountInformation(closedAccountInfoList,openAccountInfoList.size())));
+                accountInformation.setClosedAccountInfoDataSource(new JRBeanCollectionDataSource(getClosedAccountInformation(closedAccountInfoList, openAccountInfoList.size())));
             }
         }
 
@@ -75,9 +74,9 @@ public class AccountInfoReportService {
     }
 
     private JRBeanCollectionDataSource getAccountSummaryDataSource(List<OpenAccountInfo> openAccountInfoList, List<ClosedAccountInfo> closedAccountInfoList) {
-        List<AccountSummary> accountSummaryList=new ArrayList<>();
-        int i=1;
-        for(OpenAccountInfo openAccountInfo:openAccountInfoList){
+        List<AccountSummary> accountSummaryList = new ArrayList<>();
+        int i = 1;
+        for (OpenAccountInfo openAccountInfo : openAccountInfoList) {
             AccountSummary accountSummary = AccountSummary.builder()
                     .srNo(String.format("%02d", i))
                     .memberName(openAccountInfo.getAccountDetails().getBankName())
@@ -90,7 +89,7 @@ public class AccountInfoReportService {
             i++;
         }
 
-        for(ClosedAccountInfo closedAccountInfo:closedAccountInfoList){
+        for (ClosedAccountInfo closedAccountInfo : closedAccountInfoList) {
             AccountSummary accountSummary = AccountSummary.builder()
                     .srNo(String.format("%02d", i))
                     .memberName(closedAccountInfo.getAccountDetails().getBankName())
@@ -107,11 +106,11 @@ public class AccountInfoReportService {
     }
 
     private List<AccountInfo> getClosedAccountInformation(List<ClosedAccountInfo> closedAccountInfoList, int size) {
-        List<AccountInfo> accountInfoList=new ArrayList<>();
-        int i=size+1;
-        for(ClosedAccountInfo closedAccountInfo:closedAccountInfoList){
+        List<AccountInfo> accountInfoList = new ArrayList<>();
+        int i = size + 1;
+        for (ClosedAccountInfo closedAccountInfo : closedAccountInfoList) {
             AccountInfo accountInfoClosed = getAccountInfoClosed(closedAccountInfo);
-            accountInfoClosed.setSrNo(String.format("%02d",i));
+            accountInfoClosed.setSrNo(String.format("%02d", i));
             i++;
             accountInfoList.add(accountInfoClosed);
         }
@@ -128,7 +127,7 @@ public class AccountInfoReportService {
         //Validate the obj
         CommonUtil.validateAccountDetails(accountDetails);
         CommonUtil.validateAccountDates(accountDates);
-        if(accountDetails.isAccountUnderDispute()){
+        if (accountDetails.isAccountUnderDispute()) {
             CommonUtil.validateDisputeInfo(accountDetails.getDisputeInfo());
         }
 
@@ -139,7 +138,7 @@ public class AccountInfoReportService {
                 .accountNumber(accountDetails.getAccountNumber())
                 .ownerShipType(accountDetails.getOwnerShipType())
                 .accountUnderDispute(accountDetails.isAccountUnderDispute())
-                .disputeInfo(accountDetails.isAccountUnderDispute() ? accountDetails.getDisputeInfo():null)
+                .disputeInfo(accountDetails.isAccountUnderDispute() ? accountDetails.getDisputeInfo() : null)
                 .accountStatus(accountDetails.getAccountStatus())
                 .creditLimit(CommonUtil.formatIndianCurrency(accountDetails.getCreditLimit()))
                 .highCredit(CommonUtil.formatIndianCurrency(accountDetails.getHighCredit()))
@@ -175,11 +174,7 @@ public class AccountInfoReportService {
 
     private JasperReport getClosedAccountReport() {
         try {
-//            InputStream jrxmlInput = getClass().getClassLoader().getResourceAsStream(ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH);
-//
-//            return ( (JasperReport) net.sf.jasperreports.engine.util.JRLoader.loadObject(jrxmlInput) );
-            return  (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH));
-
+            return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH));
 
         } catch (JRException e) {
             // Check if the cause of JRException is a FileNotFoundException
@@ -196,10 +191,7 @@ public class AccountInfoReportService {
 
     private JasperReport getOpenAccountReport() {
         try {
-//            InputStream jrxmlInput = getClass().getClassLoader().getResourceAsStream(ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH);
-//            return ( (JasperReport) net.sf.jasperreports.engine.util.JRLoader.loadObject(jrxmlInput) );
-
-            return  (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH));
+            return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH));
 
         } catch (JRException e) {
             // Check if the cause of JRException is a FileNotFoundException
@@ -214,11 +206,11 @@ public class AccountInfoReportService {
     }
 
     private List<AccountInfo> getOpenAccountInformation(List<OpenAccountInfo> openAccountInfoList) {
-        List<AccountInfo> accountInfoList=new ArrayList<>();
-        int i=1;
-        for(OpenAccountInfo openAccountInfo:openAccountInfoList){
+        List<AccountInfo> accountInfoList = new ArrayList<>();
+        int i = 1;
+        for (OpenAccountInfo openAccountInfo : openAccountInfoList) {
             AccountInfo accountInfoOpen = getAccountInfoOpen(openAccountInfo);
-            accountInfoOpen.setSrNo(String.format("%02d",i));
+            accountInfoOpen.setSrNo(String.format("%02d", i));
             accountInfoList.add(accountInfoOpen);
             i++;
         }
@@ -233,7 +225,7 @@ public class AccountInfoReportService {
         //Validate the obj
         CommonUtil.validateAccountDetails(accountDetails);
         CommonUtil.validateAccountDates(accountDates);
-        if(accountDetails.isAccountUnderDispute()){
+        if (accountDetails.isAccountUnderDispute()) {
             CommonUtil.validateDisputeInfo(accountDetails.getDisputeInfo());
         }
 
@@ -244,7 +236,7 @@ public class AccountInfoReportService {
                 .accountNumber(accountDetails.getAccountNumber())
                 .ownerShipType(accountDetails.getOwnerShipType())
                 .accountUnderDispute(accountDetails.isAccountUnderDispute())
-                .disputeInfo(accountDetails.isAccountUnderDispute() ? accountDetails.getDisputeInfo():null)
+                .disputeInfo(accountDetails.isAccountUnderDispute() ? accountDetails.getDisputeInfo() : null)
                 .accountStatus(accountDetails.getAccountStatus())
                 .creditLimit(CommonUtil.formatIndianCurrency(accountDetails.getCreditLimit()))
                 .highCredit(CommonUtil.formatIndianCurrency(accountDetails.getHighCredit()))
@@ -280,9 +272,7 @@ public class AccountInfoReportService {
 
     private JasperReport getPastDueMonthlyReport() {
         try {
-//            InputStream jrxmlInput = getClass().getClassLoader().getResourceAsStream(ApplicationConstant.PAST_DUE_MONTHLY_JASPER_PATH);
-//            return ( (JasperReport) net.sf.jasperreports.engine.util.JRLoader.loadObject(jrxmlInput) );
-            return  (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.PAST_DUE_MONTHLY_JASPER_PATH));
+            return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.PAST_DUE_MONTHLY_JASPER_PATH));
 
         } catch (JRException e) {
             // Check if the cause of JRException is a FileNotFoundException

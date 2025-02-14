@@ -1,17 +1,18 @@
 package com.transunion.pdf.dto;
 
+import com.transunion.pdf.model.LatePaymentCount;
 import com.transunion.pdf.model.LatePaymentRemarkCount;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Summary {
+    private String controlNumber;
+    private String reportGeneratedDate;
     private int cibilScore;
-    private String cibilGraph;
     private String name;
     private String dob;
     private String gender;
@@ -20,7 +21,9 @@ public class Summary {
     private String email;
     private String mobileNumber;
     private String address;
-    private int totalEnquiries;
+    private int enquiries12;
+    private int enquiries24;
+    private int enquiries36;
     private int totalDisputes;
     private String currentBalance;
     private String amountOverdue;
@@ -29,11 +32,8 @@ public class Summary {
     private int closedLoans;
     private int openCreditCards;
     private int openLoans;
-    private JRBeanCollectionDataSource pieChartDataSource;
-    private boolean isLatePayment12;
-    private JRBeanCollectionDataSource latePayment12DataSource;
-    private boolean isLatePayment36;
-    private JRBeanCollectionDataSource latePayment36DataSource;
+    private LatePaymentCount latePayment12;
+    private LatePaymentCount latePayment36;
     private LatePaymentRemarkCount latePaymentRemarkCount12;
     private LatePaymentRemarkCount latePaymentRemarkCount36;
 

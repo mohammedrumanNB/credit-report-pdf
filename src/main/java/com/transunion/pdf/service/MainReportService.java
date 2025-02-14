@@ -3,28 +3,27 @@ package com.transunion.pdf.service;
 import com.transunion.pdf.constant.ApplicationConstant;
 import com.transunion.pdf.enums.PdfVersion;
 import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
-import java.io.InputStream;
 
 @Service
 public class MainReportService {
 
     JasperReport getMainReport(PdfVersion pdfVersion) throws JRException {
-        String filePath="";
+        String filePath;
         switch (pdfVersion) {
             case INDIRECT:
-                filePath=ApplicationConstant.INDIRECT_MAIN_JASPER_PATH;
+                filePath = ApplicationConstant.INDIRECT_MAIN_JASPER_PATH;
+                break;
+            case NH:
+                filePath = ApplicationConstant.NH_MAIN_JASPER_PATH;
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported PDF version: " + pdfVersion);
         }
-//        InputStream jrxmlInput = getClass().getClassLoader().getResourceAsStream(filePath);
-
         return (JasperReport) JRLoader.loadObject(new File(filePath));
 
     }

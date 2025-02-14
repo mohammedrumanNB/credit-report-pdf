@@ -9,34 +9,32 @@ import com.transunion.pdf.exception.InvalidDataException;
 import com.transunion.pdf.model.*;
 import com.transunion.pdf.util.CommonUtil;
 import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.util.JRLoader;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
-import java.io.InputStream;
 import java.util.List;
 
 @Service
 public class PersonalInfoReportService {
     public JasperReport getPersonalInfoReport(PdfVersion pdfVersion) throws JRException {
-        String filePath = "";
+        String filePath;
         switch (pdfVersion) {
             case INDIRECT:
                 //Get PersonalInfo Report jrxml and compile it
                 filePath = ApplicationConstant.INDIRECT_PERSONALINFO_JASPER_PATH;
                 break;
+            case NH:
+                //Get PersonalInfo Report jrxml and compile it
+                filePath = ApplicationConstant.NH_PERSONALINFO_JASPER_PATH;
+                break;
 
             default:
                 throw new InvalidDataException(1016, "Unsupported PDF version: " + pdfVersion);
         }
-//        InputStream jrxmlInput = getClass().getClassLoader().getResourceAsStream(filePath);
-//
-//        return ( (JasperReport) net.sf.jasperreports.engine.util.JRLoader.loadObject(jrxmlInput) );
-
-        return  (JasperReport) JRLoader.loadObject(new File(filePath));
+        return (JasperReport) JRLoader.loadObject(new File(filePath));
 
     }
 
@@ -78,13 +76,10 @@ public class PersonalInfoReportService {
         AddressInformation addressInformation = new AddressInformation();
         if (addressInfoList.isEmpty()) {
             addressInformation.setAddressEmpty(true);
-            return addressInformation;
         } else {
-
             addressInformation.setAddressTableDataSource(new JRBeanCollectionDataSource(addressInfoList));
-
-            return addressInformation;
         }
+        return addressInformation;
     }
 
 

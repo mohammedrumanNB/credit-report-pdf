@@ -20,7 +20,7 @@ public class ApplicationConstant {
     public static final String ID_TYPE_DRIVER_LICENSE = "Driver’s License Number";
     public static final String ID_TYPE_VOTER_ID = "Voter ID Number";
     public static final String ID_TYPE_RATION_CARD = "Ration Card Number";
-    
+
 
     //PDF MetaData
     public static final String PDF_AUTHOR = "TransUnion";
@@ -37,12 +37,6 @@ public class ApplicationConstant {
     public static final String INDIRECT_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/ai.jrxml";
     public static final String INDIRECT_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/ei.jrxml";
 
-    public static final String PAST_DUE_MONTHLY_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/past_due_table.jrxml";
-    public static final String OPEN_ACCOUNT_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/open_account.jrxml";
-    public static final String CLOSED_ACCOUNT_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/closed_account.jrxml";
-    public static final String ENQUIRY_TABLE_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/enquiry table.jrxml";
-
-
     //INDIRECT JASPER PATH
     public static final String INDIRECT_MAIN_JASPER_PATH = "src/main/resources/templates/indirect/jasper/main.jasper";
     public static final String INDIRECT_INDEX_JASPER_PATH = "src/main/resources/templates/indirect/jasper/toc.jasper";
@@ -50,10 +44,38 @@ public class ApplicationConstant {
     public static final String INDIRECT_ACCOUNTINFO_JASPER_PATH = "src/main/resources/templates/indirect/jasper/account_information.jasper";
     public static final String INDIRECT_ENQUIRYINFO_JASPER_PATH = "src/main/resources/templates/indirect/jasper/enquiry_information.jasper";
 
+    //Common JRXML PATH
+    public static final String PAST_DUE_MONTHLY_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/past_due_table.jrxml";
+    public static final String OPEN_ACCOUNT_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/open_account.jrxml";
+    public static final String CLOSED_ACCOUNT_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/closed_account.jrxml";
+    public static final String ENQUIRY_TABLE_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/enquiry table.jrxml";
+    public static final String GLOSSARY_1_JRXML_PATH = "src/main/resources/templates/nh/jrxml/glossary-1.jrxml";
+    public static final String GLOSSARY_2_JRXML_PATH = "src/main/resources/templates/nh/jrxml/glossary-2.jrxml";
+
+    //Common JASPER PATH
     public static final String PAST_DUE_MONTHLY_JASPER_PATH = "src/main/resources/templates/indirect/jasper/past_due_monthly.jasper";
     public static final String OPEN_ACCOUNT_JASPER_PATH = "src/main/resources/templates/indirect/jasper/open_account.jasper";
     public static final String CLOSED_ACCOUNT_JASPER_PATH = "src/main/resources/templates/indirect/jasper/closed_account.jasper";
     public static final String ENQUIRY_TABLE_JASPER_PATH = "src/main/resources/templates/indirect/jasper/enquiry_table.jasper";
+    public static final String GLOSSARY_1_JASPER_PATH = "src/main/resources/templates/nh/jasper/glossary1.jasper";
+    public static final String GLOSSARY_2_JASPER_PATH = "src/main/resources/templates/nh/jasper/glossary2.jasper";
+
+
+    //NH JRXML PATH
+    public static final String NH_MAIN_JRXML_PATH = "src/main/resources/templates/nh/jrxml/main.jrxml";
+    public static final String NH_INDEX_JRXML_PATH = "src/main/resources/templates/nh/jrxml/toc.jrxml";
+    public static final String NH_SUMMARY_JRXML_PATH = "src/main/resources/templates/nh/jrxml/cs.jrxml";
+    public static final String NH_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/nh/jrxml/pi.jrxml";
+    public static final String NH_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/nh/ai.jrxml";
+    public static final String NH_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/nh/ei.jrxml";
+
+    //NH JASPER PATH
+    public static final String NH_MAIN_JASPER_PATH = "src/main/resources/templates/nh/jasper/main.jasper";
+    public static final String NH_INDEX_JASPER_PATH = "src/main/resources/templates/nh/jasper/toc.jasper";
+    public static final String NH_SUMMARY_JASPER_PATH = "src/main/resources/templates/nh/jasper/summary.jasper";
+    public static final String NH_PERSONALINFO_JASPER_PATH = "src/main/resources/templates/nh/jasper/personal_information.jasper";
+    public static final String NH_ACCOUNTINFO_JASPER_PATH = "src/main/resources/templates/nh/jasper/account_information.jasper";
+    public static final String NH_ENQUIRYINFO_JASPER_PATH = "src/main/resources/templates/nh/jasper/enquiry_information.jasper";
 
 
     public static final String CIBIL_GRAPH_0 = "";

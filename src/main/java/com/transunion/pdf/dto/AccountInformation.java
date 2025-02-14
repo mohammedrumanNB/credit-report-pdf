@@ -1,6 +1,5 @@
 package com.transunion.pdf.dto;
 
-import com.transunion.pdf.model.AccountSummary;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
