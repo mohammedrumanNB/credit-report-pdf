@@ -237,7 +237,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<element kind="rectangle" uuid="3dba64a9-9aa4-49b5-a457-fca84362be88" x="0" y="0" width="144" height="87" backcolor="#F2F2F2">
+					<element kind="rectangle" uuid="3dba64a9-9aa4-49b5-a457-fca84362be88" x="0" y="0" width="144" height="87" backcolor="#E0F6E9">
 						<pen lineWidth="0.0"/>
 					</element>
 					<element kind="frame" uuid="e8181a42-29ea-4f07-bf43-8d31b2311b13" x="10" y="10" width="61" height="33">
@@ -245,18 +245,18 @@
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<element kind="staticText" uuid="593e386f-a30d-400b-878e-6aacba3e2546" x="0" y="0" width="61" height="10" forecolor="#595959" fontName="Roboto - 600" fontSize="7.0" vTextAlign="Middle">
+						<element kind="staticText" uuid="593e386f-a30d-400b-878e-6aacba3e2546" x="0" y="0" width="61" height="10" forecolor="#1D653B" fontName="Roboto - 600" fontSize="7.0" vTextAlign="Middle">
 							<text><![CDATA[YOUR CIBIL SCORE]]></text>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						</element>
-						<element kind="image" uuid="90e6b3fd-edce-4746-af0c-302f60ae770b" x="0" y="16" width="34" height="17" hImageAlign="Left" vImageAlign="Middle">
-							<expression><![CDATA["icons/NH.svg"]]></expression>
+						<element kind="textField" uuid="b9e8a2b9-f1ec-4df1-a5b0-26e7a5e5cd0f" x="0" y="10" width="61" height="23" forecolor="#262626" fontName="Roboto - 700" fontSize="19.0" vTextAlign="Middle">
+							<expression><![CDATA[$P{cibilSummaryParam}.getCibilScore()]]></expression>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						</element>
 					</element>

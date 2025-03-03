@@ -30,6 +30,14 @@ public class AccountInfoReportService {
                 //Get AccountInfo Report jrxml and compile it
                 filePath = ApplicationConstant.NH_ACCOUNTINFO_JASPER_PATH;
                 break;
+            case STARTER:
+                //Get AccountInfo Report jrxml and compile it
+                filePath = ApplicationConstant.STARTER_ACCOUNTINFO_JASPER_PATH;
+                break;
+            case PAID:
+                //Get AccountInfo Report jrxml and compile it
+                filePath = ApplicationConstant.PAID_ACCOUNTINFO_JASPER_PATH;
+                break;
             default:
                 throw new IllegalArgumentException("Unsupported PDF version: " + pdfVersion);
         }
@@ -37,7 +45,7 @@ public class AccountInfoReportService {
 
     }
 
-    public AccountInformation getAccountInformationParam(PDFData pdfData) {
+    public AccountInformation getAccountInformationParam(PDFData pdfData,PdfVersion pdfVersion) {
         AccountInformation accountInformation = new AccountInformation();
 
         accountInformation.setControlNumber(pdfData.getControlNumber());
@@ -59,13 +67,13 @@ public class AccountInfoReportService {
 
             if (hasOpenAccounts) {
                 accountInformation.setOpenAccountInformationPresent(true);
-                accountInformation.setOpenAccountReport(getOpenAccountReport());
+                accountInformation.setOpenAccountReport(getOpenAccountReport(pdfVersion));
                 accountInformation.setOpenAccountInfoDataSource(new JRBeanCollectionDataSource(getOpenAccountInformation(openAccountInfoList)));
             }
 
             if (hasClosedAccounts) {
                 accountInformation.setClosedAccountInformationPresent(true);
-                accountInformation.setClosedAccountReport(getClosedAccountReport());
+                accountInformation.setClosedAccountReport(getClosedAccountReport(pdfVersion));
                 accountInformation.setClosedAccountInfoDataSource(new JRBeanCollectionDataSource(getClosedAccountInformation(closedAccountInfoList, openAccountInfoList.size())));
             }
         }
@@ -172,15 +180,19 @@ public class AccountInfoReportService {
                 .build();
     }
 
-    private JasperReport getClosedAccountReport() {
+    private JasperReport getClosedAccountReport(PdfVersion pdfVersion) {
         try {
-            return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH));
+            if(pdfVersion.equals(PdfVersion.STARTER) || pdfVersion.equals(PdfVersion.PAID)){
+                return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH_DIRECT));
+
+            }
+            return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH_INDIRECT));
 
         } catch (JRException e) {
             // Check if the cause of JRException is a FileNotFoundException
             if (e.getCause() instanceof java.io.FileNotFoundException) {
                 throw new FileNotFoundException(1029, "Closed Account Jrxml / Jasper Report Not Found at this directory: "
-                        + ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH);
+                        + ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH_INDIRECT);
             } else {
                 // Re-throw JRException as a runtime exception if the cause is different
                 throw new RuntimeException("An error occurred while compiling the address report.", e);
@@ -189,15 +201,18 @@ public class AccountInfoReportService {
     }
 
 
-    private JasperReport getOpenAccountReport() {
+    private JasperReport getOpenAccountReport(PdfVersion pdfVersion) {
         try {
-            return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH));
+            if(pdfVersion.equals(PdfVersion.STARTER) || pdfVersion.equals(PdfVersion.PAID)){
+                return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH_DIRECT));
+            }
+            return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH_INDIRECT));
 
         } catch (JRException e) {
             // Check if the cause of JRException is a FileNotFoundException
             if (e.getCause() instanceof java.io.FileNotFoundException) {
                 throw new FileNotFoundException(1028, "Open Account Jrxml / Jasper Report Not Found at this directory: "
-                        + ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH);
+                        + ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH_INDIRECT);
             } else {
                 // Re-throw JRException as a runtime exception if the cause is different
                 throw new RuntimeException("An error occurred while compiling the address report.", e);

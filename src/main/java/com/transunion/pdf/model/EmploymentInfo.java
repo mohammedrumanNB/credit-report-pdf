@@ -16,6 +16,6 @@ public class EmploymentInfo {
     private String dateReported;
     private String occupation;
     private BigDecimal income;
-    private BigDecimal monthlyAnnualIncome;
-    private BigDecimal netGrossIncome;
+    private String monthlyAnnualIncome;
+    private String netGrossIncome;
 }

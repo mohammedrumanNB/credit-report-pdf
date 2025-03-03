@@ -192,7 +192,7 @@
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</element>
 					<element kind="textField" uuid="595fe8c2-2134-45d0-95f7-e7876c5dadf4" x="432" y="8" width="73" height="14" forecolor="#005F8D" markup="html" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-						<expression><![CDATA["<a href='https://www.cibil.com' style='color:#005F8D; text-decoration:underline;'>View Entire Glossary</a>"]]></expression>
+						<expression><![CDATA["<a href='https://www.cibil.com/content/dam/cibil/consumer/CIBIL-Report-Understanding.pdf?utm_source=PDF+Report&utm_medium=CR&utm_campaign=PrintPDF' style='color:#005F8D; text-decoration:underline;'>View Entire Glossary</a>"]]></expression>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>

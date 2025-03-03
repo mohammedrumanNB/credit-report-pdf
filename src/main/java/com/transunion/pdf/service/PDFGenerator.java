@@ -51,6 +51,56 @@ public class PDFGenerator {
         parameters.put("copyrightYear", pdfData.getCopyrightYear());
 
         switch (pdfVersion) {
+            case PAID:
+                // Generate PDF for free version
+                mainReport = mainReportService.getMainReport(pdfVersion);
+
+                //Prepare map of parameter for all sub report
+                parameters.put("indexReport", indexReportService.getIndexReport(pdfVersion));
+                parameters.put("indexParam", indexReportService.getIndexParam(pdfData));
+
+                parameters.put("cibilSummaryReport", cibilSummaryReportService.getCibilSummaryReport(pdfVersion));
+                parameters.put("cibilSummaryParam", cibilSummaryReportService.getCibilSummaryParam(pdfData));
+
+                parameters.put("personalInformationReport", personalInfoReportService.getPersonalInfoReport(pdfVersion));
+                parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
+
+                parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData,pdfVersion));
+
+                parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
+                parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
+
+                parameters.put("glossaryReport1", glossaryReportService.getGlossaryReport1());
+                parameters.put("glossaryReport2", glossaryReportService.getGlossaryReport2());
+                parameters.put("glossaryParam", glossaryReportService.getGlossaryParam(pdfData));
+
+                break;
+            case STARTER:
+                // Generate PDF for free version
+                mainReport = mainReportService.getMainReport(pdfVersion);
+
+                //Prepare map of parameter for all sub report
+                parameters.put("indexReport", indexReportService.getIndexReport(pdfVersion));
+                parameters.put("indexParam", indexReportService.getIndexParam(pdfData));
+
+                parameters.put("cibilSummaryReport", cibilSummaryReportService.getCibilSummaryReport(pdfVersion));
+                parameters.put("cibilSummaryParam", cibilSummaryReportService.getCibilSummaryParam(pdfData));
+
+                parameters.put("personalInformationReport", personalInfoReportService.getPersonalInfoReport(pdfVersion));
+                parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
+
+                parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData,pdfVersion));
+
+                parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
+                parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
+
+                parameters.put("glossaryReport1", glossaryReportService.getGlossaryReport1());
+                parameters.put("glossaryReport2", glossaryReportService.getGlossaryReport2());
+                parameters.put("glossaryParam", glossaryReportService.getGlossaryParam(pdfData));
+
+                break;
             case INDIRECT:
                 // Generate PDF for free version
                 mainReport = mainReportService.getMainReport(pdfVersion);
@@ -63,7 +113,7 @@ public class PDFGenerator {
                 parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
 
                 parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData,pdfVersion));
 
                 parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
                 parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
@@ -84,7 +134,7 @@ public class PDFGenerator {
                 parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
 
                 parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData,pdfVersion));
 
                 parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
                 parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
@@ -137,7 +187,7 @@ public class PDFGenerator {
 
             byte[] pdfBytes = outputStream.toByteArray();
 
-//            savePdfToFile(pdfBytes, pdfVersion);
+            savePdfToFile(pdfBytes, pdfVersion);
 
             return pdfBytes;
 
@@ -145,9 +195,9 @@ public class PDFGenerator {
             // Handle JasperReport generation exception, possibly logging or rethrowing a custom exception
             throw new JRException("Failed to generate PDF for version: " + pdfVersion, e);
         }
-//        catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
@@ -182,17 +232,17 @@ public class PDFGenerator {
         return jasperPrint;
     }
 
-//    private void savePdfToFile(byte[] pdfBytes, PdfVersion pdfVersion) throws IOException {
-//        UUID uuid = UUID.randomUUID();
-//        // Determine the file path in the resources directory
-//        String fileName = pdfVersion.name().toLowerCase() + "_report_" + uuid.toString().substring(0, 3) + ".pdf";
-//        String resourcePath = "src/main/resources/" + fileName;
-//
-//        // Create the file
-//        File pdfFile = new File(resourcePath);
-//        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
-//            fos.write(pdfBytes);
-//        }
-//    }
+    private void savePdfToFile(byte[] pdfBytes, PdfVersion pdfVersion) throws IOException {
+        UUID uuid = UUID.randomUUID();
+        // Determine the file path in the resources directory
+        String fileName = pdfVersion.name().toLowerCase() + "_report_" + uuid.toString().substring(0, 3) + ".pdf";
+        String resourcePath = "src/main/resources/" + fileName;
+
+        // Create the file
+        File pdfFile = new File(resourcePath);
+        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
+            fos.write(pdfBytes);
+        }
+    }
 
 }

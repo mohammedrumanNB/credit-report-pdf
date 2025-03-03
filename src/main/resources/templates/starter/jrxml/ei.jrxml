@@ -1,0 +1,190 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="ei" language="java" columnCount="1" pageWidth="595" pageHeight="842" orientation="Landscape" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="bbaede87-a248-45e7-8a5c-74db3b798cb5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="enquiryInformationParam" class="com.transunion.pdf.dto.EnquiryInformation"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<columnHeader height="64" splitType="Stretch">
+		<element kind="frame" uuid="9c34ff0d-4804-446c-b689-ff198c15263d" x="0" y="0" width="595" height="64">
+			<element kind="frame" uuid="5a6546b2-dec1-4d71-9822-67b380d49d3c" x="40" y="27" width="515" height="24">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<element kind="frame" uuid="54f3fc43-c97f-4451-82fc-1e9a43a5b8e9" x="0" y="0" width="260" height="24">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<element kind="image" uuid="2beaad12-eee8-4ca5-a87b-5514958e0d53" x="0" y="2" width="43" height="18" linkType="None" linkTarget="Self" bookmarkLevel="1">
+						<expression><![CDATA["icons/cibil-small.png"]]></expression>
+						<anchorNameExpression><![CDATA["Enquiry Anchor"]]></anchorNameExpression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="image" uuid="f189b7f2-5d6a-494a-a95d-3037e322ab50" x="51" y="5" width="9" height="12" hImageAlign="Center" vImageAlign="Middle">
+						<expression><![CDATA["icons/star-icon.svg"]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="staticText" uuid="2b719e1e-6a83-44e0-85aa-7bbab5657b45" x="68" y="0" width="177" height="24" forecolor="#004364" fontName="Roboto - 500" fontSize="20.0" hTextAlign="Right" vTextAlign="Middle">
+						<text><![CDATA[Enquiry Information]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</element>
+				</element>
+				<element kind="frame" uuid="1305c1d9-bc29-4d3a-a410-bb14b0f591ff" x="393" y="1" width="122" height="23">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<element kind="frame" uuid="c04ceb57-9948-44ab-89cf-efe49ccd4ba9" x="0" y="13" width="122" height="10">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<element kind="staticText" uuid="eaa94519-46c6-4d45-92a4-fbb3c0275afd" x="0" y="0" width="73" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+							<text><![CDATA[Report generated on]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="textField" uuid="8ca930cc-d924-4e28-8c2b-fad30424ba6c" x="77" y="0" width="45" height="10" forecolor="#595959" fontName="Roboto - 500" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+							<expression><![CDATA[$P{enquiryInformationParam}.getReportGeneratedDate()]]></expression>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+					<element kind="frame" uuid="bedf3e07-abd8-4b10-9b02-9167a8b2f9a0" x="11" y="0" width="111" height="10">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<element kind="staticText" uuid="01134a0a-7d9b-4a9f-9d90-1b045e6a6100" x="0" y="0" width="57" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+							<text><![CDATA[Control Number]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</element>
+						<element kind="textField" uuid="5e636292-e34e-4d47-91a9-666c01ea5e4b" x="61" y="0" width="50" height="10" forecolor="#595959" fontName="Roboto - 500" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+							<expression><![CDATA[$P{enquiryInformationParam}.getControlNumber() != null && $P{enquiryInformationParam}.getControlNumber().length() == 9 ?
+$P{enquiryInformationParam}.getControlNumber().substring(0, 3) + " " +
+$P{enquiryInformationParam}.getControlNumber().substring(3, 6) + " " +
+$P{enquiryInformationParam}.getControlNumber().substring(6) :
+$P{enquiryInformationParam}.getControlNumber() != null && $P{enquiryInformationParam}.getControlNumber().length() == 10 ?
+$P{enquiryInformationParam}.getControlNumber().substring(0, 3) + " " +
+$P{enquiryInformationParam}.getControlNumber().substring(3, 6) + " " +
+$P{enquiryInformationParam}.getControlNumber().substring(6) :
+$P{enquiryInformationParam}.getControlNumber()]]></expression>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+					</element>
+				</element>
+			</element>
+		</element>
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</columnHeader>
+	<detail>
+		<band height="313" splitType="Stretch">
+			<element kind="frame" uuid="b30d7a0a-c00e-49a8-aec7-d93d4bafe044" x="0" y="0" width="595" height="59">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<element kind="rectangle" uuid="136581e5-2fcb-4f52-9d8e-e18cf534ecb7" x="0" y="0" width="595" height="59" backcolor="#F7F9FA">
+					<pen lineWidth="0.0"/>
+				</element>
+				<element kind="frame" uuid="399db4b6-0bc9-4796-b239-0b7540ba1824" x="40" y="20" width="515" height="19">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<element kind="staticText" uuid="d0b9e563-dbae-472d-9798-9eb7efb2f73f" x="0" y="0" width="107" height="19" forecolor="#595959" fontName="Roboto - 400" fontSize="16.0" vTextAlign="Middle">
+						<text><![CDATA[Total Enquiries]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</element>
+					<element kind="textField" uuid="1bf60033-bbaf-48b9-b3db-9c6fa07556ee" x="110" y="0" width="19" height="19" fontName="Roboto - 600" fontSize="16.0" vTextAlign="Middle">
+						<expression><![CDATA[$P{enquiryInformationParam}.getTotalEnquiries()]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+				</element>
+			</element>
+			<element kind="frame" uuid="b2ee3ab9-dccd-4733-a9f5-761ae118d56d" x="40" y="76" width="515" height="237" removeLineWhenBlank="true">
+				<printWhenExpression><![CDATA[!$P{enquiryInformationParam}.isEnquiryInfoPresent()]]></printWhenExpression>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.element.name" value="noData"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<element kind="frame" uuid="9572eaef-ad3f-418c-9071-54507c728c15" x="219" y="56" width="77" height="77">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<element kind="image" uuid="67c49d95-1ffd-4d43-8327-b76edd7ed059" x="5" y="5" width="67" height="67">
+						<expression><![CDATA["icons/no enq.svg"]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+				</element>
+				<element kind="staticText" uuid="aaaf03ef-f4af-464d-800e-4377d45b9963" x="80" y="157" width="355" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+					<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
+					<text><![CDATA[No data was reported for this section.]]></text>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</element>
+			</element>
+			<element kind="frame" uuid="a5b00050-9ff8-482e-91f5-b9059fdff443" x="40" y="76" width="515" height="200">
+				<printWhenExpression><![CDATA[$P{enquiryInformationParam}.isEnquiryInfoPresent()]]></printWhenExpression>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<element kind="subreport" uuid="37b2e7e2-5da1-484a-9323-b6aa12763b9e" x="0" y="0" width="515" height="200" removeLineWhenBlank="true">
+					<dataSourceExpression><![CDATA[$P{enquiryInformationParam}.getEnquiryInfoDataSource()]]></dataSourceExpression>
+					<expression><![CDATA[$P{enquiryInformationParam}.getEnquiryTableReport()]]></expression>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</element>
+			</element>
+			<element kind="textField" uuid="00b7cc1e-b9ca-4336-86ca-cdccb113f3f5" x="0" y="59" width="30" height="5" forecolor="#FFFFFF" fontName="Roboto - 400" fontSize="4.0">
+				<expression><![CDATA["EIP"]]></expression>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+</jasperReport>

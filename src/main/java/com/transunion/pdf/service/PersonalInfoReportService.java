@@ -30,7 +30,14 @@ public class PersonalInfoReportService {
                 //Get PersonalInfo Report jrxml and compile it
                 filePath = ApplicationConstant.NH_PERSONALINFO_JASPER_PATH;
                 break;
-
+            case STARTER:
+                //Get PersonalInfo Report jrxml and compile it
+                filePath = ApplicationConstant.STARTER_PERSONALINFO_JASPER_PATH;
+                break;
+            case PAID:
+                //Get PersonalInfo Report jrxml and compile it
+                filePath = ApplicationConstant.PAID_PERSONALINFO_JASPER_PATH;
+                break;
             default:
                 throw new InvalidDataException(1016, "Unsupported PDF version: " + pdfVersion);
         }
@@ -66,8 +73,8 @@ public class PersonalInfoReportService {
         personalInformation.setDateReported(employmentInfo.getDateReported());
         personalInformation.setOccupation(employmentInfo.getOccupation());
         personalInformation.setIncome(CommonUtil.formatIndianCurrency(employmentInfo.getIncome()));
-        personalInformation.setMonthlyAnnualIncome(CommonUtil.formatIndianCurrency(employmentInfo.getMonthlyAnnualIncome()));
-        personalInformation.setNetGrossIncome(CommonUtil.formatIndianCurrency(employmentInfo.getNetGrossIncome()));
+        personalInformation.setMonthlyAnnualIncome(employmentInfo.getMonthlyAnnualIncome());
+        personalInformation.setNetGrossIncome(employmentInfo.getNetGrossIncome());
         return personalInformation;
 
     }

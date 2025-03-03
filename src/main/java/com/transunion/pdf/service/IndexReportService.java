@@ -26,6 +26,14 @@ public class IndexReportService {
                 //Get Index Report jrxml and compile it
                 filePath = ApplicationConstant.NH_INDEX_JASPER_PATH;
                 break;
+            case STARTER:
+                //Get Index Report jrxml and compile it
+                filePath = ApplicationConstant.STARTER_INDEX_JASPER_PATH;
+                break;
+            case PAID:
+                //Get Index Report jrxml and compile it
+                filePath = ApplicationConstant.PAID_INDEX_JASPER_PATH;
+                break;
             default:
                 throw new InvalidDataException(1016, "Unsupported PDF version: " + pdfVersion);
         }

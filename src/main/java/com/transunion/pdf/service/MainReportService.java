@@ -21,6 +21,12 @@ public class MainReportService {
             case NH:
                 filePath = ApplicationConstant.NH_MAIN_JASPER_PATH;
                 break;
+            case STARTER:
+                filePath = ApplicationConstant.STARTER_MAIN_JASPER_PATH;
+                break;
+            case PAID:
+                filePath = ApplicationConstant.PAID_MAIN_JASPER_PATH;
+                break;
             default:
                 throw new IllegalArgumentException("Unsupported PDF version: " + pdfVersion);
         }

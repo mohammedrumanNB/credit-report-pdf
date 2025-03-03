@@ -12,9 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.util.AssertionErrors;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,36 +22,37 @@ class PDFGeneratorTest {
     @Autowired
     private PDFGenerator pdfGenerator;
 
-//    @Test
-//    void testGeneratePdfPaidVersion() {
-//        try {
-//            PDFData pdfData = getPdfData();
-//            pdfData.getOpenAccountInfoList().get(1).getAccountDetails().setAccountUnderDispute(true);
-//
-//            // Call the generatePdf method for the PAID version
-//            byte[] pdfBytes = pdfGenerator.generatePdf(PdfVersion.INDIRECT, pdfData, true, "password");
-//
-//            // Validate that the PDF byte array is not null or empty
-//            AssertionErrors.assertNotNull(Arrays.toString(pdfBytes), "PDF byte array should not be null");
-//            assert pdfBytes.length > 0 : "PDF byte array should contain data";
-//
-//            System.out.println("PDF generated successfully for PAID version.");
-//
-//        } catch (JRException e) {
-//            e.printStackTrace();
-//            assert false : "An exception occurred during PDF generation: " + e.getMessage();
-//        }
-//    }
+    @Test
+    void testGeneratePdfPaidVersion() {
+        try {
+            PDFData pdfData = getPdfData();
+            pdfData.getOpenAccountInfoList().get(1).getAccountDetails().setAccountUnderDispute(true);
 
-//    @Test
-//    void testCompileJrxmlToJasper(){
-//        try {
-//             JasperCompileManager.compileReportToFile(ApplicationConstant.INDIRECT_ACCOUNTINFO_JRXML_PATH,"account_information.jasper");
-//
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//    }
+            // Call the generatePdf method for the PAID version
+            byte[] pdfBytes = pdfGenerator.generatePdf(PdfVersion.PAID, pdfData, false, "password");
+
+            // Validate that the PDF byte array is not null or empty
+            AssertionErrors.assertNotNull(Arrays.toString(pdfBytes), "PDF byte array should not be null");
+            assert pdfBytes.length > 0 : "PDF byte array should contain data";
+
+            System.out.println("PDF generated successfully for PAID version.");
+
+        } catch (JRException e) {
+            e.printStackTrace();
+            assert false : "An exception occurred during PDF generation: " + e.getMessage();
+        }
+    }
+
+    @Test
+    void testCompileJrxmlToJasper(){
+        try {
+             JasperCompileManager.compileReportToFile(ApplicationConstant.OPEN_ACCOUNT_JRXML_PATH_DIRECT,"open_account_direct.jasper");
+             JasperCompileManager.compileReportToFile(ApplicationConstant.CLOSED_ACCOUNT_JRXML_PATH_DIRECT,"closed_account_direct.jasper");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
 
     //Create Mock Data - PDFData
@@ -62,7 +60,7 @@ class PDFGeneratorTest {
         PDFData pdfData = new PDFData();
         pdfData.setCopyrightYear("2026");
         pdfData.setControlNumber("3214589045");
-        pdfData.setCibilScore(738);
+        pdfData.setCibilScore(555);
         pdfData.setReportGeneratedDate("17 Dec 2024");
         pdfData.setCibilScoreDate("12th Nov 2024");
         pdfData.setPersonalInfo(getPersonalInfo());
@@ -338,8 +336,8 @@ class PDFGeneratorTest {
                 .dateReported("14/07/2022")
                 .occupation("Developer")
                 .income(BigDecimal.valueOf(10000))
-                .monthlyAnnualIncome(BigDecimal.valueOf(20000))
-                .netGrossIncome(BigDecimal.valueOf(30000))
+                .monthlyAnnualIncome("Monthly")
+                .netGrossIncome("Net Income")
                 .build();
     }
 

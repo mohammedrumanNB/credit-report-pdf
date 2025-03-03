@@ -20,13 +20,17 @@ public class CibilSummaryReportService {
     public JasperReport getCibilSummaryReport(PdfVersion pdfVersion) throws JRException {
         String filePath;
         switch (pdfVersion) {
-            case INDIRECT:
-                //Get Cibil Summary Report jrxml and compile it
-                filePath = "";
-                break;
             case NH:
                 //Get Cibil Summary Report jrxml and compile it
                 filePath = ApplicationConstant.NH_SUMMARY_JASPER_PATH;
+                break;
+            case STARTER:
+                //Get Cibil Summary Report jrxml and compile it
+                filePath = ApplicationConstant.STARTER_SUMMARY_JASPER_PATH;
+                break;
+            case PAID:
+                //Get Cibil Summary Report jrxml and compile it
+                filePath = ApplicationConstant.PAID_SUMMARY_JASPER_PATH;
                 break;
             default:
                 throw new InvalidDataException(1016, "Unsupported PDF version: " + pdfVersion);

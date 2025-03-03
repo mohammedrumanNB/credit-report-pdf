@@ -30,6 +30,15 @@ public class EnquiryInfoReportService {
                 //Get EnquiryInfo Report jrxml and compile it
                 filePath = ApplicationConstant.NH_ENQUIRYINFO_JASPER_PATH;
                 break;
+            case STARTER:
+                //Get EnquiryInfo Report jrxml and compile it
+                filePath = ApplicationConstant.STARTER_ENQUIRYINFO_JASPER_PATH;
+                break;
+
+            case PAID:
+                //Get EnquiryInfo Report jrxml and compile it
+                filePath = ApplicationConstant.PAID_ENQUIRYINFO_JASPER_PATH;
+                break;
 
             default:
                 throw new IllegalArgumentException("Unsupported PDF version: " + pdfVersion);
