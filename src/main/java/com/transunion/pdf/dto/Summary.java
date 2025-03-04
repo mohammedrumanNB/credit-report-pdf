@@ -2,11 +2,10 @@ package com.transunion.pdf.dto;
 
 import com.transunion.pdf.model.LatePaymentCount;
 import com.transunion.pdf.model.LatePaymentRemarkCount;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Summary {

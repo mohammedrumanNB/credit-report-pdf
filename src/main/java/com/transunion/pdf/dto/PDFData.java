@@ -1,14 +1,17 @@
 package com.transunion.pdf.dto;
 
+import com.transunion.pdf.enums.SummaryIdType;
 import com.transunion.pdf.model.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class PDFData {
@@ -17,12 +20,14 @@ public class PDFData {
     private String reportGeneratedDate; // Send in this format 12 Dec 2024
     private String cibilScoreDate; // Send in this format 11 Nov 2024
     private Integer cibilScore; //Send 0 for NH Case
+    private SummaryIdType summaryIdType; // Use the respective enum while creating the Object
+    private String summaryIdNumber;
     private PersonalInfo personalInfo;
     private List<IdentificationInfo> identificationInfoList;
     private List<EmailInfo> emailInfoList;
     private List<ContactInfo> contactInfoList;
     private List<AddressInfo> addressInfoList;
-    private int totalDisputes;
+    private int totalAccountsUnderDisputes;
     private BigDecimal currentBalance;
     private BigDecimal amountOverDue;
     private int closedCreditCards;

@@ -242,8 +242,8 @@
 		</element>
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</pageFooter>
-	<lastPageFooter height="195">
-		<element kind="frame" uuid="f4794623-5ebe-45fb-8670-1b2580fc9dc7" x="40" y="0" width="515" height="146" removeLineWhenBlank="true">
+	<lastPageFooter height="160">
+		<element kind="frame" uuid="f4794623-5ebe-45fb-8670-1b2580fc9dc7" x="40" y="0" width="515" height="132" removeLineWhenBlank="true">
 			<property name="com.jaspersoft.studio.unit.x" value="px"/>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -287,21 +287,21 @@ In case of any discrepancy in Personal / Account Information pertaining to Loan 
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="29c77120-371f-4387-a3df-5a318ea19575" x="142" y="118" width="248" height="27" forecolor="#595959" markup="html" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="29c77120-371f-4387-a3df-5a318ea19575" x="142" y="118" width="248" height="14" forecolor="#595959" markup="html" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
 				<paragraph lineSpacing="Fixed" lineSpacingSize="14.0"/>
-				<expression><![CDATA["For more information, please visit our website at <a href='https://www.cibil.com' style='color:#00A6CA; text-decoration:underline;'>www.cibil.com</a>"
+				<expression><![CDATA["For more information, please visit our website at <a href='https://www.cibil.com/?utm_source=PDFReport&utm_medium=CR&utm_campaign=PrintPDF' style='color:#00A6CA; text-decoration:underline;'>www.cibil.com</a>"
 ]]></expression>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
 		</element>
-		<element kind="frame" uuid="039a9ae3-308d-43b1-b448-770d4a27dc87" x="40" y="162" width="515" height="14" removeLineWhenBlank="true">
+		<element kind="frame" uuid="039a9ae3-308d-43b1-b448-770d4a27dc87" x="40" y="146" width="515" height="14" removeLineWhenBlank="true">
 			<property name="com.jaspersoft.studio.unit.x" value="px"/>
-			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<element kind="textField" uuid="8c9f629c-8163-44e3-bd99-9063534c5d55" x="0" y="2" width="364" height="10" forecolor="#595959" fontName="Roboto - 300" fontSize="7.0" vTextAlign="Middle">
 				<expression><![CDATA["© Copyright " + $P{copyrightYear} + " TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved."
 ]]></expression>

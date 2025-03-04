@@ -161,8 +161,7 @@
 							</element>
 							<element kind="staticText" uuid="45b924ea-1381-47fb-a127-63e4afd34fcd" x="0" y="16" width="291" height="24" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 								<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
-								<text><![CDATA[Detailed view of your personal information as provided to the lender for
-loan application.]]></text>
+								<text><![CDATA[Detailed view of your personal, contact and employment information as      provided to the lender for loan application.]]></text>
 							</element>
 						</element>
 					</element>

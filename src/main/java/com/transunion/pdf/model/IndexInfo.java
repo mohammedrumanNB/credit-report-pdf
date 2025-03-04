@@ -1,11 +1,12 @@
 package com.transunion.pdf.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
 public class IndexInfo {
     private String controlNumber;
     private int cibilScore;

@@ -3,14 +3,13 @@ package com.transunion.pdf.dto;
 import com.transunion.pdf.model.ContactInfo;
 import com.transunion.pdf.model.EmailInfo;
 import com.transunion.pdf.model.PersonalInfo;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class PersonalInformation {

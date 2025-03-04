@@ -23,19 +23,15 @@ public class AccountInfoReportService {
         String filePath;
         switch (pdfVersion) {
             case INDIRECT:
-                //Get AccountInfo Report jrxml and compile it
                 filePath = ApplicationConstant.INDIRECT_ACCOUNTINFO_JASPER_PATH;
                 break;
             case NH:
-                //Get AccountInfo Report jrxml and compile it
                 filePath = ApplicationConstant.NH_ACCOUNTINFO_JASPER_PATH;
                 break;
             case STARTER:
-                //Get AccountInfo Report jrxml and compile it
                 filePath = ApplicationConstant.STARTER_ACCOUNTINFO_JASPER_PATH;
                 break;
             case PAID:
-                //Get AccountInfo Report jrxml and compile it
                 filePath = ApplicationConstant.PAID_ACCOUNTINFO_JASPER_PATH;
                 break;
             default:
@@ -45,7 +41,7 @@ public class AccountInfoReportService {
 
     }
 
-    public AccountInformation getAccountInformationParam(PDFData pdfData,PdfVersion pdfVersion) {
+    public AccountInformation getAccountInformationParam(PDFData pdfData, PdfVersion pdfVersion) {
         AccountInformation accountInformation = new AccountInformation();
 
         accountInformation.setControlNumber(pdfData.getControlNumber());
@@ -147,14 +143,13 @@ public class AccountInfoReportService {
                 .ownerShipType(accountDetails.getOwnerShipType())
                 .accountUnderDispute(accountDetails.isAccountUnderDispute())
                 .disputeInfo(accountDetails.isAccountUnderDispute() ? accountDetails.getDisputeInfo() : null)
-                .accountStatus(accountDetails.getAccountStatus())
                 .creditLimit(CommonUtil.formatIndianCurrency(accountDetails.getCreditLimit()))
                 .highCredit(CommonUtil.formatIndianCurrency(accountDetails.getHighCredit()))
                 .currentBalance(CommonUtil.formatIndianCurrency(accountDetails.getCurrentBalance()))
                 .cashLimit(CommonUtil.formatIndianCurrency(accountDetails.getCashLimit()))
                 .amountOverdue(CommonUtil.formatIndianCurrency(accountDetails.getAmountOverdue()))
-                .rateOfInterest(accountDetails.getRateOfInterest())
-                .repaymentTenure(accountDetails.getRepaymentTenure())
+                .rateOfInterest(accountDetails.getRateOfInterest() + "%")
+                .repaymentTenure(accountDetails.getRepaymentTenure() + "Month")
                 .emiAmount(CommonUtil.formatIndianCurrency(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
                 .actualPaymentAmount(CommonUtil.formatIndianCurrency(accountDetails.getActualPaymentAmount()))
@@ -182,7 +177,7 @@ public class AccountInfoReportService {
 
     private JasperReport getClosedAccountReport(PdfVersion pdfVersion) {
         try {
-            if(pdfVersion.equals(PdfVersion.STARTER) || pdfVersion.equals(PdfVersion.PAID)){
+            if (pdfVersion.equals(PdfVersion.STARTER) || pdfVersion.equals(PdfVersion.PAID)) {
                 return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH_DIRECT));
 
             }
@@ -203,7 +198,7 @@ public class AccountInfoReportService {
 
     private JasperReport getOpenAccountReport(PdfVersion pdfVersion) {
         try {
-            if(pdfVersion.equals(PdfVersion.STARTER) || pdfVersion.equals(PdfVersion.PAID)){
+            if (pdfVersion.equals(PdfVersion.STARTER) || pdfVersion.equals(PdfVersion.PAID)) {
                 return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH_DIRECT));
             }
             return (JasperReport) JRLoader.loadObject(new File(ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH_INDIRECT));
@@ -252,14 +247,13 @@ public class AccountInfoReportService {
                 .ownerShipType(accountDetails.getOwnerShipType())
                 .accountUnderDispute(accountDetails.isAccountUnderDispute())
                 .disputeInfo(accountDetails.isAccountUnderDispute() ? accountDetails.getDisputeInfo() : null)
-                .accountStatus(accountDetails.getAccountStatus())
                 .creditLimit(CommonUtil.formatIndianCurrency(accountDetails.getCreditLimit()))
                 .highCredit(CommonUtil.formatIndianCurrency(accountDetails.getHighCredit()))
                 .currentBalance(CommonUtil.formatIndianCurrency(accountDetails.getCurrentBalance()))
                 .cashLimit(CommonUtil.formatIndianCurrency(accountDetails.getCashLimit()))
                 .amountOverdue(CommonUtil.formatIndianCurrency(accountDetails.getAmountOverdue()))
-                .rateOfInterest(accountDetails.getRateOfInterest())
-                .repaymentTenure(accountDetails.getRepaymentTenure())
+                .rateOfInterest(accountDetails.getRateOfInterest() + "%")
+                .repaymentTenure(accountDetails.getRepaymentTenure() + " Month")
                 .emiAmount(CommonUtil.formatIndianCurrency(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
                 .actualPaymentAmount(CommonUtil.formatIndianCurrency(accountDetails.getActualPaymentAmount()))

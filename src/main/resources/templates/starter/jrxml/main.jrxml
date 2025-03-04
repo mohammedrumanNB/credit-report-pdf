@@ -242,32 +242,32 @@
 		</element>
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</pageFooter>
-	<lastPageFooter height="195">
-		<element kind="frame" uuid="f4794623-5ebe-45fb-8670-1b2580fc9dc7" x="40" y="0" width="515" height="146" removeLineWhenBlank="true">
+	<lastPageFooter height="160">
+		<element kind="frame" uuid="f7eed7c3-b8f6-41bd-8ef1-f7a237888c05" x="40" y="0" width="515" height="132" removeLineWhenBlank="true">
 			<property name="com.jaspersoft.studio.unit.x" value="px"/>
 			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<element kind="frame" uuid="76275a38-fc0f-4eeb-8ba9-d95cb313b8ee" x="0" y="0" width="515" height="16">
+			<element kind="frame" uuid="53785fca-644c-4ea8-b433-e60c8d086f3b" x="0" y="0" width="515" height="16">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<element kind="staticText" uuid="87d1be80-36ca-4020-860a-6a89450f0662" x="223" y="0" width="71" height="16" forecolor="#595959" fontName="Roboto - 400" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+				<element kind="staticText" uuid="1a875822-4466-4acc-acc8-d90f1d5b6d0b" x="223" y="0" width="71" height="16" forecolor="#595959" fontName="Roboto - 400" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
 					<text><![CDATA[End of report]]></text>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</element>
-				<element kind="rectangle" uuid="227a677d-7b8b-4d06-8fb3-91c0c1f257c3" x="0" y="8" width="200" height="1" backcolor="#CCDBE3">
+				<element kind="rectangle" uuid="128a8178-0c56-40bf-a4c9-a5335f75ad8f" x="0" y="8" width="200" height="1" backcolor="#CCDBE3">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<pen lineWidth="0.0" lineColor="#BFBFBF"/>
 				</element>
-				<element kind="rectangle" uuid="55ff5d0d-96fe-4fb7-86ee-17633a602d08" x="315" y="8" width="200" height="1" backcolor="#CCDBE3">
+				<element kind="rectangle" uuid="861f04a6-e862-4dc6-8e06-2935207eaeab" x="315" y="8" width="200" height="1" backcolor="#CCDBE3">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -275,11 +275,11 @@
 					<pen lineWidth="0.0" lineColor="#BFBFBF"/>
 				</element>
 			</element>
-			<element kind="staticText" uuid="1f51cc08-2cd0-4e69-92b1-b0f6527f987f" x="0" y="32" width="515" height="70" forecolor="#595959" fontName="Roboto - 400" fontSize="7.0" vTextAlign="Middle">
+			<element kind="staticText" uuid="b5a2ad71-6195-4dd7-b74c-151af9300e33" x="0" y="32" width="515" height="70" forecolor="#595959" fontName="Roboto - 400" fontSize="7.0" vTextAlign="Middle">
 				<paragraph lineSpacing="Fixed" lineSpacingSize="7.35"/>
-				<text><![CDATA[All information contained in this credit report has been collated by TransUnion CIBIL Limited (TU CIBIL) based on information provided/ submitted by its various members("Members"), as part of periodic data submission and Members are required to ensure accuracy, completeness and veracity of the information 
-submitted. The credit report is generated using the proprietary search and match logic of TU CIBIL. TU CIBIL uses its best efforts to ensure accuracy, 
-completeness and veracity of the information contained in the Report and shall only be liable and / or responsible if any discrepancies are directly attributable to 
+				<text><![CDATA[All information contained in this credit report has been collated by TransUnion CIBIL Limited (TU CIBIL) based on information provided/ submitted by its various members("Members"), as part of periodic data submission and Members are required to ensure accuracy, completeness and veracity of the information
+submitted. The credit report is generated using the proprietary search and match logic of TU CIBIL. TU CIBIL uses its best efforts to ensure accuracy,
+completeness and veracity of the information contained in the Report and shall only be liable and / or responsible if any discrepancies are directly attributable to
 TU CIBIL. The use of this report is governed by the terms and conditions of the Operating Rules for TU CIBIL and its Members.
 In case of any discrepancy in Personal / Account Information pertaining to Loan Accounts / Credit Cards, concerned Financial Institutions / Credit Card Company (CCC) may also please be contacted for required clarification.]]></text>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -287,22 +287,22 @@ In case of any discrepancy in Personal / Account Information pertaining to Loan 
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="29c77120-371f-4387-a3df-5a318ea19575" x="142" y="118" width="248" height="27" forecolor="#595959" markup="html" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="39510cce-690b-4a26-969f-90aa86cd2cc8" x="142" y="118" width="248" height="14" forecolor="#595959" markup="html" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
 				<paragraph lineSpacing="Fixed" lineSpacingSize="14.0"/>
 				<expression><![CDATA["For more information, please visit our website at <a href='https://www.cibil.com/?utm_source=PDFReport&utm_medium=CR&utm_campaign=PrintPDF' style='color:#00A6CA; text-decoration:underline;'>www.cibil.com</a>"
 ]]></expression>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
 		</element>
-		<element kind="frame" uuid="039a9ae3-308d-43b1-b448-770d4a27dc87" x="40" y="162" width="515" height="14" removeLineWhenBlank="true">
+		<element kind="frame" uuid="5879d07e-9ee6-4722-9fc1-4826ca25a277" x="40" y="146" width="515" height="14" removeLineWhenBlank="true">
 			<property name="com.jaspersoft.studio.unit.x" value="px"/>
-			<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<element kind="textField" uuid="8c9f629c-8163-44e3-bd99-9063534c5d55" x="0" y="2" width="364" height="10" forecolor="#595959" fontName="Roboto - 300" fontSize="7.0" vTextAlign="Middle">
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<element kind="textField" uuid="acaa11a1-be30-4b98-9b60-b84acc3c11fc" x="0" y="2" width="364" height="10" forecolor="#595959" fontName="Roboto - 300" fontSize="7.0" vTextAlign="Middle">
 				<expression><![CDATA["© Copyright " + $P{copyrightYear} + " TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved."
 ]]></expression>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -310,26 +310,26 @@ In case of any discrepancy in Personal / Account Information pertaining to Loan 
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="frame" uuid="51f8af00-1e01-4b95-8367-b6c8d162b6ba" x="398" y="0" width="115" height="14">
+			<element kind="frame" uuid="803d7f23-767e-416f-90df-40ff7a2a974b" x="398" y="0" width="115" height="14">
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<element kind="staticText" uuid="1f248896-469d-46b5-af39-7dc3b2f0a2b2" x="35" y="0" width="45" height="14" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+				<element kind="staticText" uuid="fc1317a4-3977-4e6d-a836-16eb83a6266f" x="35" y="0" width="45" height="14" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
 					<text><![CDATA[CIBIL Report]]></text>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</element>
-				<element kind="staticText" uuid="fa1a9287-4c5f-4200-b78c-b73fa781de65" x="84" y="0" width="19" height="14" fontName="Roboto - 600" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+				<element kind="staticText" uuid="20e3f24a-abe6-46eb-8e36-9c9889cb1dd0" x="84" y="0" width="19" height="14" fontName="Roboto - 600" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
 					<text><![CDATA[Page]]></text>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</element>
-				<element kind="textField" uuid="1596bacd-2e49-41ba-bc3e-5ef22570ab26" x="105" y="0" width="10" height="14" fontName="Roboto - 700" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+				<element kind="textField" uuid="2a0bfaff-576b-4a3f-82ef-1c982dd974dc" x="105" y="0" width="10" height="14" fontName="Roboto - 700" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
 					<expression><![CDATA[String.format("%02d", $V{PAGE_NUMBER})]]></expression>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>

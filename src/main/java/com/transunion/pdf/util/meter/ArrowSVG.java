@@ -27,8 +27,8 @@ public class ArrowSVG {
         ((GeneralPath) shape).closePath();
 
         // Get the rightmost point (pivot point)
-        double pivotX = 35.0;  // Approximate rightmost X from shape
-        double pivotY = 2.0;   // Approximate middle Y of the shape
+        double pivotX = 36;  // Approximate rightmost X from shape 37px
+        double pivotY = 0.0;   // Approximate middle Y of the shape 2px
 
         // Apply transformations: move to pivot, rotate, move back
         AffineTransform transform = new AffineTransform();

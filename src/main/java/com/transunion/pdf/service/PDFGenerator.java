@@ -52,7 +52,6 @@ public class PDFGenerator {
 
         switch (pdfVersion) {
             case PAID:
-                // Generate PDF for free version
                 mainReport = mainReportService.getMainReport(pdfVersion);
 
                 //Prepare map of parameter for all sub report
@@ -66,7 +65,7 @@ public class PDFGenerator {
                 parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
 
                 parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData,pdfVersion));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
 
                 parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
                 parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
@@ -77,7 +76,6 @@ public class PDFGenerator {
 
                 break;
             case STARTER:
-                // Generate PDF for free version
                 mainReport = mainReportService.getMainReport(pdfVersion);
 
                 //Prepare map of parameter for all sub report
@@ -91,7 +89,7 @@ public class PDFGenerator {
                 parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
 
                 parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData,pdfVersion));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
 
                 parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
                 parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
@@ -102,7 +100,6 @@ public class PDFGenerator {
 
                 break;
             case INDIRECT:
-                // Generate PDF for free version
                 mainReport = mainReportService.getMainReport(pdfVersion);
 
                 //Prepare map of parameter for all sub report
@@ -113,14 +110,13 @@ public class PDFGenerator {
                 parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
 
                 parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData,pdfVersion));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
 
                 parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
                 parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
 
                 break;
             case NH:
-                // Generate PDF for free version
                 mainReport = mainReportService.getMainReport(pdfVersion);
 
                 //Prepare map of parameter for all sub report
@@ -134,7 +130,7 @@ public class PDFGenerator {
                 parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
 
                 parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData,pdfVersion));
+                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
 
                 parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
                 parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
@@ -194,8 +190,7 @@ public class PDFGenerator {
         } catch (JRException e) {
             // Handle JasperReport generation exception, possibly logging or rethrowing a custom exception
             throw new JRException("Failed to generate PDF for version: " + pdfVersion, e);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

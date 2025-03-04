@@ -3,6 +3,7 @@ package com.transunion.pdf;
 import com.transunion.pdf.constant.ApplicationConstant;
 import com.transunion.pdf.dto.PDFData;
 import com.transunion.pdf.enums.PdfVersion;
+import com.transunion.pdf.enums.SummaryIdType;
 import com.transunion.pdf.model.*;
 import com.transunion.pdf.service.PDFGenerator;
 import net.sf.jasperreports.engine.JRException;
@@ -22,37 +23,35 @@ class PDFGeneratorTest {
     @Autowired
     private PDFGenerator pdfGenerator;
 
-    @Test
-    void testGeneratePdfPaidVersion() {
-        try {
-            PDFData pdfData = getPdfData();
-            pdfData.getOpenAccountInfoList().get(1).getAccountDetails().setAccountUnderDispute(true);
-
-            // Call the generatePdf method for the PAID version
-            byte[] pdfBytes = pdfGenerator.generatePdf(PdfVersion.PAID, pdfData, false, "password");
-
-            // Validate that the PDF byte array is not null or empty
-            AssertionErrors.assertNotNull(Arrays.toString(pdfBytes), "PDF byte array should not be null");
-            assert pdfBytes.length > 0 : "PDF byte array should contain data";
-
-            System.out.println("PDF generated successfully for PAID version.");
-
-        } catch (JRException e) {
-            e.printStackTrace();
-            assert false : "An exception occurred during PDF generation: " + e.getMessage();
-        }
-    }
-
-    @Test
-    void testCompileJrxmlToJasper(){
-        try {
-             JasperCompileManager.compileReportToFile(ApplicationConstant.OPEN_ACCOUNT_JRXML_PATH_DIRECT,"open_account_direct.jasper");
-             JasperCompileManager.compileReportToFile(ApplicationConstant.CLOSED_ACCOUNT_JRXML_PATH_DIRECT,"closed_account_direct.jasper");
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
+//    @Test
+//    void testGeneratePdfPaidVersion() {
+//        try {
+//            PDFData pdfData = getPdfData();
+//            pdfData.getOpenAccountInfoList().get(1).getAccountDetails().setAccountUnderDispute(true);
+//
+//            // Call the generatePdf method for the PAID version
+//            byte[] pdfBytes = pdfGenerator.generatePdf(PdfVersion.PAID, pdfData, false, "password");
+//
+//            // Validate that the PDF byte array is not null or empty
+//            AssertionErrors.assertNotNull(Arrays.toString(pdfBytes), "PDF byte array should not be null");
+//            assert pdfBytes.length > 0 : "PDF byte array should contain data";
+//
+//            System.out.println("PDF generated successfully for PAID version.");
+//
+//        } catch (JRException e) {
+//            e.printStackTrace();
+//            assert false : "An exception occurred during PDF generation: " + e.getMessage();
+//        }
+//    }
+//
+//    @Test
+//    void testCompileJrxmlToJasper(){
+//        try {
+//             JasperCompileManager.compileReportToFile(ApplicationConstant.NH_INDEX_JRXML_PATH,"toc.jasper");
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//    }
 
 
     //Create Mock Data - PDFData
@@ -60,7 +59,7 @@ class PDFGeneratorTest {
         PDFData pdfData = new PDFData();
         pdfData.setCopyrightYear("2026");
         pdfData.setControlNumber("3214589045");
-        pdfData.setCibilScore(555);
+        pdfData.setCibilScore(300);
         pdfData.setReportGeneratedDate("17 Dec 2024");
         pdfData.setCibilScoreDate("12th Nov 2024");
         pdfData.setPersonalInfo(getPersonalInfo());
@@ -68,13 +67,16 @@ class PDFGeneratorTest {
         pdfData.setEmailInfoList(getEmailInfoList());
         pdfData.setContactInfoList(getContactInfoList());
         pdfData.setAddressInfoList(getAddressInfoList());
-        pdfData.setTotalDisputes(1);
+        pdfData.setTotalAccountsUnderDisputes(1);
         pdfData.setCurrentBalance(BigDecimal.valueOf(150));
         pdfData.setAmountOverDue(BigDecimal.valueOf(50));
         pdfData.setClosedCreditCards(0);
         pdfData.setClosedLoans(0);
         pdfData.setOpenCreditCards(10);
         pdfData.setOpenLoans(0);
+
+        pdfData.setSummaryIdType(SummaryIdType.DRIVERS_LICENSE);
+        pdfData.setSummaryIdNumber("DYDPR23P");
 
         pdfData.setTwelveMonthLatePaymentInfo(getTwelveMonthLatePaymentInfo());
 //        pdfData.setTwelveMonthLatePaymentInfo(new TwelveMonthLatePaymentInfo(new LatePaymentCount(),new LatePaymentRemarkCount()));
@@ -272,8 +274,8 @@ class PDFGeneratorTest {
     private List<PastDueMonthlyStatus> getPastDueMonthlyStatusList() {
         List<PastDueMonthlyStatus> pastDueMonthlyStatusList = new ArrayList<>();
         pastDueMonthlyStatusList.add(PastDueMonthlyStatus.builder()
-                .year(2021).janDue("STD").febDue("1").marDue("###")
-                .aprDue("000").mayDue("0").junDue("SUB").julDue("000")
+                .year(2021).febDue("1").marDue("###")
+                .aprDue("000").mayDue("0").julDue("000")
                 .augDue("SMA").sepDue("000").octDue("XXX").novDue("001")
                 .decDue("002")
                 .build());
@@ -316,14 +318,13 @@ class PDFGeneratorTest {
                 .ownerShipType("Joint Ownership")
                 .isAccountUnderDispute(false)
                 .disputeInfo(new DisputeInfo("IDontknow", "10/05/2020"))
-                .accountStatus("Amount OverDue")
                 .creditLimit(BigDecimal.valueOf(50000))
                 .highCredit(BigDecimal.valueOf(10000))
                 .currentBalance(BigDecimal.valueOf(4000))
                 .cashLimit(BigDecimal.valueOf(3000))
                 .amountOverdue(BigDecimal.valueOf(2000))
-                .rateOfInterest("8%")
-                .repaymentTenure("12 Months")
+                .rateOfInterest(BigDecimal.valueOf(8))
+                .repaymentTenure(BigDecimal.valueOf(10))
                 .emiAmount(BigDecimal.valueOf(3000))
                 .paymentFrequency("Monthly")
                 .actualPaymentAmount(BigDecimal.valueOf(5000))

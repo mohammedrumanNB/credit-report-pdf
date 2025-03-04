@@ -23,19 +23,15 @@ public class PersonalInfoReportService {
         String filePath;
         switch (pdfVersion) {
             case INDIRECT:
-                //Get PersonalInfo Report jrxml and compile it
                 filePath = ApplicationConstant.INDIRECT_PERSONALINFO_JASPER_PATH;
                 break;
             case NH:
-                //Get PersonalInfo Report jrxml and compile it
                 filePath = ApplicationConstant.NH_PERSONALINFO_JASPER_PATH;
                 break;
             case STARTER:
-                //Get PersonalInfo Report jrxml and compile it
                 filePath = ApplicationConstant.STARTER_PERSONALINFO_JASPER_PATH;
                 break;
             case PAID:
-                //Get PersonalInfo Report jrxml and compile it
                 filePath = ApplicationConstant.PAID_PERSONALINFO_JASPER_PATH;
                 break;
             default:

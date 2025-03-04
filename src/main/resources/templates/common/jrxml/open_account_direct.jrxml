@@ -46,7 +46,7 @@
 	<field name="srNo" class="java.lang.String"/>
 	<background splitType="Stretch"/>
 	<detail>
-		<band height="757" splitType="Immediate">
+		<band height="701" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{accountUnderDispute}==true]]></printWhenExpression>
 			<element kind="frame" uuid="6545068d-93b4-4faa-a884-0bb7fd322c4b" x="0" y="0" width="515" height="70">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -139,15 +139,15 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="f42726ac-d600-4ce0-b387-c430c4caf77e" x="0" y="70" width="515" height="110" removeLineWhenBlank="true">
+			<element kind="frame" uuid="f42726ac-d600-4ce0-b387-c430c4caf77e" x="0" y="70" width="515" height="82" removeLineWhenBlank="true">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.element.name" value="chck"/>
-				<element kind="frame" uuid="4aec4896-8c58-4861-9397-ef21fb8ab638" x="16" y="16" width="483" height="94" removeLineWhenBlank="true">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<element kind="frame" uuid="4aec4896-8c58-4861-9397-ef21fb8ab638" x="16" y="16" width="483" height="66" removeLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$F{accountUnderDispute}]]></printWhenExpression>
-					<element kind="rectangle" uuid="45b81fc4-c716-4355-bf63-b45a2645e1cc" x="0" y="0" width="483" height="94" backcolor="#F2F2FC" radius="8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<element kind="rectangle" uuid="45b81fc4-c716-4355-bf63-b45a2645e1cc" x="0" y="0" width="483" height="66" backcolor="#F2F2FC" radius="8">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -236,42 +236,6 @@
 							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						</box>
 					</element>
-					<element kind="frame" uuid="5564fad9-802d-49b5-ab77-6c710873a2e7" x="0" y="66" width="483" height="28" removeLineWhenBlank="true">
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<element kind="frame" uuid="f209ac56-75d6-4444-9a24-9dbeac582e76" x="12" y="8" width="12" height="12">
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<element kind="image" uuid="b520e601-6cee-45c5-a40d-a6c811d5db44" x="1" y="1" width="10" height="10" hImageAlign="Center" vImageAlign="Middle">
-								<expression><![CDATA["icons/danger circular icon.svg"]]></expression>
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.y" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							</element>
-						</element>
-						<element kind="frame" uuid="4528f5f8-de40-4354-9157-6fc3cea4ff37" x="32" y="8" width="439" height="12">
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<element kind="staticText" uuid="0b37a100-7925-45cd-a22b-0e296343939c" x="0" y="0" width="101" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-								<text><![CDATA[The status of this account is]]></text>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							</element>
-							<element kind="textField" uuid="17175b9e-fb1f-455b-8338-907cc2dedf44" x="102" y="0" width="250" height="12" forecolor="#EB0000" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-								<expression><![CDATA[$F{accountStatus}]]></expression>
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.y" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							</element>
-						</element>
-					</element>
 				</element>
 				<box>
 					<pen lineWidth="0.75" lineColor="#D9D9D9"/>
@@ -281,9 +245,10 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="a60a3396-1883-4a17-bc7e-04434bb4e4d7" positionType="Float" x="0" y="180" width="515" height="132" backcolor="#FFFFFF">
+			<element kind="frame" uuid="a60a3396-1883-4a17-bc7e-04434bb4e4d7" positionType="Float" x="0" y="152" width="515" height="132" backcolor="#FFFFFF">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="d6af7492-9769-4db9-a0ea-1ea53bb4ca51" x="16" y="16" width="483" height="12">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -521,11 +486,11 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="29481d55-7354-4a36-9e8d-074c6c06ab2b" positionType="Float" x="0" y="312" width="515" height="33">
+			<element kind="frame" uuid="29481d55-7354-4a36-9e8d-074c6c06ab2b" positionType="Float" x="0" y="284" width="515" height="33">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="line" uuid="fec5cb85-c6fb-4aef-b0e0-4cbdb9a26c1f" mode="Opaque" x="16" y="16" width="483" height="1" backcolor="#D9D9D9">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -541,9 +506,10 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="f73485c1-8e44-4c85-af9e-7ed4df44ffde" positionType="Float" x="0" y="345" width="515" height="56">
+			<element kind="frame" uuid="f73485c1-8e44-4c85-af9e-7ed4df44ffde" positionType="Float" x="0" y="317" width="515" height="56">
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="f2b0536b-d7fd-4713-8013-1dee92baec23" x="16" y="0" width="483" height="56">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -661,11 +627,11 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="8426205e-f7c2-4595-99e6-b0a70da651dd" positionType="Float" x="0" y="401" width="515" height="33">
+			<element kind="frame" uuid="8426205e-f7c2-4595-99e6-b0a70da651dd" positionType="Float" x="0" y="373" width="515" height="33">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="line" uuid="16997fec-79ef-4134-953b-4d5f0eb83742" mode="Opaque" x="16" y="16" width="483" height="1" backcolor="#D9D9D9">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -681,9 +647,10 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="8b5aa5f1-6f59-4578-8707-0c483d17c89a" positionType="Float" x="0" y="434" width="515" height="36">
+			<element kind="frame" uuid="8b5aa5f1-6f59-4578-8707-0c483d17c89a" positionType="Float" x="0" y="406" width="515" height="36">
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="3b612be4-9b65-4daf-9633-456bc47098d3" x="16" y="0" width="483" height="36">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -761,11 +728,11 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="575794b7-c22a-46b7-81ca-8eb65234a08e" positionType="Float" x="0" y="470" width="515" height="33">
+			<element kind="frame" uuid="575794b7-c22a-46b7-81ca-8eb65234a08e" positionType="Float" x="0" y="442" width="515" height="33">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="line" uuid="eec342d5-973e-4dfd-8870-3fe43bf73201" mode="Opaque" x="16" y="16" width="483" height="1" backcolor="#D9D9D9">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -781,9 +748,10 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="59b759e9-9bac-4986-a164-09ab36a0aa8c" positionType="Float" x="0" y="503" width="515" height="28">
+			<element kind="frame" uuid="59b759e9-9bac-4986-a164-09ab36a0aa8c" positionType="Float" x="0" y="475" width="515" height="28">
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="c80dfe06-808a-4610-9e2e-cde332521468" x="16" y="0" width="485" height="28" forecolor="#005F8D">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -813,11 +781,11 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="fdf1363e-c3a4-4cb3-afae-6687e9084f71" positionType="Float" x="0" y="531" width="515" height="33">
+			<element kind="frame" uuid="fdf1363e-c3a4-4cb3-afae-6687e9084f71" positionType="Float" x="0" y="503" width="515" height="33">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="line" uuid="7f00f8cc-5686-4c6e-a5a3-96eb75f4a354" mode="Opaque" x="16" y="16" width="483" height="1" backcolor="#D9D9D9">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -833,7 +801,7 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="1d05f8f0-2c2c-4bc2-a44e-c3fadd6befdf" positionType="Float" x="0" y="564" width="515" height="36">
+			<element kind="frame" uuid="1d05f8f0-2c2c-4bc2-a44e-c3fadd6befdf" positionType="Float" x="0" y="536" width="515" height="36">
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -914,11 +882,11 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="451ef6b9-420e-46bc-adb3-1014980578dc" positionType="Float" x="0" y="600" width="515" height="33">
+			<element kind="frame" uuid="451ef6b9-420e-46bc-adb3-1014980578dc" positionType="Float" x="0" y="572" width="515" height="33">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="line" uuid="e89e011e-6f83-438b-921e-d3c1c9600234" mode="Opaque" x="16" y="16" width="483" height="1" backcolor="#D9D9D9">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -934,10 +902,10 @@
 					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#D9D9D9"/>
 				</box>
 			</element>
-			<element kind="frame" uuid="d8b8fddc-8d0f-4ded-8b07-f4005f08950d" positionType="Float" x="0" y="633" width="515" height="96">
+			<element kind="frame" uuid="d8b8fddc-8d0f-4ded-8b07-f4005f08950d" positionType="Float" x="0" y="605" width="515" height="96">
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="38e31255-365a-4b1f-8fd5-9a7a1cf1b5c1" x="16" y="0" width="483" height="76">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>

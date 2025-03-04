@@ -104,25 +104,25 @@
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</columnHeader>
 	<detail>
-		<band height="577" splitType="Stretch">
-			<element kind="frame" uuid="eec2e3ac-08e9-4ac8-888e-9e7747851f02" x="50" y="14" width="495" height="124">
+		<band height="589" splitType="Stretch">
+			<element kind="frame" uuid="eec2e3ac-08e9-4ac8-888e-9e7747851f02" x="50" y="14" width="495" height="136">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<element kind="staticText" uuid="422659bd-5cec-4025-aaf7-0362a063ffa8" x="0" y="100" width="495" height="24" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+				<element kind="staticText" uuid="422659bd-5cec-4025-aaf7-0362a063ffa8" x="0" y="112" width="495" height="24" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 					<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
 					<text><![CDATA[Note: CIBIL cannot make any change directly to your CIBIL Report. Your CIBIL Report can be modified only once the change is authorized by the lender, and the details are provided to CIBIL.]]></text>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</element>
-				<element kind="frame" uuid="a79432e7-4a4a-4b98-85e2-133bd7e8aa5f" x="0" y="56" width="495" height="36">
+				<element kind="frame" uuid="a79432e7-4a4a-4b98-85e2-133bd7e8aa5f" x="0" y="64" width="495" height="36">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<element kind="textField" uuid="5ff9e634-bb1e-4104-86a6-2ebf46cbae44" x="10" y="0" width="485" height="36" forecolor="#595959" markup="html" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 						<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
 						<expression><![CDATA["<span style='font-family: Roboto - 700;'>Enquiry Information:</span>  This section provides details regarding loan applications you have made. An enquiry means that a credit institution has requested your credit details from CIBIL. Lenders may tread with caution considering your multiple enquiries in a short span of time, which shows a behaviour of seeking excessive credit. The enquiries made are captured for a period of 7 years.</span>"]]></expression>
@@ -140,18 +140,18 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</element>
 				</element>
-				<element kind="frame" uuid="8458a444-b665-4d1f-80f8-3484730fd38f" x="10" y="0" width="485" height="48">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<element kind="frame" uuid="8458a444-b665-4d1f-80f8-3484730fd38f" x="10" y="20" width="485" height="36">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<element kind="staticText" uuid="82a37068-8a8c-4d6c-b566-fdc634735b96" x="10" y="0" width="475" height="48" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+					<element kind="staticText" uuid="82a37068-8a8c-4d6c-b566-fdc634735b96" x="10" y="0" width="475" height="36" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 						<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
-						<text><![CDATA[On occasion you may also notice “XXX” reported for your DPD on a certain account which implies that information for these months has not been reported to CIBIL by the Banks. If there is a number in the DPD column, then it means that the payment is late by that many days. So for example if it is 050, then it means the payment is late by 50 days. If it is 000 then it means the payment is as per   the due date, so there is no deviation or late payment.]]></text>
+						<text><![CDATA[Loans taken through a digital lending platform may appear multiple times on your CIBIL report, where the loan amount is split   between different banks or financial institutions. To better understand this co-lending arrangement, it is essential to carefully review the terms and conditions provided by the digital lending platform.]]></text>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</element>
 					<element kind="staticText" uuid="c8a174e0-0ad9-4719-a276-14f2b3dd1908" x="0" y="0" width="10" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Bottom">
 						<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
@@ -162,12 +162,34 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</element>
 				</element>
+				<element kind="frame" uuid="f699a8be-5669-42e7-bc77-abbea66789c9" x="20" y="0" width="475" height="12">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<element kind="staticText" uuid="016e0054-f6c3-4910-9833-006caac574e3" x="10" y="0" width="465" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
+						<text><![CDATA[Regulated entities offering credit through multiple brands and channels.]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="staticText" uuid="409ba4bb-df7a-45e0-9256-3758257ac50a" x="0" y="0" width="10" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Bottom">
+						<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
+						<text><![CDATA[•]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+				</element>
 			</element>
-			<element kind="frame" uuid="6ff88009-130b-46eb-a2fc-ed782073e23e" x="40" y="158" width="515" height="30">
+			<element kind="frame" uuid="6ff88009-130b-46eb-a2fc-ed782073e23e" x="40" y="170" width="515" height="30">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="9ce43060-6b43-424c-ae9c-dd5442f2a364" x="0" y="0" width="515" height="30">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -200,11 +222,11 @@
 					</element>
 				</element>
 			</element>
-			<element kind="frame" uuid="c705ac9f-2a13-4f4d-b188-03b20b2db3d2" x="40" y="200" width="515" height="377">
+			<element kind="frame" uuid="c705ac9f-2a13-4f4d-b188-03b20b2db3d2" x="40" y="212" width="515" height="377">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="d2e3182a-0fc7-469c-a4c7-349a76297e6e" x="10" y="0" width="495" height="21">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -551,6 +573,7 @@
 					</element>
 				</element>
 			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>
 	</detail>
 </jasperReport>

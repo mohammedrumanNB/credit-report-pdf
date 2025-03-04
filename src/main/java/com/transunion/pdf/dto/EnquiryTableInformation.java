@@ -1,11 +1,10 @@
 package com.transunion.pdf.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class EnquiryTableInformation {

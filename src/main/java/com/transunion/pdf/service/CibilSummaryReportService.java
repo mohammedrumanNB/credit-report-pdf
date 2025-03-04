@@ -21,15 +21,12 @@ public class CibilSummaryReportService {
         String filePath;
         switch (pdfVersion) {
             case NH:
-                //Get Cibil Summary Report jrxml and compile it
                 filePath = ApplicationConstant.NH_SUMMARY_JASPER_PATH;
                 break;
             case STARTER:
-                //Get Cibil Summary Report jrxml and compile it
                 filePath = ApplicationConstant.STARTER_SUMMARY_JASPER_PATH;
                 break;
             case PAID:
-                //Get Cibil Summary Report jrxml and compile it
                 filePath = ApplicationConstant.PAID_SUMMARY_JASPER_PATH;
                 break;
             default:
@@ -60,10 +57,6 @@ public class CibilSummaryReportService {
         //Validate Identification Details
         CommonUtil.validateIdentificationInfo(identificationInfoList);
 
-        //Get PAN Card Details if available
-        IdentificationInfo identificationInfo = getIdentificationInfo(identificationInfoList);
-
-
         //Validate Late Payment Info
         CommonUtil.validateLatePaymentInfoTw(twelveMonthLatePaymentInfo);
         CommonUtil.validateLatePaymentInfoTh(thirtySixMonthLatePaymentInfo);
@@ -77,8 +70,8 @@ public class CibilSummaryReportService {
         summary.setName(personalInfo.getFullName());
         summary.setDob(personalInfo.getDateOfBirth());
         summary.setGender(personalInfo.getGender());
-        summary.setIdType(identificationInfo.getIdentificationType());
-        summary.setIdNumber(identificationInfo.getIdNumber());
+        summary.setIdType(pdfData.getSummaryIdType().getCode());
+        summary.setIdNumber(pdfData.getSummaryIdNumber());
         summary.setEmail(!emailInfoList.isEmpty() ? emailInfoList.get(0).getEmail() : "-");
         summary.setMobileNumber(!contactInfoList.isEmpty() ? contactInfoList.get(0).getContactNumber() : "-");
         summary.setAddress(!addressInfoList.isEmpty() ? addressInfoList.get(0).getCompleteAddress() : "-");
@@ -93,7 +86,7 @@ public class CibilSummaryReportService {
             summary.setEnquiries36(enquiryInfoList.get(2) != null ? enquiryInfoList.get(2).getEnquiryDetailsList() == null || enquiryInfoList.get(2).getEnquiryDetailsList().isEmpty() ? 0 : enquiryInfoList.get(2).getEnquiryDetailsList().size() : 0);
         }
 
-        summary.setTotalDisputes(pdfData.getTotalDisputes());
+        summary.setTotalDisputes(pdfData.getTotalAccountsUnderDisputes());
 
         //Format the monetary values to Indian Format
         summary.setCurrentBalance(CommonUtil.formatIndianCurrency(pdfData.getCurrentBalance()));
@@ -134,17 +127,4 @@ public class CibilSummaryReportService {
         return pdfData.getOpenCreditCards() + pdfData.getOpenLoans();
     }
 
-    public IdentificationInfo getIdentificationInfo(List<IdentificationInfo> identificationInfoList) {
-
-        // Search for PAN ID and return it if found
-        for (IdentificationInfo info : identificationInfoList) {
-            if (ApplicationConstant.ID_TYPE_PAN.equalsIgnoreCase(info.getIdentificationType())) {
-                return info;
-            }
-        }
-
-        // Return the first element if PAN ID is not found
-        return identificationInfoList.get(0);
-
-    }
 }

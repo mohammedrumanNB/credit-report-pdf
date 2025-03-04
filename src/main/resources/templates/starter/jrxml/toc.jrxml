@@ -151,7 +151,7 @@
 						<element kind="frame" uuid="0f7888ed-c5fb-4fb1-849a-ee11594af630" x="0" y="0" width="291" height="40">
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							<element kind="textField" uuid="b41ac11c-9856-46bf-8a5c-85a5c7320603" x="0" y="0" width="120" height="16" forecolor="#262626" fontName="Roboto - 500" linkType="LocalAnchor" linkTarget="Self" underline="true" vTextAlign="Middle">
-								<expression><![CDATA["Personal Information"]]></expression>
+								<expression><![CDATA["Profile Information"]]></expression>
 								<hyperlinkAnchorExpression><![CDATA["Personal Anchor"]]></hyperlinkAnchorExpression>
 								<hyperlinkTooltipExpression><![CDATA["Go to Personal Information Page"]]></hyperlinkTooltipExpression>
 								<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -161,8 +161,7 @@
 							</element>
 							<element kind="staticText" uuid="45b924ea-1381-47fb-a127-63e4afd34fcd" x="0" y="16" width="291" height="24" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 								<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
-								<text><![CDATA[Detailed view of your personal information as provided to the lender for
-loan application.]]></text>
+								<text><![CDATA[Detailed view of your personal, contact and employment information as      provided to the lender for loan application.]]></text>
 							</element>
 						</element>
 					</element>
@@ -329,8 +328,9 @@ credit profile.]]></text>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<element kind="image" uuid="adb5e7b4-2e36-42fa-a98b-430c97f60e01" x="0" y="0" width="62" height="25" vImageAlign="Top">
+					<element kind="image" uuid="adb5e7b4-2e36-42fa-a98b-430c97f60e01" x="0" y="0" width="62" height="25" linkType="Reference" linkTarget="Blank" vImageAlign="Top">
 						<expression><![CDATA["icons/gplay.png"]]></expression>
+						<hyperlinkReferenceExpression><![CDATA["https://play.google.com/store/apps/details?id=com.tuci.cibilindia&referrer=utm_source%3DPDF%2BReport%26utm_medium%3DCR%26utm_campaign%3DPrintPDF"]]></hyperlinkReferenceExpression>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -345,8 +345,9 @@ credit profile.]]></text>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<element kind="image" uuid="1bc8412c-c0e4-49a5-91ca-4f9133d0b614" x="0" y="0" width="54" height="16" scaleImage="FillFrame">
+							<element kind="image" uuid="1bc8412c-c0e4-49a5-91ca-4f9133d0b614" x="0" y="0" width="54" height="16" scaleImage="FillFrame" linkType="Reference" linkTarget="Blank">
 								<expression><![CDATA["icons/apple-store.png"]]></expression>
+								<hyperlinkReferenceExpression><![CDATA["https://apps.apple.com/ba/app/cibil-score-report/id1501683967?utm_source=PDF+Report&utm_medium=CR&utm_campaign=PrintPDF"]]></hyperlinkReferenceExpression>
 								<property name="com.jaspersoft.studio.unit.height" value="px"/>
 							</element>
 						</element>

@@ -298,7 +298,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="e679952c-f7e6-44be-9d80-aca5938b9bc8" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextDec">
+							<element kind="textField" uuid="e679952c-f7e6-44be-9d80-aca5938b9bc8" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextDec">
 								<expression><![CDATA[$F{decDue}]]></expression>
 							</element>
 						</detailCell>
@@ -312,7 +312,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="3a4fb062-d1e7-428d-b800-689fbb6c6190" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextNov">
+							<element kind="textField" uuid="3a4fb062-d1e7-428d-b800-689fbb6c6190" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextNov">
 								<expression><![CDATA[$F{novDue}]]></expression>
 							</element>
 						</detailCell>
@@ -326,7 +326,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="d6c5154d-ace3-4384-b943-3b383840508e" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextOct">
+							<element kind="textField" uuid="d6c5154d-ace3-4384-b943-3b383840508e" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextOct">
 								<expression><![CDATA[$F{octDue}]]></expression>
 							</element>
 						</detailCell>
@@ -340,7 +340,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="61a0448b-0d8d-40d4-9bbc-2a559030f933" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextSep">
+							<element kind="textField" uuid="61a0448b-0d8d-40d4-9bbc-2a559030f933" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextSep">
 								<expression><![CDATA[$F{sepDue}]]></expression>
 							</element>
 						</detailCell>
@@ -354,7 +354,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="99d1db89-9861-4507-92f9-3b09ebb7aa88" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextAug">
+							<element kind="textField" uuid="99d1db89-9861-4507-92f9-3b09ebb7aa88" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextAug">
 								<expression><![CDATA[$F{augDue}]]></expression>
 							</element>
 						</detailCell>
@@ -368,7 +368,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="cdd9537a-bbec-4920-a729-bd5a6d29809e" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextJul">
+							<element kind="textField" uuid="cdd9537a-bbec-4920-a729-bd5a6d29809e" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextJul">
 								<expression><![CDATA[$F{julDue}]]></expression>
 							</element>
 						</detailCell>
@@ -382,7 +382,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="d09e1299-85d3-4274-a096-90c2f7f16297" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextJun">
+							<element kind="textField" uuid="d09e1299-85d3-4274-a096-90c2f7f16297" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextJun">
 								<expression><![CDATA[$F{junDue}]]></expression>
 							</element>
 						</detailCell>
@@ -396,7 +396,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="cdc1c850-b05f-424c-867d-9d0ca118c6f6" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextMay">
+							<element kind="textField" uuid="cdc1c850-b05f-424c-867d-9d0ca118c6f6" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextMay">
 								<expression><![CDATA[$F{mayDue}]]></expression>
 							</element>
 						</detailCell>
@@ -410,7 +410,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="1953e45a-3945-46ab-b968-080fa752fc98" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextApr">
+							<element kind="textField" uuid="1953e45a-3945-46ab-b968-080fa752fc98" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextApr">
 								<expression><![CDATA[$F{aprDue}]]></expression>
 							</element>
 						</detailCell>
@@ -424,7 +424,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="f3863c8d-c1e1-4d6e-8438-d4ae0ffcc5d3" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextMar">
+							<element kind="textField" uuid="f3863c8d-c1e1-4d6e-8438-d4ae0ffcc5d3" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextMar">
 								<expression><![CDATA[$F{marDue}]]></expression>
 							</element>
 						</detailCell>
@@ -438,7 +438,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="712aa581-b0e5-48f7-8722-0f93ff52e142" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextFeb">
+							<element kind="textField" uuid="712aa581-b0e5-48f7-8722-0f93ff52e142" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextFeb">
 								<expression><![CDATA[$F{febDue}]]></expression>
 							</element>
 						</detailCell>
@@ -452,7 +452,7 @@ $F{febDue}.equals("LSS") ||
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</columnHeader>
 						<detailCell height="20" style="Table 1_TD">
-							<element kind="textField" uuid="34578e6f-194e-4c56-97aa-b3107ac21211" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle" style="boldTextJan">
+							<element kind="textField" uuid="34578e6f-194e-4c56-97aa-b3107ac21211" x="0" y="0" width="37" height="20" fontName="Roboto - 400" fontSize="8.0" blankWhenNull="true" hTextAlign="Center" vTextAlign="Middle" style="boldTextJan">
 								<expression><![CDATA[$F{janDue}]]></expression>
 							</element>
 						</detailCell>
