@@ -2,6 +2,7 @@ package com.transunion.pdf.model;
 
 import lombok.*;
 
+
 @Getter
 @Setter
 @NoArgsConstructor

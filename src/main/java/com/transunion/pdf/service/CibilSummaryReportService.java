@@ -20,9 +20,6 @@ public class CibilSummaryReportService {
     public JasperReport getCibilSummaryReport(PdfVersion pdfVersion) throws JRException {
         String filePath;
         switch (pdfVersion) {
-            case NH:
-                filePath = ApplicationConstant.NH_SUMMARY_JASPER_PATH;
-                break;
             case STARTER:
                 filePath = ApplicationConstant.STARTER_SUMMARY_JASPER_PATH;
                 break;

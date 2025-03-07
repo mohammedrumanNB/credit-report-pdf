@@ -13,9 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @Service
 public class PDFGenerator {
@@ -111,29 +115,6 @@ public class PDFGenerator {
                 parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
                 parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
 
-                break;
-            case NH:
-                mainReport = mainReportService.getMainReport(pdfVersion);
-
-                //Prepare map of parameter for all sub report
-                parameters.put("cibilSummaryReport", cibilSummaryReportService.getCibilSummaryReport(pdfVersion));
-                parameters.put("cibilSummaryParam", cibilSummaryReportService.getCibilSummaryParam(pdfData));
-
-                parameters.put("indexReport", indexReportService.getIndexReport(pdfVersion));
-                parameters.put("indexParam", indexReportService.getIndexParam(pdfData));
-
-                parameters.put("personalInformationReport", personalInfoReportService.getPersonalInfoReport(pdfVersion));
-                parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
-
-                parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
-
-                parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
-                parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
-
-                parameters.put("glossaryReport1", glossaryReportService.getGlossaryReport1());
-                parameters.put("glossaryReport2", glossaryReportService.getGlossaryReport2());
-                parameters.put("glossaryParam", glossaryReportService.getGlossaryParam(pdfData));
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported PDF version: " + pdfVersion);

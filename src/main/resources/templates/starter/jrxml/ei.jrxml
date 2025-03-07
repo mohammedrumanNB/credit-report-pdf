@@ -58,18 +58,18 @@
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<element kind="staticText" uuid="eaa94519-46c6-4d45-92a4-fbb3c0275afd" x="0" y="0" width="73" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+						<element kind="staticText" uuid="eaa94519-46c6-4d45-92a4-fbb3c0275afd" x="-5" y="0" width="73" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
 							<text><![CDATA[Report generated on]]></text>
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						</element>
-						<element kind="textField" uuid="8ca930cc-d924-4e28-8c2b-fad30424ba6c" x="77" y="0" width="45" height="10" forecolor="#595959" fontName="Roboto - 500" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+						<element kind="textField" uuid="8ca930cc-d924-4e28-8c2b-fad30424ba6c" x="72" y="0" width="50" height="10" forecolor="#595959" fontName="Roboto - 500" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
 							<expression><![CDATA[$P{enquiryInformationParam}.getReportGeneratedDate()]]></expression>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
 					</element>
 					<element kind="frame" uuid="bedf3e07-abd8-4b10-9b02-9167a8b2f9a0" x="11" y="0" width="111" height="10">
@@ -84,15 +84,7 @@
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						</element>
 						<element kind="textField" uuid="5e636292-e34e-4d47-91a9-666c01ea5e4b" x="61" y="0" width="50" height="10" forecolor="#595959" fontName="Roboto - 500" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
-							<expression><![CDATA[$P{enquiryInformationParam}.getControlNumber() != null && $P{enquiryInformationParam}.getControlNumber().length() == 9 ?
-$P{enquiryInformationParam}.getControlNumber().substring(0, 3) + " " +
-$P{enquiryInformationParam}.getControlNumber().substring(3, 6) + " " +
-$P{enquiryInformationParam}.getControlNumber().substring(6) :
-$P{enquiryInformationParam}.getControlNumber() != null && $P{enquiryInformationParam}.getControlNumber().length() == 10 ?
-$P{enquiryInformationParam}.getControlNumber().substring(0, 3) + " " +
-$P{enquiryInformationParam}.getControlNumber().substring(3, 6) + " " +
-$P{enquiryInformationParam}.getControlNumber().substring(6) :
-$P{enquiryInformationParam}.getControlNumber()]]></expression>
+							<expression><![CDATA[$P{enquiryInformationParam}.getControlNumber()]]></expression>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -101,11 +93,19 @@ $P{enquiryInformationParam}.getControlNumber()]]></expression>
 					</element>
 				</element>
 			</element>
+			<element kind="line" uuid="8715d2bb-a1a6-4ff7-bbda-8c7b46a347da" x="40" y="63" width="515" height="1" backcolor="#D9D9D9">
+				<printWhenExpression><![CDATA[$V{PAGE_NUMBER}>1]]></printWhenExpression>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<pen lineWidth="1.0" lineColor="#D9D9D9"/>
+			</element>
 		</element>
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</columnHeader>
 	<detail>
-		<band height="313" splitType="Stretch">
+		<band height="378" splitType="Stretch">
 			<element kind="frame" uuid="b30d7a0a-c00e-49a8-aec7-d93d4bafe044" x="0" y="0" width="595" height="59">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -183,6 +183,102 @@ $P{enquiryInformationParam}.getControlNumber()]]></expression>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="frame" uuid="676646d8-fad8-41aa-b1a2-c3bc3a19b615" positionType="Float" x="40" y="277" width="515" height="66">
+				<printWhenExpression><![CDATA[$P{enquiryInformationParam}.isEnquiryInfoDisputePresent()]]></printWhenExpression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<element kind="rectangle" uuid="8de546a7-e88a-4dde-a4b1-19f61a3b5651" x="0" y="0" width="515" height="66" backcolor="#F2F2FC" radius="8">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<pen lineWidth="0.0"/>
+				</element>
+				<element kind="frame" uuid="c8a57754-0890-492c-938a-335ef344a019" x="0" y="0" width="515" height="66" removeLineWhenBlank="true">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<element kind="frame" uuid="8bd7529e-f276-4d96-8421-10aaccf16185" x="12" y="12" width="12" height="12">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<element kind="image" uuid="dea78844-8fff-4cfe-9d4a-1d84bc277e90" x="1" y="2" width="10" height="9" hImageAlign="Left" vImageAlign="Middle">
+							<expression><![CDATA["icons/danger icon.svg"]]></expression>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						</element>
+					</element>
+					<element kind="frame" uuid="d8006b4a-c1cf-436a-80da-2dd062b9d378" x="32" y="12" width="471" height="42">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<element kind="staticText" uuid="7b23e8f7-61c9-4999-a510-cee9f853cb84" x="0" y="0" width="471" height="12" fontName="Roboto - 600" fontSize="8.0" vTextAlign="Middle">
+							<text><![CDATA[This enquiry information is under dispute]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</element>
+						<element kind="frame" uuid="a5f0433a-9734-40f6-93ab-173f633ce097" x="0" y="16" width="471" height="26">
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<element kind="frame" uuid="757c7aa1-a2bc-4423-a774-084919781ac8" x="0" y="0" width="471" height="12">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<element kind="staticText" uuid="88e21c55-948c-45d3-8de3-395801dc1c71" x="0" y="0" width="60" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<text><![CDATA[CIBIL Remarks:]]></text>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+								<element kind="textField" uuid="14e1650b-4323-47f1-aad1-775be4a77e68" x="64" y="0" width="406" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<expression><![CDATA[$P{enquiryInformationParam}.getEnquiryInfoDisputeInfo().getCibilRemarks()]]></expression>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+							</element>
+							<element kind="frame" uuid="d3f84bfe-5708-443c-8fac-d63e0d160861" x="0" y="14" width="471" height="12">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<element kind="staticText" uuid="e14371f9-dc26-4eb5-b9d5-547167fb4fbb" x="0" y="0" width="60" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<text><![CDATA[Dispute Date:]]></text>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+								<element kind="textField" uuid="5ec8187a-1476-42d0-ac9c-d7a9918169ec" x="64" y="0" width="405" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<expression><![CDATA[$P{enquiryInformationParam}.getEnquiryInfoDisputeInfo().getDisputeDate()]]></expression>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+							</element>
+						</element>
+					</element>
+					<box>
+						<pen lineWidth="0.75" lineColor="#E5E4F8"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#E5E4F8"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#E5E4F8"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+				</element>
 			</element>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>

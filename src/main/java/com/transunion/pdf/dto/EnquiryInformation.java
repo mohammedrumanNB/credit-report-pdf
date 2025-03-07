@@ -1,5 +1,6 @@
 package com.transunion.pdf.dto;
 
+import com.transunion.pdf.model.DisputeInfo;
 import lombok.*;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
@@ -15,4 +16,6 @@ public class EnquiryInformation {
     private int totalEnquiries;
     private JRBeanCollectionDataSource enquiryInfoDataSource;
     private JasperReport enquiryTableReport;
+    private boolean enquiryInfoDisputePresent;
+    private DisputeInfo enquiryInfoDisputeInfo;
 }

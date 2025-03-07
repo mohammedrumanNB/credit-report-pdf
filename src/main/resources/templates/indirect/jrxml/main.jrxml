@@ -37,7 +37,7 @@
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>
 		<band height="100">
-			<element kind="subreport" uuid="66c94690-5e9b-46cc-9c71-8fdce9185676" x="0" y="0" width="595" height="100" runToBottom="true" usingCache="true">
+			<element kind="subreport" uuid="66c94690-5e9b-46cc-9c71-8fdce9185676" x="0" y="0" width="595" height="100" runToBottom="true">
 				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
 				<expression><![CDATA[$P{personalInformationReport}]]></expression>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -51,7 +51,7 @@
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>
 		<band height="100">
-			<element kind="subreport" uuid="ae68fe39-82bc-4bcf-b115-2ad788d3dc99" x="0" y="0" width="595" height="100" runToBottom="true" usingCache="true">
+			<element kind="subreport" uuid="ae68fe39-82bc-4bcf-b115-2ad788d3dc99" x="0" y="0" width="595" height="100" runToBottom="true">
 				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
 				<expression><![CDATA[$P{accountInformationReport}]]></expression>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>

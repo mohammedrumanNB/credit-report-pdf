@@ -97,15 +97,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</element>
 					<element kind="textField" uuid="7f271175-a01a-47a7-894b-002319e6c8e3" x="0" y="12" width="128" height="15" forecolor="#262626" fontName="Roboto - 600" fontSize="12.0" vTextAlign="Middle">
-						<expression><![CDATA[$P{indexParam}.getControlNumber() != null && $P{indexParam}.getControlNumber().length() == 9 ?
-    $P{indexParam}.getControlNumber().substring(0, 3) + " " +
-    $P{indexParam}.getControlNumber().substring(3, 6) + " " +
-    $P{indexParam}.getControlNumber().substring(6) :
-    $P{indexParam}.getControlNumber() != null && $P{indexParam}.getControlNumber().length() == 10 ?
-    $P{indexParam}.getControlNumber().substring(0, 3) + " " +
-    $P{indexParam}.getControlNumber().substring(3, 6) + " " +
-    $P{indexParam}.getControlNumber().substring(6) : $P{indexParam}.getControlNumber()
-]]></expression>
+						<expression><![CDATA[$P{indexParam}.getControlNumber() ]]></expression>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -372,184 +364,223 @@ credit profile.]]></text>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</element>
 			</element>
-			<element kind="frame" uuid="ac124d92-96bb-46e6-997e-a40dc8b6d9c7" x="40" y="156" width="234" height="170">
-				<element kind="textField" uuid="f76a36b0-4904-4c01-ac7e-5f3caf7c99af" x="0" y="70" width="168" height="100" forecolor="#004364" fontName="Roboto - 400" fontSize="85.0" hTextAlign="Left" vTextAlign="Top">
-					<expression><![CDATA[$P{indexParam}.getCibilScore()]]></expression>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</element>
-				<element kind="frame" uuid="3e91b013-f2be-475f-aef2-488d1f5c9f4f" x="4" y="0" width="128" height="64">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<element kind="chart" chartType="meter" uuid="31e59253-a085-49f7-8dc3-569acba05674" x="0" y="0" width="128" height="64" showLegend="false" evaluationTime="Report" renderType="draw" theme="DialTheme" titlePosition="Bottom">
-						<titleFont fontSize="1.0"/>
-						<subtitleFont fontSize="1.0"/>
-						<legendFont fontSize="1.0"/>
-						<dataset kind="value" resetType="None">
-							<valueExpression><![CDATA[$P{indexParam}.getCibilScore()]]></valueExpression>
-						</dataset>
-						<plot backcolor="#FFFFFF" orientation="Horizontal" backgroundAlpha="1.0" foregroundAlpha="1.0" shape="pie" meterAngle="180" units="1" tickInterval="1.0" needleColor="#262626" tickColor="#FFFFFF" meterColor="#FFFFFF">
-							<dataRange>
-								<lowExpression><![CDATA[300]]></lowExpression>
-								<highExpression><![CDATA[900]]></highExpression>
-							</dataRange>
-							<valueDisplay/>
-						</plot>
+			<element kind="frame" uuid="17883ad1-fdd5-4e8d-a342-e8a5233f6613" x="40" y="156" width="264" height="291">
+				<printWhenExpression><![CDATA[$P{indexParam}.getCibilScore()>=300]]></printWhenExpression>
+				<property name="com.jaspersoft.studio.element.name" value="DialFrame"/>
+				<element kind="frame" uuid="ac124d92-96bb-46e6-997e-a40dc8b6d9c7" x="0" y="0" width="234" height="170">
+					<element kind="textField" uuid="f76a36b0-4904-4c01-ac7e-5f3caf7c99af" x="0" y="70" width="168" height="100" forecolor="#004364" fontName="Roboto - 400" fontSize="85.0" hTextAlign="Left" vTextAlign="Top">
+						<expression><![CDATA[$P{indexParam}.getCibilScore()]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="frame" uuid="3e91b013-f2be-475f-aef2-488d1f5c9f4f" x="4" y="0" width="128" height="64">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<element kind="chart" chartType="meter" uuid="31e59253-a085-49f7-8dc3-569acba05674" x="0" y="0" width="128" height="64" showLegend="false" evaluationTime="Report" renderType="draw" theme="DialTheme" titlePosition="Bottom">
+							<titleFont fontSize="1.0"/>
+							<subtitleFont fontSize="1.0"/>
+							<legendFont fontSize="1.0"/>
+							<dataset kind="value" resetType="None">
+								<valueExpression><![CDATA[$P{indexParam}.getCibilScore()]]></valueExpression>
+							</dataset>
+							<plot backcolor="#FFFFFF" orientation="Horizontal" backgroundAlpha="1.0" foregroundAlpha="1.0" shape="pie" meterAngle="180" units="1" tickInterval="1.0" needleColor="#262626" tickColor="#FFFFFF" meterColor="#FFFFFF">
+								<dataRange>
+									<lowExpression><![CDATA[300]]></lowExpression>
+									<highExpression><![CDATA[900]]></highExpression>
+								</dataRange>
+								<valueDisplay/>
+							</plot>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						</element>
+					</element>
+					<element kind="staticText" uuid="9bfe7ef1-a138-4128-881d-17b8a1a3d989" x="0" y="69" width="13" height="8" forecolor="#595959" fontName="Roboto - 400" fontSize="6.0" hTextAlign="Center" vTextAlign="Middle">
+						<text><![CDATA[300]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="staticText" uuid="542d4294-3d22-4c4a-b375-06dbe1e7ec16" x="122" y="69" width="13" height="8" forecolor="#595959" fontName="Roboto - 400" fontSize="6.0" hTextAlign="Center" vTextAlign="Middle">
+						<text><![CDATA[900]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</element>
 				</element>
-				<element kind="staticText" uuid="9bfe7ef1-a138-4128-881d-17b8a1a3d989" x="0" y="69" width="13" height="8" forecolor="#595959" fontName="Roboto - 400" fontSize="6.0" hTextAlign="Center" vTextAlign="Middle">
-					<text><![CDATA[300]]></text>
+				<element kind="frame" uuid="ffd59720-19a7-417b-95a7-2ea8f4696737" x="0" y="170" width="264" height="121">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</element>
-				<element kind="staticText" uuid="542d4294-3d22-4c4a-b375-06dbe1e7ec16" x="122" y="69" width="13" height="8" forecolor="#595959" fontName="Roboto - 400" fontSize="6.0" hTextAlign="Center" vTextAlign="Middle">
-					<text><![CDATA[900]]></text>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<element kind="staticText" uuid="ae65d80c-c524-4657-b81e-bb0d73014b47" x="0" y="0" width="264" height="24" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
+						<text><![CDATA[Your CIBIL Score is a 3 digit numeric summary of your credit history             & ranges from 300 to 900.]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</element>
+					<element kind="staticText" uuid="026b9238-bd7f-4d59-afe2-f715ec828cfc" x="0" y="36" width="264" height="48" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
+						<text><![CDATA[It is calculated on the information available in the Accounts and Enquiry section of your CIBIL Report. The closer your score is to 900, the more confidence the lender will have in your ability to repay the loan. Higher your score, the better chances of your application getting approved.]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</element>
+					<element kind="frame" uuid="1834755e-e39c-43d5-9027-3e3947ddef96" x="0" y="96" width="264" height="25">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<element kind="staticText" uuid="ea0d448d-d92b-48fa-8dd9-69b34a1a742e" x="0" y="0" width="54" height="9" forecolor="rgba(0, 67, 100, 0.8)" fontName="Roboto - 600" fontSize="7.0" vTextAlign="Middle">
+							<text><![CDATA[SCORE RANGE]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</element>
+						<element kind="frame" uuid="a75e6764-ec53-4703-b49a-31a8965e89a4" x="0" y="13" width="264" height="12">
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<element kind="frame" uuid="80b33d28-32cd-4a26-aec8-ce15de4f95b9" x="0" y="0" width="38" height="12">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<element kind="rectangle" uuid="2edbd5b4-1cb6-49c3-9b46-08f982ed0c95" x="0" y="3" width="6" height="6" backcolor="#009900">
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<pen lineWidth="0.0"/>
+								</element>
+								<element kind="staticText" uuid="47a3f4c9-770b-4a39-b81a-cac30600d39e" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<text><![CDATA[778-900]]></text>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+							</element>
+							<element kind="frame" uuid="de562244-0b3b-4bb5-bda5-25fda00037d3" x="56" y="0" width="38" height="12">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<element kind="rectangle" uuid="8e77baad-11e1-4d3b-a275-643e4c31c7a0" x="0" y="3" width="6" height="6" backcolor="#A9D161">
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<pen lineWidth="0.0"/>
+								</element>
+								<element kind="staticText" uuid="248aa30a-41fc-4e2c-9a66-68d34cafd7e0" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<text><![CDATA[765-777]]></text>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+							</element>
+							<element kind="frame" uuid="63be0810-d73d-4096-9b60-d8318f13d9b3" x="113" y="0" width="38" height="12">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<element kind="rectangle" uuid="817b8c76-ed40-4d95-9229-9430ace8e354" x="0" y="3" width="6" height="6" backcolor="#FCD800">
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<pen lineWidth="0.0"/>
+								</element>
+								<element kind="staticText" uuid="403e77dc-0f6e-4171-8faf-d0c37ab09a01" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<text><![CDATA[748-764]]></text>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+							</element>
+							<element kind="frame" uuid="89cd3bd5-7421-4aac-95ea-a01d8304375a" x="169" y="0" width="38" height="12">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<element kind="rectangle" uuid="876b29d1-fd5c-4df3-b3c4-1766b2d634f1" x="0" y="3" width="6" height="6" backcolor="#F18200">
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<pen lineWidth="0.0"/>
+								</element>
+								<element kind="staticText" uuid="cab390ac-dffe-4df0-94c6-82e05abcb3f0" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<text><![CDATA[723-747]]></text>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+							</element>
+							<element kind="frame" uuid="951be182-e4a8-4c80-9203-0add97998b17" x="226" y="0" width="38" height="12">
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.y" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<element kind="rectangle" uuid="a8bb20b6-073c-45ff-834a-3e642dbba249" x="0" y="3" width="6" height="6" backcolor="#E15825">
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<pen lineWidth="0.0"/>
+								</element>
+								<element kind="staticText" uuid="c5571880-449e-43f8-b723-c72693d4a7e7" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+									<text><![CDATA[300-722]]></text>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								</element>
+							</element>
+						</element>
+					</element>
 				</element>
 			</element>
-			<element kind="frame" uuid="ffd59720-19a7-417b-95a7-2ea8f4696737" x="40" y="326" width="264" height="121">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<element kind="staticText" uuid="ae65d80c-c524-4657-b81e-bb0d73014b47" x="0" y="0" width="264" height="24" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-					<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
-					<text><![CDATA[Your CIBIL Score is a 3 digit numeric summary of your credit history             & ranges from 300 to 900.]]></text>
+			<element kind="frame" uuid="49070dfc-7351-4c2c-bcc0-67361b718b26" x="40" y="158" width="264" height="263">
+				<printWhenExpression><![CDATA[$P{indexParam}.getCibilScore()<300]]></printWhenExpression>
+				<property name="com.jaspersoft.studio.element.name" value="NHFrame"/>
+				<element kind="image" uuid="0c8f28cc-dfda-4e8d-ba6e-cbcfb90a9658" x="0" y="0" width="139" height="148">
+					<expression><![CDATA["icons/nh-toc.svg"]]></expression>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</element>
-				<element kind="staticText" uuid="026b9238-bd7f-4d59-afe2-f715ec828cfc" x="0" y="36" width="264" height="48" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-					<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
-					<text><![CDATA[It is calculated on the information available in the Accounts and Enquiry section of your CIBIL Report. The closer your score is to 900, the more confidence the lender will have in your ability to repay the loan. Higher your score, the better chances of your application getting approved.]]></text>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</element>
-				<element kind="frame" uuid="1834755e-e39c-43d5-9027-3e3947ddef96" x="0" y="96" width="264" height="25">
+				<element kind="frame" uuid="5639aa39-60cf-4097-8e27-21f82c06221c" x="0" y="171" width="264" height="92">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<element kind="staticText" uuid="ea0d448d-d92b-48fa-8dd9-69b34a1a742e" x="0" y="0" width="54" height="9" forecolor="rgba(0, 67, 100, 0.8)" fontName="Roboto - 600" fontSize="7.0" vTextAlign="Middle">
-						<text><![CDATA[SCORE RANGE]]></text>
+					<element kind="staticText" uuid="9585dc9c-8503-4e5a-94ff-bb08e641d249" x="0" y="0" width="264" height="12" forecolor="#262626" fontName="Roboto - 700" fontSize="8.0" vTextAlign="Middle">
+						<text><![CDATA[What does NH mean?]]></text>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</element>
-					<element kind="frame" uuid="a75e6764-ec53-4703-b49a-31a8965e89a4" x="0" y="13" width="264" height="12">
+					<element kind="staticText" uuid="e6d77ce9-b1e0-49ca-ae13-2748dfcf3402" x="0" y="20" width="264" height="72" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
+						<text><![CDATA[If CIBIL score is displayed as "NH", it indicates the following 3 things:
+1. You have a credit card or loan account, but no credit activity in the last three years.
+2. Lenders may have made enquiries, but you do not have any credit activity.
+3. You only have add-on credit cards, and no credit exposure.]]></text>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<element kind="frame" uuid="80b33d28-32cd-4a26-aec8-ce15de4f95b9" x="0" y="0" width="38" height="12">
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<element kind="rectangle" uuid="2edbd5b4-1cb6-49c3-9b46-08f982ed0c95" x="0" y="3" width="6" height="6" backcolor="#009900">
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-								<pen lineWidth="0.0"/>
-							</element>
-							<element kind="staticText" uuid="47a3f4c9-770b-4a39-b81a-cac30600d39e" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-								<text><![CDATA[778-900]]></text>
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.y" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							</element>
-						</element>
-						<element kind="frame" uuid="de562244-0b3b-4bb5-bda5-25fda00037d3" x="56" y="0" width="38" height="12">
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<element kind="rectangle" uuid="8e77baad-11e1-4d3b-a275-643e4c31c7a0" x="0" y="3" width="6" height="6" backcolor="#A9D161">
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-								<pen lineWidth="0.0"/>
-							</element>
-							<element kind="staticText" uuid="248aa30a-41fc-4e2c-9a66-68d34cafd7e0" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-								<text><![CDATA[765-777]]></text>
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.y" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							</element>
-						</element>
-						<element kind="frame" uuid="63be0810-d73d-4096-9b60-d8318f13d9b3" x="113" y="0" width="38" height="12">
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<element kind="rectangle" uuid="817b8c76-ed40-4d95-9229-9430ace8e354" x="0" y="3" width="6" height="6" backcolor="#FCD800">
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-								<pen lineWidth="0.0"/>
-							</element>
-							<element kind="staticText" uuid="403e77dc-0f6e-4171-8faf-d0c37ab09a01" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-								<text><![CDATA[748-764]]></text>
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.y" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							</element>
-						</element>
-						<element kind="frame" uuid="89cd3bd5-7421-4aac-95ea-a01d8304375a" x="169" y="0" width="38" height="12">
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<element kind="rectangle" uuid="876b29d1-fd5c-4df3-b3c4-1766b2d634f1" x="0" y="3" width="6" height="6" backcolor="#F18200">
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-								<pen lineWidth="0.0"/>
-							</element>
-							<element kind="staticText" uuid="cab390ac-dffe-4df0-94c6-82e05abcb3f0" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-								<text><![CDATA[723-747]]></text>
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.y" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							</element>
-						</element>
-						<element kind="frame" uuid="951be182-e4a8-4c80-9203-0add97998b17" x="226" y="0" width="38" height="12">
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<element kind="rectangle" uuid="a8bb20b6-073c-45ff-834a-3e642dbba249" x="0" y="3" width="6" height="6" backcolor="#E15825">
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-								<pen lineWidth="0.0"/>
-							</element>
-							<element kind="staticText" uuid="c5571880-449e-43f8-b723-c72693d4a7e7" x="8" y="0" width="30" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-								<text><![CDATA[300-722]]></text>
-								<property name="com.jaspersoft.studio.unit.x" value="px"/>
-								<property name="com.jaspersoft.studio.unit.y" value="px"/>
-								<property name="com.jaspersoft.studio.unit.width" value="px"/>
-								<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							</element>
-						</element>
 					</element>
 				</element>
 			</element>

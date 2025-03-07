@@ -1,5 +1,7 @@
 package com.transunion.pdf.constant;
 
+import java.math.BigDecimal;
+
 public class ApplicationConstant {
 
     //Contact Type Constants
@@ -84,19 +86,19 @@ public class ApplicationConstant {
     //STARTER JRXML PATH
     public static final String STARTER_MAIN_JRXML_PATH = "src/main/resources/templates/starter/jrxml/main.jrxml";
     public static final String STARTER_INDEX_JRXML_PATH = "src/main/resources/templates/starter/jrxml/toc.jrxml";
-    public static final String STARTER_PERSONALINFO_JRXML_PATH =  "src/main/resources/templates/starter/jrxml/pi.jrxml";
-    public static final String STARTER_ACCOUNTINFO_JRXML_PATH =  "src/main/resources/templates/starter/jrxml/ai.jrxml";
-    public static final String STARTER_ENQUIRYINFO_JRXML_PATH =  "src/main/resources/templates/starter/jrxml/ei.jrxml";
-    public static final String STARTER_SUMMARY_JRXML_PATH =  "src/main/resources/templates/starter/jrxml/cs.jrxml";
+    public static final String STARTER_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/pi.jrxml";
+    public static final String STARTER_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/ai.jrxml";
+    public static final String STARTER_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/ei.jrxml";
+    public static final String STARTER_SUMMARY_JRXML_PATH = "src/main/resources/templates/starter/jrxml/cs.jrxml";
 
 
     //STARTER JASPER PATH
     public static final String STARTER_MAIN_JASPER_PATH = "src/main/resources/templates/starter/jasper/main.jasper";
     public static final String STARTER_INDEX_JASPER_PATH = "src/main/resources/templates/starter/jasper/toc.jasper";
-    public static final String STARTER_SUMMARY_JASPER_PATH =  "src/main/resources/templates/starter/jasper/summary.jasper";
-    public static final String STARTER_PERSONALINFO_JASPER_PATH =  "src/main/resources/templates/starter/jasper/personal_information.jasper";
-    public static final String STARTER_ACCOUNTINFO_JASPER_PATH =  "src/main/resources/templates/starter/jasper/account_information.jasper";
-    public static final String STARTER_ENQUIRYINFO_JASPER_PATH =  "src/main/resources/templates/starter/jasper/enquiry_information.jasper";
+    public static final String STARTER_SUMMARY_JASPER_PATH = "src/main/resources/templates/starter/jasper/summary.jasper";
+    public static final String STARTER_PERSONALINFO_JASPER_PATH = "src/main/resources/templates/starter/jasper/personal_information.jasper";
+    public static final String STARTER_ACCOUNTINFO_JASPER_PATH = "src/main/resources/templates/starter/jasper/account_information.jasper";
+    public static final String STARTER_ENQUIRYINFO_JASPER_PATH = "src/main/resources/templates/starter/jasper/enquiry_information.jasper";
 
     //PAID JRXML PATH
     public static final String PAID_MAIN_JRXML_PATH = "src/main/resources/templates/paid/jrxml/main.jrxml";
@@ -114,5 +116,6 @@ public class ApplicationConstant {
     public static final String PAID_ACCOUNTINFO_JASPER_PATH = "src/main/resources/templates/paid/jasper/account_information.jasper";
     public static final String PAID_ENQUIRYINFO_JASPER_PATH = "src/main/resources/templates/paid/jasper/enquiry_information.jasper";
 
-
+    public static final String DEFAULT_HYPHEN = "-";
+    public static final BigDecimal DEFAULT_BIG_DECIMAL = BigDecimal.valueOf(-1);
 }

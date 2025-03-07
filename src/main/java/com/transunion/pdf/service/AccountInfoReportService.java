@@ -14,6 +14,7 @@ import net.sf.jasperreports.engine.util.JRLoader;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,9 +25,6 @@ public class AccountInfoReportService {
         switch (pdfVersion) {
             case INDIRECT:
                 filePath = ApplicationConstant.INDIRECT_ACCOUNTINFO_JASPER_PATH;
-                break;
-            case NH:
-                filePath = ApplicationConstant.NH_ACCOUNTINFO_JASPER_PATH;
                 break;
             case STARTER:
                 filePath = ApplicationConstant.STARTER_ACCOUNTINFO_JASPER_PATH;
@@ -143,16 +141,16 @@ public class AccountInfoReportService {
                 .ownerShipType(accountDetails.getOwnerShipType())
                 .accountUnderDispute(accountDetails.isAccountUnderDispute())
                 .disputeInfo(accountDetails.isAccountUnderDispute() ? accountDetails.getDisputeInfo() : null)
-                .creditLimit(CommonUtil.formatIndianCurrency(accountDetails.getCreditLimit()))
-                .highCredit(CommonUtil.formatIndianCurrency(accountDetails.getHighCredit()))
-                .currentBalance(CommonUtil.formatIndianCurrency(accountDetails.getCurrentBalance()))
-                .cashLimit(CommonUtil.formatIndianCurrency(accountDetails.getCashLimit()))
-                .amountOverdue(CommonUtil.formatIndianCurrency(accountDetails.getAmountOverdue()))
-                .rateOfInterest(accountDetails.getRateOfInterest() + "%")
-                .repaymentTenure(accountDetails.getRepaymentTenure() + "Month")
-                .emiAmount(CommonUtil.formatIndianCurrency(accountDetails.getEmiAmount()))
+                .creditLimit(checkDefaultBigDecimal(accountDetails.getCreditLimit()))
+                .highCredit(checkDefaultBigDecimal(accountDetails.getHighCredit()))
+                .currentBalance(checkDefaultBigDecimal(accountDetails.getCurrentBalance()))
+                .cashLimit(checkDefaultBigDecimal(accountDetails.getCashLimit()))
+                .amountOverdue(checkDefaultBigDecimal(accountDetails.getAmountOverdue()))
+                .rateOfInterest(accountDetails.getRateOfInterest().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL)? ApplicationConstant.DEFAULT_HYPHEN :accountDetails.getRateOfInterest()  + "%")
+                .repaymentTenure(accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL)? ApplicationConstant.DEFAULT_HYPHEN :accountDetails.getRepaymentTenure() + " Month")
+                .emiAmount(checkDefaultBigDecimal(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
-                .actualPaymentAmount(CommonUtil.formatIndianCurrency(accountDetails.getActualPaymentAmount()))
+                .actualPaymentAmount(checkDefaultBigDecimal(accountDetails.getActualPaymentAmount()))
                 //Account Dates
                 .dateOpenedOrDisbursed(accountDates.getDateOpenedOrDisbursed())
                 .dateLastPayment(accountDates.getDateLastPayment())
@@ -165,13 +163,13 @@ public class AccountInfoReportService {
                 .pastDueMonthlyDataSource(getPastDueMontlyDataSource(closedAccountInfo.getPastDueMonthlyStatusList()))
                 .pastDueMonthlyReport(getPastDueMonthlyReport())
 
-                .valueOfCollateral(CommonUtil.formatIndianCurrency(closedAccountInfo.getValueOfCollateral()))
+                .valueOfCollateral(checkDefaultBigDecimal(closedAccountInfo.getValueOfCollateral()))
                 .typeOfCollateral(closedAccountInfo.getTypeOfCollateral())
                 .suitFiledOrWillfulDefault(closedAccountInfo.getSuitFiledOrWillfulDefault())
                 .creditFacilityStatus(closedAccountInfo.getCreditFacilityStatus())
-                .writtenOffAmountTotal(CommonUtil.formatIndianCurrency(closedAccountInfo.getWrittenOffAmountTotal()))
-                .writtenOffAmountPrincipal(CommonUtil.formatIndianCurrency(closedAccountInfo.getWrittenOffAmountPrincipal()))
-                .settlementAmount(CommonUtil.formatIndianCurrency(closedAccountInfo.getSettlementAmount()))
+                .writtenOffAmountTotal(checkDefaultBigDecimal(closedAccountInfo.getWrittenOffAmountTotal()))
+                .writtenOffAmountPrincipal(checkDefaultBigDecimal(closedAccountInfo.getWrittenOffAmountPrincipal()))
+                .settlementAmount(checkDefaultBigDecimal(closedAccountInfo.getSettlementAmount()))
                 .build();
     }
 
@@ -247,16 +245,16 @@ public class AccountInfoReportService {
                 .ownerShipType(accountDetails.getOwnerShipType())
                 .accountUnderDispute(accountDetails.isAccountUnderDispute())
                 .disputeInfo(accountDetails.isAccountUnderDispute() ? accountDetails.getDisputeInfo() : null)
-                .creditLimit(CommonUtil.formatIndianCurrency(accountDetails.getCreditLimit()))
-                .highCredit(CommonUtil.formatIndianCurrency(accountDetails.getHighCredit()))
-                .currentBalance(CommonUtil.formatIndianCurrency(accountDetails.getCurrentBalance()))
-                .cashLimit(CommonUtil.formatIndianCurrency(accountDetails.getCashLimit()))
-                .amountOverdue(CommonUtil.formatIndianCurrency(accountDetails.getAmountOverdue()))
-                .rateOfInterest(accountDetails.getRateOfInterest() + "%")
-                .repaymentTenure(accountDetails.getRepaymentTenure() + " Month")
-                .emiAmount(CommonUtil.formatIndianCurrency(accountDetails.getEmiAmount()))
+                .creditLimit(checkDefaultBigDecimal(accountDetails.getCreditLimit()))
+                .highCredit(checkDefaultBigDecimal(accountDetails.getHighCredit()))
+                .currentBalance(checkDefaultBigDecimal(accountDetails.getCurrentBalance()))
+                .cashLimit(checkDefaultBigDecimal(accountDetails.getCashLimit()))
+                .amountOverdue(checkDefaultBigDecimal(accountDetails.getAmountOverdue()))
+                .rateOfInterest(accountDetails.getRateOfInterest().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL)? ApplicationConstant.DEFAULT_HYPHEN :accountDetails.getRateOfInterest()  + "%")
+                .repaymentTenure(accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL)? ApplicationConstant.DEFAULT_HYPHEN :accountDetails.getRepaymentTenure() + " Month")
+                .emiAmount(checkDefaultBigDecimal(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
-                .actualPaymentAmount(CommonUtil.formatIndianCurrency(accountDetails.getActualPaymentAmount()))
+                .actualPaymentAmount(checkDefaultBigDecimal(accountDetails.getActualPaymentAmount()))
                 //Account Dates
                 .dateOpenedOrDisbursed(accountDates.getDateOpenedOrDisbursed())
                 .dateLastPayment(accountDates.getDateLastPayment())
@@ -269,14 +267,18 @@ public class AccountInfoReportService {
                 .pastDueMonthlyDataSource(getPastDueMontlyDataSource(openAccountInfo.getPastDueMonthlyStatusList()))
                 .pastDueMonthlyReport(getPastDueMonthlyReport())
 
-                .valueOfCollateral(CommonUtil.formatIndianCurrency(openAccountInfo.getValueOfCollateral()))
+                .valueOfCollateral(checkDefaultBigDecimal(openAccountInfo.getValueOfCollateral()))
                 .typeOfCollateral(openAccountInfo.getTypeOfCollateral())
                 .suitFiledOrWillfulDefault(openAccountInfo.getSuitFiledOrWillfulDefault())
                 .creditFacilityStatus(openAccountInfo.getCreditFacilityStatus())
-                .writtenOffAmountTotal(CommonUtil.formatIndianCurrency(openAccountInfo.getWrittenOffAmountTotal()))
-                .writtenOffAmountPrincipal(CommonUtil.formatIndianCurrency(openAccountInfo.getWrittenOffAmountPrincipal()))
-                .settlementAmount(CommonUtil.formatIndianCurrency(openAccountInfo.getSettlementAmount()))
+                .writtenOffAmountTotal(checkDefaultBigDecimal(openAccountInfo.getWrittenOffAmountTotal()))
+                .writtenOffAmountPrincipal(checkDefaultBigDecimal(openAccountInfo.getWrittenOffAmountPrincipal()))
+                .settlementAmount(checkDefaultBigDecimal(openAccountInfo.getSettlementAmount()))
                 .build();
+    }
+
+    private  String checkDefaultBigDecimal(BigDecimal decimal) {
+        return decimal.equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : CommonUtil.formatIndianCurrency(decimal);
     }
 
     private JasperReport getPastDueMonthlyReport() {

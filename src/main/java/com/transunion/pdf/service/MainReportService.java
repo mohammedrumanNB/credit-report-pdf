@@ -18,9 +18,6 @@ public class MainReportService {
             case INDIRECT:
                 filePath = ApplicationConstant.INDIRECT_MAIN_JASPER_PATH;
                 break;
-            case NH:
-                filePath = ApplicationConstant.NH_MAIN_JASPER_PATH;
-                break;
             case STARTER:
                 filePath = ApplicationConstant.STARTER_MAIN_JASPER_PATH;
                 break;

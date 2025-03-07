@@ -21,9 +21,6 @@ public class IndexReportService {
             case INDIRECT:
                 filePath = ApplicationConstant.INDIRECT_INDEX_JASPER_PATH;
                 break;
-            case NH:
-                filePath = ApplicationConstant.NH_INDEX_JASPER_PATH;
-                break;
             case STARTER:
                 filePath = ApplicationConstant.STARTER_INDEX_JASPER_PATH;
                 break;

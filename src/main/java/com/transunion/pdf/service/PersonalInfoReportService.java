@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class PersonalInfoReportService {
@@ -24,9 +25,6 @@ public class PersonalInfoReportService {
         switch (pdfVersion) {
             case INDIRECT:
                 filePath = ApplicationConstant.INDIRECT_PERSONALINFO_JASPER_PATH;
-                break;
-            case NH:
-                filePath = ApplicationConstant.NH_PERSONALINFO_JASPER_PATH;
                 break;
             case STARTER:
                 filePath = ApplicationConstant.STARTER_PERSONALINFO_JASPER_PATH;
@@ -63,16 +61,34 @@ public class PersonalInfoReportService {
         personalInformation.setPersonalInfo(personalInfo);
         personalInformation.setIdentificationTableDataSource(getIdentificationTableDataSource(identificationInfoList));
         personalInformation.setAddressInformation(getAddressInformation(addressInfoList));
-        personalInformation.setContactInfoList(contactInfoList);
+        personalInformation.setContactInfoList(processContactInfo(contactInfoList));
         personalInformation.setEmailInfoList(emailInfoList);
         personalInformation.setAccountType(employmentInfo.getAccountType());
         personalInformation.setDateReported(employmentInfo.getDateReported());
         personalInformation.setOccupation(employmentInfo.getOccupation());
-        personalInformation.setIncome(CommonUtil.formatIndianCurrency(employmentInfo.getIncome()));
+        personalInformation.setIncome(getIncome(employmentInfo));
         personalInformation.setMonthlyAnnualIncome(employmentInfo.getMonthlyAnnualIncome());
         personalInformation.setNetGrossIncome(employmentInfo.getNetGrossIncome());
+
+        //Add Dispute if present
+        if(pdfData.isPersonalInfoDisputePresent()){
+            CommonUtil.validateDisputeInfo(pdfData.getPersonalInfoDisputeInfo());
+            personalInformation.setPersonalInfoDisputePresent(true);
+            personalInformation.setPersonalInfoDisputeInfo(pdfData.getPersonalInfoDisputeInfo());
+        }
+
         return personalInformation;
 
+    }
+
+    private List<ContactInfo> processContactInfo(List<ContactInfo> contactInfoList) {
+        contactInfoList.forEach(contactInfo ->
+                contactInfo.setContactType(contactInfo.getContactType().toUpperCase()));
+        return contactInfoList;
+    }
+
+    private String getIncome(EmploymentInfo employmentInfo) {
+        return employmentInfo.getIncome().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : CommonUtil.formatIndianCurrency(employmentInfo.getIncome());
     }
 
     private AddressInformation getAddressInformation(List<AddressInfo> addressInfoList) {

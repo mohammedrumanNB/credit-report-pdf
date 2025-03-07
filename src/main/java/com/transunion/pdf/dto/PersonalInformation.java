@@ -1,8 +1,6 @@
 package com.transunion.pdf.dto;
 
-import com.transunion.pdf.model.ContactInfo;
-import com.transunion.pdf.model.EmailInfo;
-import com.transunion.pdf.model.PersonalInfo;
+import com.transunion.pdf.model.*;
 import lombok.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
@@ -26,4 +24,7 @@ public class PersonalInformation {
     private String income;
     private String monthlyAnnualIncome;
     private String netGrossIncome;
+    private List<AddressInfo> addressInfoList;
+    private boolean personalInfoDisputePresent;
+    private DisputeInfo personalInfoDisputeInfo;
 }

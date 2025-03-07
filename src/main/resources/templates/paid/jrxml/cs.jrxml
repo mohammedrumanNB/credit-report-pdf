@@ -77,18 +77,18 @@
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<element kind="staticText" uuid="557b99bc-c686-42b9-b1f1-cb9d11fb8977" x="0" y="0" width="73" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+						<element kind="staticText" uuid="557b99bc-c686-42b9-b1f1-cb9d11fb8977" x="-5" y="0" width="73" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
 							<text><![CDATA[Report generated on]]></text>
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						</element>
-						<element kind="textField" uuid="993c6fe2-135b-4550-8fe9-09edb5d49929" x="77" y="0" width="45" height="10" forecolor="#595959" fontName="Roboto - 500" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+						<element kind="textField" uuid="993c6fe2-135b-4550-8fe9-09edb5d49929" x="72" y="0" width="50" height="10" forecolor="#595959" fontName="Roboto - 500" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
 							<expression><![CDATA[$P{cibilSummaryParam}.getReportGeneratedDate()]]></expression>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
 					</element>
 				</element>

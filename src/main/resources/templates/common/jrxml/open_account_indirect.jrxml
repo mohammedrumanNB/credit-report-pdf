@@ -122,11 +122,11 @@
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
-						<element kind="textField" uuid="358461ff-820c-4937-9deb-e6279413a02b" x="417" y="4" width="64" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<element kind="textField" uuid="358461ff-820c-4937-9deb-e6279413a02b" x="407" y="4" width="76" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
 							<expression><![CDATA[$F{ownerShipType}]]></expression>
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
 					</element>
@@ -1127,11 +1127,11 @@
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
-						<element kind="textField" uuid="2a360485-373f-4ebf-8ac5-17892a79f868" x="417" y="4" width="64" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<element kind="textField" uuid="2a360485-373f-4ebf-8ac5-17892a79f868" x="407" y="4" width="76" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
 							<expression><![CDATA[$F{ownerShipType}]]></expression>
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
 					</element>

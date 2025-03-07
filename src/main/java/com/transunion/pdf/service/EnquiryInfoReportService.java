@@ -7,6 +7,7 @@ import com.transunion.pdf.dto.PDFData;
 import com.transunion.pdf.enums.PdfVersion;
 import com.transunion.pdf.exception.FileNotFoundException;
 import com.transunion.pdf.model.EnquiryInfo;
+import com.transunion.pdf.util.CommonUtil;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
@@ -24,9 +25,6 @@ public class EnquiryInfoReportService {
         switch (pdfVersion) {
             case INDIRECT:
                 filePath = ApplicationConstant.INDIRECT_ENQUIRYINFO_JASPER_PATH;
-                break;
-            case NH:
-                filePath = ApplicationConstant.NH_ENQUIRYINFO_JASPER_PATH;
                 break;
             case STARTER:
                 filePath = ApplicationConstant.STARTER_ENQUIRYINFO_JASPER_PATH;
@@ -59,6 +57,13 @@ public class EnquiryInfoReportService {
             enquiryInformation.setTotalEnquiries(getTotalEnquiries(enquiryInfoList));
             enquiryInformation.setEnquiryInfoDataSource(getEnquiryInfoDataSource(enquiryInfoList));
             enquiryInformation.setEnquiryTableReport(getEnquiryTableReport());
+        }
+
+        //Add Dispute info if present
+        if(pdfData.isEnquiryInfoDisputePresent()){
+            CommonUtil.validateDisputeInfo(pdfData.getEnquiryInfoDisputeInfo());
+            enquiryInformation.setEnquiryInfoDisputePresent(true);
+            enquiryInformation.setEnquiryInfoDisputeInfo(pdfData.getEnquiryInfoDisputeInfo());
         }
 
         return enquiryInformation;
