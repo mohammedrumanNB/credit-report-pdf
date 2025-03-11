@@ -35,9 +35,9 @@ public class ApplicationConstant {
     //INDIRECT JRXML PATH
     public static final String INDIRECT_MAIN_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/main.jrxml";
     public static final String INDIRECT_INDEX_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/toc.jrxml";
-    public static final String INDIRECT_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/pi.jrxml";
-    public static final String INDIRECT_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/ai.jrxml";
-    public static final String INDIRECT_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/ei.jrxml";
+    public static final String INDIRECT_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/personal_information.jrxml";
+    public static final String INDIRECT_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/account_information.jrxml";
+    public static final String INDIRECT_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/indirect/jrxml/enquiry_information.jrxml";
 
     //INDIRECT JASPER PATH
     public static final String INDIRECT_MAIN_JASPER_PATH = "src/main/resources/templates/indirect/jasper/main.jasper";
@@ -52,7 +52,7 @@ public class ApplicationConstant {
     public static final String CLOSED_ACCOUNT_JRXML_PATH_INDIRECT = "src/main/resources/templates/common/jrxml/closed_account_indirect.jrxml";
     public static final String OPEN_ACCOUNT_JRXML_PATH_DIRECT = "src/main/resources/templates/common/jrxml/open_account_direct.jrxml";
     public static final String CLOSED_ACCOUNT_JRXML_PATH_DIRECT = "src/main/resources/templates/common/jrxml/closed_account_direct.jrxml";
-    public static final String ENQUIRY_TABLE_JRXML_PATH = "src/main/resources/templates/indirect/common/enquiry table.jrxml";
+    public static final String ENQUIRY_TABLE_JRXML_PATH = "src/main/resources/templates/common/jrxml/enquiry table.jrxml";
     public static final String GLOSSARY_1_JRXML_PATH = "src/main/resources/templates/common/jrxml/glossary-1.jrxml";
     public static final String GLOSSARY_2_JRXML_PATH = "src/main/resources/templates/common/jrxml/glossary-2.jrxml";
 
@@ -70,10 +70,10 @@ public class ApplicationConstant {
     //NH JRXML PATH
     public static final String NH_MAIN_JRXML_PATH = "src/main/resources/templates/nh/jrxml/main.jrxml";
     public static final String NH_INDEX_JRXML_PATH = "src/main/resources/templates/nh/jrxml/toc.jrxml";
-    public static final String NH_SUMMARY_JRXML_PATH = "src/main/resources/templates/nh/jrxml/cs.jrxml";
-    public static final String NH_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/nh/jrxml/pi.jrxml";
-    public static final String NH_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/nh/ai.jrxml";
-    public static final String NH_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/nh/ei.jrxml";
+    public static final String NH_SUMMARY_JRXML_PATH = "src/main/resources/templates/nh/jrxml/summary.jrxml";
+    public static final String NH_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/nh/jrxml/personal_information.jrxml";
+    public static final String NH_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/nh/account_information.jrxml";
+    public static final String NH_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/nh/enquiry_information.jrxml";
 
     //NH JASPER PATH
     public static final String NH_MAIN_JASPER_PATH = "src/main/resources/templates/nh/jasper/main.jasper";
@@ -86,10 +86,10 @@ public class ApplicationConstant {
     //STARTER JRXML PATH
     public static final String STARTER_MAIN_JRXML_PATH = "src/main/resources/templates/starter/jrxml/main.jrxml";
     public static final String STARTER_INDEX_JRXML_PATH = "src/main/resources/templates/starter/jrxml/toc.jrxml";
-    public static final String STARTER_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/pi.jrxml";
-    public static final String STARTER_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/ai.jrxml";
-    public static final String STARTER_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/ei.jrxml";
-    public static final String STARTER_SUMMARY_JRXML_PATH = "src/main/resources/templates/starter/jrxml/cs.jrxml";
+    public static final String STARTER_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/personal_information.jrxml";
+    public static final String STARTER_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/account_information.jrxml";
+    public static final String STARTER_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/starter/jrxml/enquiry_information.jrxml";
+    public static final String STARTER_SUMMARY_JRXML_PATH = "src/main/resources/templates/starter/jrxml/summary.jrxml";
 
 
     //STARTER JASPER PATH
@@ -103,10 +103,10 @@ public class ApplicationConstant {
     //PAID JRXML PATH
     public static final String PAID_MAIN_JRXML_PATH = "src/main/resources/templates/paid/jrxml/main.jrxml";
     public static final String PAID_INDEX_JRXML_PATH = "src/main/resources/templates/paid/jrxml/toc.jrxml";
-    public static final String PAID_SUMMARY_JRXML_PATH = "src/main/resources/templates/paid/jrxml/cs.jrxml";
-    public static final String PAID_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/paid/jrxml/pi.jrxml";
-    public static final String PAID_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/paid/jrxml/ai.jrxml";
-    public static final String PAID_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/paid/jrxml/ei.jrxml";
+    public static final String PAID_SUMMARY_JRXML_PATH = "src/main/resources/templates/paid/jrxml/summary.jrxml";
+    public static final String PAID_PERSONALINFO_JRXML_PATH = "src/main/resources/templates/paid/jrxml/personal_information.jrxml";
+    public static final String PAID_ACCOUNTINFO_JRXML_PATH = "src/main/resources/templates/paid/jrxml/account_information.jrxml";
+    public static final String PAID_ENQUIRYINFO_JRXML_PATH = "src/main/resources/templates/paid/jrxml/enquiry_information.jrxml";
 
     //PAID JASPER PATH
     public static final String PAID_MAIN_JASPER_PATH = "src/main/resources/templates/paid/jasper/main.jasper";

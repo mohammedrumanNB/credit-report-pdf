@@ -23,35 +23,36 @@ class PDFGeneratorTest {
     @Autowired
     private PDFGenerator pdfGenerator;
 
-//    @Test
-//    void testGeneratePdfPaidVersion() {
-//        try {
-//            PDFData pdfData = getPdfData();
+    @Test
+    void testGeneratePdfPaidVersion() {
+        try {
+            PDFData pdfData = getPdfData();
 //            pdfData.getOpenAccountInfoList().get(1).getAccountDetails().setAccountUnderDispute(true);
-//
-//            // Call the generatePdf method for the PAID version
-//            byte[] pdfBytes = pdfGenerator.generatePdf(PdfVersion.PAID, pdfData, false, "password");
-//
-//            // Validate that the PDF byte array is not null or empty
-//            AssertionErrors.assertNotNull(Arrays.toString(pdfBytes), "PDF byte array should not be null");
-//            assert pdfBytes.length > 0 : "PDF byte array should contain data";
-//
-//            System.out.println("PDF generated successfully for PAID version.");
-//
-//        } catch (JRException e) {
-//            e.printStackTrace();
-//            assert false : "An exception occurred during PDF generation: " + e.getMessage();
-//        }
-//    }
-//
-//    @Test
-//    void testCompileJrxmlToJasper(){
-//        try {
-//             JasperCompileManager.compileReportToFile(ApplicationConstant.NH_INDEX_JRXML_PATH,"toc.jasper");
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//    }
+
+            // Call the generatePdf method for the PAID version
+            byte[] pdfBytes = pdfGenerator.generatePdf(PdfVersion.INDIRECT, pdfData, false, "password");
+
+            // Validate that the PDF byte array is not null or empty
+            AssertionErrors.assertNotNull(Arrays.toString(pdfBytes), "PDF byte array should not be null");
+            assert pdfBytes.length > 0 : "PDF byte array should contain data";
+
+            System.out.println("PDF generated successfully for PAID version.");
+
+        } catch (JRException e) {
+            e.printStackTrace();
+            assert false : "An exception occurred during PDF generation: " + e.getMessage();
+        }
+    }
+
+    @Test
+    void testCompileJrxmlToJasper(){
+        try {
+             JasperCompileManager.compileReportToFile(ApplicationConstant.INDIRECT_INDEX_JRXML_PATH,"toc.jasper");
+             JasperCompileManager.compileReportToFile(ApplicationConstant.INDIRECT_INDEX_JRXML_PATH,"toc.jasper");
+              }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
 
     //Create Mock Data - PDFData
@@ -74,6 +75,11 @@ class PDFGeneratorTest {
         pdfData.setClosedLoans(0);
         pdfData.setOpenCreditCards(10);
         pdfData.setOpenLoans(0);
+        pdfData.setPersonalInfoDisputePresent(true);
+        pdfData.setPersonalInfoDisputeInfo(new DisputeInfo("Remarks","25 Jasn 2025"));
+
+        pdfData.setEnquiryInfoDisputePresent(true);
+        pdfData.setEnquiryInfoDisputeInfo(new DisputeInfo());
 
         pdfData.setSummaryIdType(SummaryIdType.DRIVERS_LICENSE);
         pdfData.setSummaryIdNumber("DYDPR23P");
@@ -85,6 +91,7 @@ class PDFGeneratorTest {
         pdfData.setThirtySixMonthLatePaymentInfo(new ThirtySixMonthLatePaymentInfo(new LatePaymentCount(), new LatePaymentRemarkCount()));
 
         pdfData.setEmploymentInfo(getEmploymentInfo());
+
 
         pdfData.setOpenAccountInfoList(getOpenAccountInfoList());
         pdfData.setClosedAccountInfoList(getClosedAccountInfoList());
@@ -136,6 +143,11 @@ class PDFGeneratorTest {
 
     private List<ClosedAccountInfo> getClosedAccountInfoList() {
         List<ClosedAccountInfo> closedAccountInfoList = new ArrayList<>();
+        ClosedAccountInfo closedAccountInfo=new ClosedAccountInfo();
+        closedAccountInfo.setAccountDetails(new AccountDetails());
+        closedAccountInfo.setAccountDates(new AccountDates());
+        closedAccountInfo.setPastDueMonthlyStatusList(getPastDueMonthlyStatusList());
+        closedAccountInfoList.add(closedAccountInfo);
         closedAccountInfoList.add(ClosedAccountInfo.builder()
                 .accountDetails(getAccountDetails("Closed"))
                 .accountDates(getAccountDates())
@@ -211,6 +223,11 @@ class PDFGeneratorTest {
 
     private List<OpenAccountInfo> getOpenAccountInfoList() {
         List<OpenAccountInfo> openAccountInfoList = new ArrayList<>();
+        OpenAccountInfo openAccountInfo=new OpenAccountInfo();
+        openAccountInfo.setAccountDetails(new AccountDetails());
+        openAccountInfo.setAccountDates(new AccountDates());
+        openAccountInfo.setPastDueMonthlyStatusList(getPastDueMonthlyStatusList());
+        openAccountInfoList.add(openAccountInfo);
         openAccountInfoList.add(OpenAccountInfo.builder()
                 .accountDetails(getAccountDetails("Open"))
                 .accountDates(getAccountDates())
@@ -225,21 +242,21 @@ class PDFGeneratorTest {
                 .writtenOffAmountPrincipal(BigDecimal.valueOf(1500))
                 .settlementAmount(BigDecimal.valueOf(5000))
                 .build());
-
-        openAccountInfoList.add(OpenAccountInfo.builder()
-                .accountDetails(getAccountDetails("Open"))
-                .accountDates(getAccountDates())
-                .paymentStartDate("25/06/2020")
-                .paymentEndDate("25/06/2024")
-                .pastDueMonthlyStatusList(getPastDueMonthlyStatusList())
-                .valueOfCollateral(BigDecimal.valueOf(50000))
-                .typeOfCollateral("Property")
-                .suitFiledOrWillfulDefault("Yes")
-                .creditFacilityStatus("Don't Know")
-                .writtenOffAmountTotal(BigDecimal.valueOf(10000))
-                .writtenOffAmountPrincipal(BigDecimal.valueOf(1500))
-                .settlementAmount(BigDecimal.valueOf(5000))
-                .build());
+//
+//        openAccountInfoList.add(OpenAccountInfo.builder()
+//                .accountDetails(getAccountDetails("Open"))
+//                .accountDates(getAccountDates())
+//                .paymentStartDate("25/06/2020")
+//                .paymentEndDate("25/06/2024")
+//                .pastDueMonthlyStatusList(getPastDueMonthlyStatusList())
+//                .valueOfCollateral(BigDecimal.valueOf(50000))
+//                .typeOfCollateral("Property")
+//                .suitFiledOrWillfulDefault("Yes")
+//                .creditFacilityStatus("Don't Know")
+//                .writtenOffAmountTotal(BigDecimal.valueOf(10000))
+//                .writtenOffAmountPrincipal(BigDecimal.valueOf(1500))
+//                .settlementAmount(BigDecimal.valueOf(5000))
+//                .build());
 //        openAccountInfoList.add(OpenAccountInfo.builder()
 //                .accountDetails(getAccountDetails("Open"))
 //                .accountDates(getAccountDates())
@@ -332,14 +349,18 @@ class PDFGeneratorTest {
     }
 
     private EmploymentInfo getEmploymentInfo() {
-        return EmploymentInfo.builder()
-                .accountType("Loan")
-                .dateReported("14/07/2022")
-                .occupation("Developer")
-                .income(BigDecimal.valueOf(10000))
-                .monthlyAnnualIncome("Monthly")
-                .netGrossIncome("Net Income")
-                .build();
+        EmploymentInfo employmentInfo=new EmploymentInfo();
+        employmentInfo.setAccountType("Loan");
+        employmentInfo.setOccupation("Dev");
+//        return EmploymentInfo.builder()
+//                .accountType("Loan")
+//                .dateReported("14/07/2022")
+//                .occupation("Developer")
+//                .income(BigDecimal.valueOf(10000))
+//                .monthlyAnnualIncome("Monthly")
+//                .netGrossIncome("Net Income")
+//                .build();
+        return employmentInfo;
     }
 
     private ThirtySixMonthLatePaymentInfo getThirtySixMonthLatePaymentInfo() {
@@ -411,10 +432,10 @@ class PDFGeneratorTest {
 
     private List<ContactInfo> getContactInfoList() {
         List<ContactInfo> contactInfoList = new ArrayList<>();
-        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_MOBILE, "9876543210", "-"));
-        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_HOME, "9876543210", "+91"));
+//        contactInfoList.add(new ContactInfo("test", "9876543210", "-"));
+//        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_HOME, "9876543210", "+91"));
 //        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_OFFICE, "9876543210", "+91"));
-        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_NOT_CLASSIFIED, "9876543210", "-"));
+//        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_NOT_CLASSIFIED, "9876543210", "-"));
         return contactInfoList;
     }
 
@@ -431,10 +452,10 @@ class PDFGeneratorTest {
     private List<IdentificationInfo> getIdentificationInfoList() {
         List<IdentificationInfo> identificationInfoList = new ArrayList<>();
         identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_PAN, "DYDPR123X", "12/07/2020", "-"));
-        identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_PASSPORT, "RQERWT98", "-", "-"));
-        identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_DRIVER_LICENSE, "DL4567890", "-", "12/07/2020"));
-        identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_VOTER_ID, "YJP123456", "12/07/2020", "12/07/2020"));
-        identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_RATION_CARD, "RC123456", "12/07/2020", "12/07/2020"));
+//        identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_PASSPORT, "RQERWT98", "-", "-"));
+//        identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_DRIVER_LICENSE, "DL4567890", "-", "12/07/2020"));
+//        identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_VOTER_ID, "YJP123456", "12/07/2020", "12/07/2020"));
+//        identificationInfoList.add(new IdentificationInfo(ApplicationConstant.ID_TYPE_RATION_CARD, "RC123456", "12/07/2020", "12/07/2020"));
         return identificationInfoList;
 
     }
