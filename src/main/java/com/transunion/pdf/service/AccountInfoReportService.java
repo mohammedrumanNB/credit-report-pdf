@@ -146,8 +146,8 @@ public class AccountInfoReportService {
                 .currentBalance(checkDefaultBigDecimal(accountDetails.getCurrentBalance()))
                 .cashLimit(checkDefaultBigDecimal(accountDetails.getCashLimit()))
                 .amountOverdue(checkDefaultBigDecimal(accountDetails.getAmountOverdue()))
-                .rateOfInterest(accountDetails.getRateOfInterest().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL)? ApplicationConstant.DEFAULT_HYPHEN :accountDetails.getRateOfInterest()  + "%")
-                .repaymentTenure(accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL)? ApplicationConstant.DEFAULT_HYPHEN :accountDetails.getRepaymentTenure() + " Month")
+                .rateOfInterest(checkDefaultRateofInterest(accountDetails.getRateOfInterest()))
+                .repaymentTenure(accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure() + " Month")
                 .emiAmount(checkDefaultBigDecimal(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
                 .actualPaymentAmount(checkDefaultBigDecimal(accountDetails.getActualPaymentAmount()))
@@ -250,8 +250,8 @@ public class AccountInfoReportService {
                 .currentBalance(checkDefaultBigDecimal(accountDetails.getCurrentBalance()))
                 .cashLimit(checkDefaultBigDecimal(accountDetails.getCashLimit()))
                 .amountOverdue(checkDefaultBigDecimal(accountDetails.getAmountOverdue()))
-                .rateOfInterest(accountDetails.getRateOfInterest().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL)? ApplicationConstant.DEFAULT_HYPHEN :accountDetails.getRateOfInterest()  + "%")
-                .repaymentTenure(accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL)? ApplicationConstant.DEFAULT_HYPHEN :accountDetails.getRepaymentTenure() + " Month")
+                .rateOfInterest(checkDefaultRateofInterest(accountDetails.getRateOfInterest()))
+                .repaymentTenure(accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure() + " Month")
                 .emiAmount(checkDefaultBigDecimal(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
                 .actualPaymentAmount(checkDefaultBigDecimal(accountDetails.getActualPaymentAmount()))
@@ -277,7 +277,11 @@ public class AccountInfoReportService {
                 .build();
     }
 
-    private  String checkDefaultBigDecimal(BigDecimal decimal) {
+    private static String checkDefaultRateofInterest(BigDecimal roi) {
+        return roi.equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) || roi.equals(BigDecimal.valueOf(-1.00)) || roi.equals(BigDecimal.valueOf(-1.0)) ? ApplicationConstant.DEFAULT_HYPHEN : roi + "%";
+    }
+
+    private String checkDefaultBigDecimal(BigDecimal decimal) {
         return decimal.equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : CommonUtil.formatIndianCurrency(decimal);
     }
 
