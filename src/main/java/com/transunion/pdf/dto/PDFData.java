@@ -23,22 +23,12 @@ public class PDFData {
     private String reportGeneratedDate = DEFAULT_HYPHEN; // Send in this format 12 Dec 2024
     private String cibilScoreDate = DEFAULT_HYPHEN; // Send in this format 11 Nov 2024
     private Integer cibilScore = 0; //Send 0 for NH Case
-    private SummaryIdType summaryIdType; // Use the respective enum while creating the Object
-    private String summaryIdNumber = DEFAULT_HYPHEN;
     private PersonalInfo personalInfo;
     private List<IdentificationInfo> identificationInfoList;
     private List<EmailInfo> emailInfoList;
     private List<ContactInfo> contactInfoList;
     private List<AddressInfo> addressInfoList;
     private int totalAccountsUnderDisputes = 0;
-    private BigDecimal currentBalance = DEFAULT_BIG_DECIMAL;
-    private BigDecimal amountOverDue = DEFAULT_BIG_DECIMAL;
-    private int closedCreditCards;
-    private int closedLoans;
-    private int openCreditCards;
-    private int openLoans;
-    private TwelveMonthLatePaymentInfo twelveMonthLatePaymentInfo;
-    private ThirtySixMonthLatePaymentInfo thirtySixMonthLatePaymentInfo;
     private EmploymentInfo employmentInfo;
     private List<OpenAccountInfo> openAccountInfoList;
     private List<ClosedAccountInfo> closedAccountInfoList;
@@ -47,4 +37,5 @@ public class PDFData {
     private DisputeInfo personalInfoDisputeInfo;
     private boolean enquiryInfoDisputePresent;
     private DisputeInfo enquiryInfoDisputeInfo;
+    private SummaryInfo summaryInfo;
 }

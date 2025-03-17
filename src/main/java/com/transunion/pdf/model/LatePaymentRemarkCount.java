@@ -8,8 +8,8 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class LatePaymentRemarkCount {
-    private int subStandardRemark;
-    private int specialMentionRemark;
-    private int doubtfulRemark;
-    private int lossRemark;
+    private int subStandardRemark=0;
+    private int specialMentionRemark=0;
+    private int doubtfulRemark=0;
+    private int lossRemark=0;
 }
