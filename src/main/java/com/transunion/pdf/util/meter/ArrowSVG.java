@@ -45,10 +45,21 @@ public class ArrowSVG {
     }
 
     // Bounding box methods
-    public static int getOrigX() { return 1; }
-    public static int getOrigY() { return 0; }
-    public static int getOrigWidth() { return 37; }
-    public static int getOrigHeight() { return 5; }
+    public static int getOrigX() {
+        return 1;
+    }
+
+    public static int getOrigY() {
+        return 0;
+    }
+
+    public static int getOrigWidth() {
+        return 37;
+    }
+
+    public static int getOrigHeight() {
+        return 5;
+    }
 }
 
 

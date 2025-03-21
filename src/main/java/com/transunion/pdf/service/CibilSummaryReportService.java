@@ -47,7 +47,7 @@ public class CibilSummaryReportService {
         summary.setName(summaryInfo.getName());
         summary.setDob(summaryInfo.getDob());
         summary.setGender(summaryInfo.getGender());
-        summary.setIdType(summaryInfo.getSummaryIdType()==null?"-":summaryInfo.getSummaryIdType().getCode());
+        summary.setIdType(summaryInfo.getSummaryIdType() == null ? "-" : summaryInfo.getSummaryIdType().getCode());
         summary.setIdNumber(summaryInfo.getSummaryIdNumber());
         summary.setEmail(summaryInfo.getEmail());
         summary.setMobileNumber(summaryInfo.getMobileNumber());

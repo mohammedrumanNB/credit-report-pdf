@@ -4,8 +4,6 @@ import lombok.*;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
-import static com.transunion.pdf.constant.ApplicationConstant.DEFAULT_HYPHEN;
-
 @Getter
 @Setter
 @AllArgsConstructor

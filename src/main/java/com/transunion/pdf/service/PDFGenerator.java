@@ -160,17 +160,16 @@ public class PDFGenerator {
 
             byte[] pdfBytes = outputStream.toByteArray();
 
-//            savePdfToFile(pdfBytes, pdfVersion);
+            savePdfToFile(pdfBytes, pdfVersion);
 
             return pdfBytes;
 
         } catch (JRException e) {
             // Handle JasperReport generation exception, possibly logging or rethrowing a custom exception
             throw new JRException("Failed to generate PDF for version: " + pdfVersion, e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-//        catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
     }
 
 
@@ -205,17 +204,17 @@ public class PDFGenerator {
         return jasperPrint;
     }
 
-//    private void savePdfToFile(byte[] pdfBytes, PdfVersion pdfVersion) throws IOException {
-//        UUID uuid = UUID.randomUUID();
-//        // Determine the file path in the resources directory
-//        String fileName = pdfVersion.name().toLowerCase() + "_report_" + uuid.toString().substring(0, 3) + ".pdf";
-//        String resourcePath = "src/main/resources/" + fileName;
-//
-//        // Create the file
-//        File pdfFile = new File(resourcePath);
-//        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
-//            fos.write(pdfBytes);
-//        }
-//    }
+    private void savePdfToFile(byte[] pdfBytes, PdfVersion pdfVersion) throws IOException {
+        UUID uuid = UUID.randomUUID();
+        // Determine the file path in the resources directory
+        String fileName = pdfVersion.name().toLowerCase() + "_report_" + uuid.toString().substring(0, 3) + ".pdf";
+        String resourcePath = "src/main/resources/" + fileName;
+
+        // Create the file
+        File pdfFile = new File(resourcePath);
+        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
+            fos.write(pdfBytes);
+        }
+    }
 
 }

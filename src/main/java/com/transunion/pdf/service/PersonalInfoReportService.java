@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class PersonalInfoReportService {
@@ -71,7 +70,7 @@ public class PersonalInfoReportService {
         personalInformation.setNetGrossIncome(employmentInfo.getNetGrossIncome());
 
         //Add Dispute if present
-        if(pdfData.isPersonalInfoDisputePresent()){
+        if (pdfData.isPersonalInfoDisputePresent()) {
             CommonUtil.validateDisputeInfo(pdfData.getPersonalInfoDisputeInfo());
             personalInformation.setPersonalInfoDisputePresent(true);
             personalInformation.setPersonalInfoDisputeInfo(pdfData.getPersonalInfoDisputeInfo());

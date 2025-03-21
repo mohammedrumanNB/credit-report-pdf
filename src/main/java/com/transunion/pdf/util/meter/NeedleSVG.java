@@ -23,7 +23,7 @@ public class NeedleSVG {
         float origAlpha = 1.0f;
         Composite origComposite = g.getComposite();
         if (origComposite instanceof AlphaComposite) {
-            AlphaComposite origAlphaComposite = (AlphaComposite)origComposite;
+            AlphaComposite origAlphaComposite = (AlphaComposite) origComposite;
             if (origAlphaComposite.getRule() == AlphaComposite.SRC_OVER) {
                 origAlpha = origAlphaComposite.getAlpha();
             }
@@ -33,7 +33,6 @@ public class NeedleSVG {
         AffineTransform transform = new AffineTransform();
         transform.translate(46, 46);
         transformations.add(transform);
-
 
 
         //

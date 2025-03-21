@@ -84,7 +84,7 @@ public class CustomMeterPlot extends MeterPlot {
 
                         g2.setTransform(originalTransform);
                         g2.translate(29.42, 57);
-                        ArrowSVG.paint(g2,  valueAngle);
+                        ArrowSVG.paint(g2, valueAngle);
                     }
 
                 } catch (Exception e) {
@@ -120,17 +120,6 @@ public class CustomMeterPlot extends MeterPlot {
         } else {
             return calculateAngle(value, 778, 900, 160, 180);
         }
-//        if (value <= 722) {
-//            return calculateAngle(value, 300, 722, 0, 89);
-//        } else if (value <= 747) {
-//            return calculateAngle(value, 723, 747, 90, 109);
-//        } else if (value <= 764) {
-//            return calculateAngle(value, 748, 764, 110, 129);
-//        } else if (value <= 777) {
-//            return calculateAngle(value, 765, 777, 130, 149);
-//        } else {
-//            return calculateAngle(value, 778, 900, 150, 180);
-//        }
     }
 
     private double calculateAngle(double score, int startScore, int endScore, int startDegree, int endDegree) {

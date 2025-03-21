@@ -1,17 +1,14 @@
 package com.transunion.pdf.dto;
 
-import com.transunion.pdf.enums.SummaryIdType;
 import com.transunion.pdf.model.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import static com.transunion.pdf.constant.ApplicationConstant.DEFAULT_HYPHEN;
-import static com.transunion.pdf.constant.ApplicationConstant.DEFAULT_BIG_DECIMAL;
 
 @Getter
 @Setter

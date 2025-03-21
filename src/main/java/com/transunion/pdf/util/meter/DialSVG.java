@@ -24,7 +24,7 @@ public class DialSVG {
         float origAlpha = 1.0f;
         Composite origComposite = g.getComposite();
         if (origComposite instanceof AlphaComposite) {
-            AlphaComposite origAlphaComposite = (AlphaComposite)origComposite;
+            AlphaComposite origAlphaComposite = (AlphaComposite) origComposite;
             if (origAlphaComposite.getRule() == AlphaComposite.SRC_OVER) {
                 origAlpha = origAlphaComposite.getAlpha();
             }

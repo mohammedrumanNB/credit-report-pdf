@@ -3,7 +3,6 @@ package com.transunion.pdf;
 import com.transunion.pdf.constant.ApplicationConstant;
 import com.transunion.pdf.dto.PDFData;
 import com.transunion.pdf.enums.PdfVersion;
-import com.transunion.pdf.enums.SummaryIdType;
 import com.transunion.pdf.model.*;
 import com.transunion.pdf.service.PDFGenerator;
 import net.sf.jasperreports.engine.JRException;
@@ -45,11 +44,10 @@ class PDFGeneratorTest {
     }
 
     @Test
-    void testCompileJrxmlToJasper(){
+    void testCompileJrxmlToJasper() {
         try {
-             JasperCompileManager.compileReportToFile(ApplicationConstant.INDIRECT_INDEX_JRXML_PATH,"toc.jasper");
-             JasperCompileManager.compileReportToFile(ApplicationConstant.INDIRECT_INDEX_JRXML_PATH,"toc.jasper");
-              }catch (Exception e){
+            JasperCompileManager.compileReportToFile(ApplicationConstant.INDIRECT_ACCOUNTINFO_JRXML_PATH, "account_information.jasper");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -69,26 +67,26 @@ class PDFGeneratorTest {
         pdfData.setContactInfoList(getContactInfoList());
         pdfData.setAddressInfoList(getAddressInfoList());
         pdfData.setTotalAccountsUnderDisputes(1);
-        pdfData.setCurrentBalance(BigDecimal.valueOf(150));
-        pdfData.setAmountOverDue(BigDecimal.valueOf(50));
-        pdfData.setClosedCreditCards(0);
-        pdfData.setClosedLoans(0);
-        pdfData.setOpenCreditCards(10);
-        pdfData.setOpenLoans(0);
+//        pdfData.setCurrentBalance(BigDecimal.valueOf(150));
+//        pdfData.setAmountOverDue(BigDecimal.valueOf(50));
+//        pdfData.setClosedCreditCards(0);
+//        pdfData.setClosedLoans(0);
+//        pdfData.setOpenCreditCards(10);
+//        pdfData.setOpenLoans(0);
         pdfData.setPersonalInfoDisputePresent(true);
-        pdfData.setPersonalInfoDisputeInfo(new DisputeInfo("Remarks","25 Jasn 2025"));
+        pdfData.setPersonalInfoDisputeInfo(new DisputeInfo("Remarks", "25 Jasn 2025"));
 
         pdfData.setEnquiryInfoDisputePresent(true);
         pdfData.setEnquiryInfoDisputeInfo(new DisputeInfo());
 
-        pdfData.setSummaryIdType(SummaryIdType.DRIVERS_LICENSE);
-        pdfData.setSummaryIdNumber("DYDPR23P");
+//        pdfData.setSummaryIdType(SummaryIdType.DRIVERS_LICENSE);
+//        pdfData.setSummaryIdNumber("DYDPR23P");
 
-        pdfData.setTwelveMonthLatePaymentInfo(getTwelveMonthLatePaymentInfo());
+//        pdfData.setTwelveMonthLatePaymentInfo(getTwelveMonthLatePaymentInfo());
 //        pdfData.setTwelveMonthLatePaymentInfo(new TwelveMonthLatePaymentInfo(new LatePaymentCount(),new LatePaymentRemarkCount()));
 
 //        pdfData.setThirtySixMonthLatePaymentInfo(getThirtySixMonthLatePaymentInfo());
-        pdfData.setThirtySixMonthLatePaymentInfo(new ThirtySixMonthLatePaymentInfo(new LatePaymentCount(), new LatePaymentRemarkCount()));
+//        pdfData.setThirtySixMonthLatePaymentInfo(new ThirtySixMonthLatePaymentInfo(new LatePaymentCount(), new LatePaymentRemarkCount()));
 
         pdfData.setEmploymentInfo(getEmploymentInfo());
 
@@ -97,9 +95,38 @@ class PDFGeneratorTest {
         pdfData.setClosedAccountInfoList(getClosedAccountInfoList());
 
         pdfData.setEnquiryInfoList(getEnquiryInfoList());
+        pdfData.setSummaryInfo(getSummaryInfo());
 
 
         return pdfData;
+    }
+
+    private SummaryInfo getSummaryInfo() {
+        SummaryInfo summaryInfo = new SummaryInfo();
+//        summaryInfo.setDob("25/09/1997");
+//        summaryInfo.setName("Summit");
+//        summaryInfo.setEmail("email");
+//        summaryInfo.setMobileNumber("987654321");
+//        summaryInfo.setGender("Male");
+//        summaryInfo.setAddress("address");
+//        summaryInfo.setSummaryIdNumber("IDNumber");
+//        summaryInfo.setSummaryIdType(SummaryIdType.DRIVERS_LICENSE);
+//        summaryInfo.setAmountOverdue(BigDecimal.valueOf(0));
+//        summaryInfo.setCurrentBalance(BigDecimal.valueOf(0));
+//        summaryInfo.setClosedLoans(10);
+//        summaryInfo.setClosedCreditCards(5);
+//        summaryInfo.setOpenLoans(6);
+//        summaryInfo.setOpenCreditCards(5);
+//        summaryInfo.setLatePaymentRemarkCount12(getLatePaymentRemark());
+//        summaryInfo.setLatePaymentRemarkCount36(getLatePaymentRemark());
+//        summaryInfo.setLatePayment12(getLatePaymentCount());
+//        summaryInfo.setLatePayment36(getLatePaymentCount());
+//        summaryInfo.setEnquiries12(10);
+//        summaryInfo.setEnquiries24(10);
+//        summaryInfo.setEnquiries36(10);
+//        summaryInfo.setTotalAccountsUnderDisputes(10);
+        summaryInfo.setLatePayment12(new LatePaymentCount());
+        return summaryInfo;
     }
 
     private List<EnquiryInfo> getEnquiryInfoList() {
@@ -143,7 +170,7 @@ class PDFGeneratorTest {
 
     private List<ClosedAccountInfo> getClosedAccountInfoList() {
         List<ClosedAccountInfo> closedAccountInfoList = new ArrayList<>();
-        ClosedAccountInfo closedAccountInfo=new ClosedAccountInfo();
+        ClosedAccountInfo closedAccountInfo = new ClosedAccountInfo();
         closedAccountInfo.setAccountDetails(new AccountDetails());
         closedAccountInfo.setAccountDates(new AccountDates());
         closedAccountInfo.setPastDueMonthlyStatusList(getPastDueMonthlyStatusList());
@@ -223,8 +250,8 @@ class PDFGeneratorTest {
 
     private List<OpenAccountInfo> getOpenAccountInfoList() {
         List<OpenAccountInfo> openAccountInfoList = new ArrayList<>();
-        OpenAccountInfo openAccountInfo=new OpenAccountInfo();
-        openAccountInfo.setAccountDetails(new AccountDetails());
+        OpenAccountInfo openAccountInfo = new OpenAccountInfo();
+        openAccountInfo.setAccountDetails(getAccountDetails("Open"));
         openAccountInfo.setAccountDates(new AccountDates());
         openAccountInfo.setPastDueMonthlyStatusList(getPastDueMonthlyStatusList());
         openAccountInfoList.add(openAccountInfo);
@@ -329,8 +356,9 @@ class PDFGeneratorTest {
     private AccountDetails getAccountDetails(String accountOpenOrClosed) {
         return AccountDetails.builder()
                 .accountOpenOrClosed(accountOpenOrClosed)
-                .accountType("Credit Card")
-                .bankName("Housing Development Finance Corporation Bank")
+                .accountType("Business Non-Funded Credit Facility – Priority Sector – Small Business")
+                .bankName("Evangelical Social Action Forum Small Finance Bank")
+                .highCreditOrAmountSanctionLabel("High Credit")
                 .accountNumber("1234567890")
                 .ownerShipType("Joint Ownership")
                 .isAccountUnderDispute(false)
@@ -340,7 +368,7 @@ class PDFGeneratorTest {
                 .currentBalance(BigDecimal.valueOf(4000))
                 .cashLimit(BigDecimal.valueOf(3000))
                 .amountOverdue(BigDecimal.valueOf(2000))
-                .rateOfInterest(BigDecimal.valueOf(8))
+                .rateOfInterest(BigDecimal.valueOf(-1.0))
                 .repaymentTenure(BigDecimal.valueOf(10))
                 .emiAmount(BigDecimal.valueOf(3000))
                 .paymentFrequency("Monthly")
@@ -349,7 +377,7 @@ class PDFGeneratorTest {
     }
 
     private EmploymentInfo getEmploymentInfo() {
-        EmploymentInfo employmentInfo=new EmploymentInfo();
+        EmploymentInfo employmentInfo = new EmploymentInfo();
         employmentInfo.setAccountType("Loan");
         employmentInfo.setOccupation("Dev");
 //        return EmploymentInfo.builder()
@@ -399,32 +427,32 @@ class PDFGeneratorTest {
 
     private List<AddressInfo> getAddressInfoList() {
         List<AddressInfo> addressInfoList = new ArrayList<>();
-        addressInfoList.add(AddressInfo.builder()
-                .addressType(ApplicationConstant.ADDRESS_RESIDENCE)
-                .completeAddress("Yaseen Manzil, Vijayapura 4th cross, Behind Indian Service Station, Chikmagaluru, Karnataka - 577101")
-                .residenceCode("-")
-                .dateReported("25/06/2020")
-                .build());
-
-        addressInfoList.add(AddressInfo.builder()
-                .addressType(ApplicationConstant.ADDRESS_PERMANENT)
-                .completeAddress("Yaseen Manzil, Vijayapura 4th cross, Behind Indian Service Station, Chikmagaluru, Karnataka - 577101")
-                .residenceCode("+91")
-                .dateReported("25/06/2020")
-                .build());
-
-        addressInfoList.add(AddressInfo.builder()
-                .addressType(ApplicationConstant.ADDRESS_PERMANENT)
-                .completeAddress("Yaseen Manzil, Vijayapura 4th cross, Behind Indian Service Station, Chikmagaluru, Karnataka - 577101")
-                .residenceCode("+91")
-                .dateReported("25/06/2020")
-                .build());
-        addressInfoList.add(AddressInfo.builder()
-                .addressType(ApplicationConstant.ADDRESS_PERMANENT)
-                .completeAddress("Yaseen Manzil, Vijayapura 4th cross, Behind Indian Service Station, Chikmagaluru, Karnataka - 577101")
-                .residenceCode("+91")
-                .dateReported("25/06/2020")
-                .build());
+//        addressInfoList.add(AddressInfo.builder()
+//                .addressType(ApplicationConstant.ADDRESS_RESIDENCE)
+//                .completeAddress("Yaseen Manzil, Vijayapura 4th cross, Behind Indian Service Station, Chikmagaluru, Karnataka - 577101")
+//                .residenceCode("-")
+//                .dateReported("25/06/2020")
+//                .build());
+//
+//        addressInfoList.add(AddressInfo.builder()
+//                .addressType(ApplicationConstant.ADDRESS_PERMANENT)
+//                .completeAddress("Yaseen Manzil, Vijayapura 4th cross, Behind Indian Service Station, Chikmagaluru, Karnataka - 577101")
+//                .residenceCode("+91")
+//                .dateReported("25/06/2020")
+//                .build());
+//
+//        addressInfoList.add(AddressInfo.builder()
+//                .addressType(ApplicationConstant.ADDRESS_PERMANENT)
+//                .completeAddress("Yaseen Manzil, Vijayapura 4th cross, Behind Indian Service Station, Chikmagaluru, Karnataka - 577101")
+//                .residenceCode("+91")
+//                .dateReported("25/06/2020")
+//                .build());
+//        addressInfoList.add(AddressInfo.builder()
+//                .addressType(ApplicationConstant.ADDRESS_PERMANENT)
+//                .completeAddress("Yaseen Manzil, Vijayapura 4th cross, Behind Indian Service Station, Chikmagaluru, Karnataka - 577101")
+//                .residenceCode("+91")
+//                .dateReported("25/06/2020")
+//                .build());
 
         return addressInfoList;
 
@@ -432,7 +460,7 @@ class PDFGeneratorTest {
 
     private List<ContactInfo> getContactInfoList() {
         List<ContactInfo> contactInfoList = new ArrayList<>();
-//        contactInfoList.add(new ContactInfo("test", "9876543210", "-"));
+        contactInfoList.add(new ContactInfo("test", "9876543210", "-"));
 //        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_HOME, "9876543210", "+91"));
 //        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_OFFICE, "9876543210", "+91"));
 //        contactInfoList.add(new ContactInfo(ApplicationConstant.CONTACT_NOT_CLASSIFIED, "9876543210", "-"));

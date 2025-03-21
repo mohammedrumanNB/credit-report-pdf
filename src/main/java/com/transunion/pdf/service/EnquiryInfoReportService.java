@@ -60,7 +60,7 @@ public class EnquiryInfoReportService {
         }
 
         //Add Dispute info if present
-        if(pdfData.isEnquiryInfoDisputePresent()){
+        if (pdfData.isEnquiryInfoDisputePresent()) {
             CommonUtil.validateDisputeInfo(pdfData.getEnquiryInfoDisputeInfo());
             enquiryInformation.setEnquiryInfoDisputePresent(true);
             enquiryInformation.setEnquiryInfoDisputeInfo(pdfData.getEnquiryInfoDisputeInfo());
