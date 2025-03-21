@@ -4,8 +4,9 @@ import lombok.*;
 
 import java.math.BigDecimal;
 
-import static com.transunion.pdf.constant.ApplicationConstant.DEFAULT_HYPHEN;
 import static com.transunion.pdf.constant.ApplicationConstant.DEFAULT_BIG_DECIMAL;
+import static com.transunion.pdf.constant.ApplicationConstant.DEFAULT_HYPHEN;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,4 +31,5 @@ public class AccountDetails {
     private BigDecimal emiAmount = DEFAULT_BIG_DECIMAL;
     private String paymentFrequency = DEFAULT_HYPHEN;
     private BigDecimal actualPaymentAmount = DEFAULT_BIG_DECIMAL;
+    private String highCreditOrAmountSanctionLabel = DEFAULT_HYPHEN;
 }
