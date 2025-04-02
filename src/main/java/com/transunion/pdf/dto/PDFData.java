@@ -20,6 +20,7 @@ public class PDFData {
     private String reportGeneratedDate = DEFAULT_HYPHEN; // Send in this format 12 Dec 2024
     private String cibilScoreDate = DEFAULT_HYPHEN; // Send in this format 11 Nov 2024
     private Integer cibilScore = 0; //Send 0 for NH Case
+    private String coverPageName =DEFAULT_HYPHEN;
     private PersonalInfo personalInfo;
     private List<IdentificationInfo> identificationInfoList;
     private List<EmailInfo> emailInfoList;

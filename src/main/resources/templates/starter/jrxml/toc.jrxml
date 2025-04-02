@@ -37,8 +37,8 @@
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</element>
-					<element kind="textField" uuid="f12af504-7c1e-40e7-bdcc-8b1d1265f432" x="0" y="20" width="128" height="20" forecolor="#595959" fontName="Roboto - 400" vTextAlign="Middle">
-						<expression><![CDATA[$P{indexParam}.getName()]]></expression>
+					<element kind="textField" uuid="f12af504-7c1e-40e7-bdcc-8b1d1265f432" x="0" y="20" width="128" height="20" forecolor="#595959" fontName="Roboto - 400" textAdjust="StretchHeight" vTextAlign="Middle">
+						<expression><![CDATA[$P{indexParam}.getCoverPageName()]]></expression>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>

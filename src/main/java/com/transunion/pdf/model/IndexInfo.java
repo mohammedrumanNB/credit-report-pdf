@@ -13,13 +13,15 @@ public class IndexInfo {
     private String reportGeneratedDate;
     private String cibilScoreDate;
     private String name;
+    private String coverPageName;
 
-    public IndexInfo(int cibilScore, String reportGeneratedDate, String cibilScoreDate, String controlNumber, String name) {
+    public IndexInfo(int cibilScore, String reportGeneratedDate, String cibilScoreDate, String controlNumber, String name, String coverPageName) {
         this.cibilScore = cibilScore;
         this.controlNumber = controlNumber;
         this.reportGeneratedDate = reportGeneratedDate;
         this.cibilScoreDate = cibilScoreDate;
         this.name = name;
+        this.coverPageName=coverPageName;
     }
 
 }

@@ -37,6 +37,6 @@ public class IndexReportService {
 
     public IndexInfo getIndexParam(PDFData pdfData) {
         CommonUtil.validateIndexInfo(pdfData);
-        return new IndexInfo(pdfData.getCibilScore(), pdfData.getReportGeneratedDate(), pdfData.getCibilScoreDate(), pdfData.getControlNumber(), pdfData.getPersonalInfo().getFullName());
+        return new IndexInfo(pdfData.getCibilScore(), pdfData.getReportGeneratedDate(), pdfData.getCibilScoreDate(), pdfData.getControlNumber(), pdfData.getPersonalInfo().getFullName(), pdfData.getCoverPageName());
     }
 }
