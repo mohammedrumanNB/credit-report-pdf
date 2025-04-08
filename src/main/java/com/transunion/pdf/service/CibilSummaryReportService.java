@@ -53,6 +53,7 @@ public class CibilSummaryReportService {
         summary.setMobileNumber(summaryInfo.getMobileNumber());
         summary.setAddress(summaryInfo.getAddress());
 
+        summary.setTotalEnquiries(summaryInfo.getTotalEnquiries());
         summary.setEnquiries12(summaryInfo.getEnquiries12());
         summary.setEnquiries24(summaryInfo.getEnquiries24());
         summary.setEnquiries36(summaryInfo.getEnquiries36());

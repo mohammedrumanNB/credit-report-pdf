@@ -65,24 +65,8 @@ public class CommonUtil {
 
     }
 
-    public static void validateIdentificationInfo(List<IdentificationInfo> identificationInfoList) {
-        if (identificationInfoList.isEmpty()) {
-            throw new InvalidDataException(1009, "Indentification detail is Empty. Provide atleast one Identification detail");
-        }
-    }
 
 
-    public static void validateLatePaymentInfoTw(TwelveMonthLatePaymentInfo twelveMonthLatePaymentInfo) {
-        if (twelveMonthLatePaymentInfo == null) {
-            throw new InvalidDataException(1011, "Twelve Month Late Payment Info is Null. Atleast Send Empty TwelveMonthPaymentInfo Object");
-        }
-    }
-
-    public static void validateLatePaymentInfoTh(ThirtySixMonthLatePaymentInfo thirtySixMonthLatePaymentInfo) {
-        if (thirtySixMonthLatePaymentInfo == null) {
-            throw new InvalidDataException(1011, "Thirty Six Month Late Payment Info is Null. Atleast Send Empty ThirtySixMonthLatePaymentInfo Object");
-        }
-    }
 
 
     public static void validateEmploymentInfo(EmploymentInfo employmentInfo) {

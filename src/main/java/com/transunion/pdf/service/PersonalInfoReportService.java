@@ -46,6 +46,10 @@ public class PersonalInfoReportService {
 
         PersonalInfo personalInfo = pdfData.getPersonalInfo();
         List<IdentificationInfo> identificationInfoList = pdfData.getIdentificationInfoList();
+        if(!identificationInfoList.isEmpty()){
+           personalInformation.setIdentificationInfoPresent(true);
+        }
+
         List<AddressInfo> addressInfoList = pdfData.getAddressInfoList();
         List<ContactInfo> contactInfoList = pdfData.getContactInfoList();
         List<EmailInfo> emailInfoList = pdfData.getEmailInfoList();
@@ -54,11 +58,12 @@ public class PersonalInfoReportService {
 
         //Validate Personal Info, Identification Info
         CommonUtil.validatePersonalInfo(personalInfo);
-        CommonUtil.validateIdentificationInfo(identificationInfoList);
         CommonUtil.validateEmploymentInfo(employmentInfo);
 
         personalInformation.setPersonalInfo(personalInfo);
-        personalInformation.setIdentificationTableDataSource(getIdentificationTableDataSource(identificationInfoList));
+        if(personalInformation.isIdentificationInfoPresent()) {
+            personalInformation.setIdentificationTableDataSource(getIdentificationTableDataSource(identificationInfoList));
+        }
         personalInformation.setAddressInformation(getAddressInformation(addressInfoList));
         personalInformation.setContactInfoList(processContactInfo(contactInfoList));
         personalInformation.setEmailInfoList(emailInfoList);

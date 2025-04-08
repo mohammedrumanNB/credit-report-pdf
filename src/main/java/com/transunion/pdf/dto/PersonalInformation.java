@@ -14,6 +14,7 @@ public class PersonalInformation {
     private String controlNumber;
     private String reportGeneratedDate;
     private PersonalInfo personalInfo;
+    private boolean identificationInfoPresent;
     private JRBeanCollectionDataSource identificationTableDataSource;
     private AddressInformation addressInformation;
     private List<ContactInfo> contactInfoList;

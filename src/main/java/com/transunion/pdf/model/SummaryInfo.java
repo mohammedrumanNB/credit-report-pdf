@@ -24,6 +24,7 @@ public class SummaryInfo {
     private String email = DEFAULT_HYPHEN;
     private String mobileNumber = DEFAULT_HYPHEN;
     private String address = DEFAULT_HYPHEN;
+    private int totalEnquiries=0;
     private int enquiries12 = 0;
     private int enquiries24 = 0;
     private int enquiries36 = 0;

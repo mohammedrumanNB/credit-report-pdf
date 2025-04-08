@@ -138,7 +138,7 @@
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</columnHeader>
 	<detail>
-		<band height="572" splitType="Stretch">
+		<band height="576" splitType="Stretch">
 			<element kind="textField" uuid="b1480e2b-67f3-4856-8d62-fa018c33f9bf" x="0" y="61" width="50" height="5" forecolor="#FFFFFF" fontName="Roboto - 400" fontSize="4.0">
 				<expression><![CDATA["PIP"]]></expression>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -467,7 +467,7 @@
 				</element>
 				<box bottomPadding="32"/>
 			</element>
-			<element kind="frame" uuid="ffa61048-d7a0-49e3-bc79-c0befeb17852" positionType="Float" x="40" y="234" width="515" height="80" removeLineWhenBlank="true">
+			<element kind="frame" uuid="ffa61048-d7a0-49e3-bc79-c0befeb17852" positionType="Float" x="40" y="235" width="515" height="80" removeLineWhenBlank="true">
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -688,7 +688,7 @@
 				</element>
 				<box bottomPadding="32"/>
 			</element>
-			<element kind="frame" uuid="77eea0ef-8a2a-4710-acea-8099118efb5f" positionType="Float" x="40" y="314" width="515" height="65">
+			<element kind="frame" uuid="77eea0ef-8a2a-4710-acea-8099118efb5f" positionType="Float" x="40" y="316" width="515" height="65">
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -728,6 +728,7 @@
 					</element>
 				</element>
 				<element kind="frame" uuid="7f57d00a-067d-48a8-8733-e4bb01a19402" x="0" y="32" width="514" height="33">
+					<printWhenExpression><![CDATA[!$P{personalInformationParam}.getEmailInfoList().isEmpty()]]></printWhenExpression>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -757,7 +758,7 @@
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<element kind="textField" uuid="dde05bab-6ad4-4227-85fc-9daf76689d3d" x="0" y="13" width="114" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<element kind="textField" uuid="dde05bab-6ad4-4227-85fc-9daf76689d3d" x="0" y="13" width="114" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" textAdjust="StretchHeight" vTextAlign="Middle">
 							<expression><![CDATA[$P{personalInformationParam}.getEmailInfoList().get(1).getEmail()]]></expression>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -774,7 +775,7 @@
 						<printWhenExpression><![CDATA[$P{personalInformationParam}.getEmailInfoList().size()>=3]]></printWhenExpression>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<element kind="textField" uuid="04986d31-68d4-49fc-afbc-1e44b3344310" x="0" y="13" width="114" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<element kind="textField" uuid="04986d31-68d4-49fc-afbc-1e44b3344310" x="0" y="13" width="114" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" textAdjust="StretchHeight" vTextAlign="Middle">
 							<expression><![CDATA[$P{personalInformationParam}.getEmailInfoList().get(2).getEmail()]]></expression>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -788,9 +789,24 @@
 						</element>
 					</element>
 				</element>
+				<element kind="frame" uuid="5c8ba0fe-10e2-4714-95da-51a4f6fbcf07" x="0" y="32" width="514" height="28" removeLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$P{personalInformationParam}.getEmailInfoList().isEmpty()]]></printWhenExpression>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="noData"/>
+					<element kind="staticText" uuid="fee266a5-7bef-4b8f-b300-f1297db9bca1" x="8" y="8" width="311" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+						<text><![CDATA[No data was reported for this section.]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+				</element>
 				<box bottomPadding="32"/>
 			</element>
-			<element kind="frame" uuid="47e99adc-0337-4d1b-8c81-35da22c03bb5" positionType="Float" mode="Opaque" x="40" y="379" width="515" height="111" backcolor="#FFFFFF" removeLineWhenBlank="true">
+			<element kind="frame" uuid="47e99adc-0337-4d1b-8c81-35da22c03bb5" positionType="Float" mode="Opaque" x="40" y="382" width="515" height="111" backcolor="#FFFFFF" removeLineWhenBlank="true">
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="11819f40-884e-4d56-a8ad-e31f7eeb3120" positionType="Float" x="0" y="0" width="515" height="28">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -951,7 +967,7 @@ INDICATOR]]></text>
 				</element>
 				<box bottomPadding="0"/>
 			</element>
-			<element kind="frame" uuid="041f7874-5c4c-4647-a73e-8b92867eb83b" positionType="Float" mode="Transparent" x="40" y="490" width="515" height="82" backcolor="#FFFFFF" removeLineWhenBlank="true">
+			<element kind="frame" uuid="041f7874-5c4c-4647-a73e-8b92867eb83b" positionType="Float" mode="Transparent" x="40" y="494" width="515" height="82" backcolor="#FFFFFF" removeLineWhenBlank="true">
 				<printWhenExpression><![CDATA[$P{personalInformationParam}.isPersonalInfoDisputePresent()]]></printWhenExpression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>

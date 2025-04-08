@@ -47,7 +47,7 @@
 	<field name="highCreditOrAmountSanctionLabel" class="java.lang.String"/>
 	<background splitType="Stretch"/>
 	<detail>
-		<band height="701" splitType="Immediate">
+		<band height="739" splitType="Immediate">
 			<printWhenExpression><![CDATA[$F{accountUnderDispute}==true]]></printWhenExpression>
 			<element kind="frame" uuid="6545068d-93b4-4faa-a884-0bb7fd322c4b" x="0" y="0" width="515" height="70">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>

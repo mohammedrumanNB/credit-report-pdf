@@ -31,7 +31,7 @@
 	<background splitType="Stretch"/>
 	<detail>
 		<band height="100" splitType="Stretch">
-			<element kind="subreport" uuid="9dd93c6d-66ae-485c-bb5d-6fb47af43e71" x="0" y="0" width="595" height="100">
+			<element kind="subreport" uuid="9dd93c6d-66ae-485c-bb5d-6fb47af43e71" x="0" y="0" width="595" height="100" runToBottom="true" usingCache="true">
 				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
 				<expression><![CDATA[$P{indexReport}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -41,8 +41,8 @@
 			</element>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>
-		<band height="100">
-			<element kind="subreport" uuid="d68dd536-64c8-402b-8f42-09512c33099e" x="0" y="0" width="595" height="100">
+		<band height="1" splitType="Stretch">
+			<element kind="subreport" uuid="d68dd536-64c8-402b-8f42-09512c33099e" x="0" y="0" width="595" height="1">
 				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
 				<expression><![CDATA[$P{cibilSummaryReport}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>

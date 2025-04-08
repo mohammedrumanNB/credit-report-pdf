@@ -20,6 +20,7 @@ public class Summary {
     private String email;
     private String mobileNumber;
     private String address;
+    private int totalEnquiries;
     private int enquiries12;
     private int enquiries24;
     private int enquiries36;
