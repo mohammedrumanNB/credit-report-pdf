@@ -621,7 +621,7 @@
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								<property name="com.jaspersoft.studio.unit.height" value="px"/>
 								<element kind="staticText" uuid="e5de32b6-6ca2-4f70-9536-0d923b34289e" x="0" y="0" width="102" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-									<text><![CDATA[Suit - Filed / Willful default]]></text>
+									<text><![CDATA[Suit - Filed / Wilful default]]></text>
 									<property name="com.jaspersoft.studio.unit.x" value="px"/>
 									<property name="com.jaspersoft.studio.unit.y" value="px"/>
 									<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -647,7 +647,7 @@
 									<property name="com.jaspersoft.studio.unit.width" value="px"/>
 									<property name="com.jaspersoft.studio.unit.height" value="px"/>
 								</element>
-								<element kind="textField" uuid="29d098c2-504a-4a09-9c06-9f4dd509912e" x="110" y="0" width="101" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+								<element kind="textField" uuid="29d098c2-504a-4a09-9c06-9f4dd509912e" x="110" y="0" width="101" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" textAdjust="StretchHeight" hTextAlign="Right" vTextAlign="Middle">
 									<expression><![CDATA[$F{creditFacilityStatus}]]></expression>
 									<property name="com.jaspersoft.studio.unit.x" value="px"/>
 									<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -655,7 +655,7 @@
 									<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								</element>
 							</element>
-							<element kind="frame" uuid="3ad1be7b-2af1-4240-abd3-0256412bd42f" x="0" y="40" width="211" height="12">
+							<element kind="frame" uuid="3ad1be7b-2af1-4240-abd3-0256412bd42f" positionType="Float" x="0" y="40" width="211" height="12">
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								<property name="com.jaspersoft.studio.unit.height" value="px"/>
 								<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -1631,7 +1631,7 @@
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								<property name="com.jaspersoft.studio.unit.height" value="px"/>
 								<element kind="staticText" uuid="82bfa68b-1ca0-42d0-a0b5-15e2bcf2de55" x="0" y="0" width="102" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
-									<text><![CDATA[Suit - Filed / Willful default]]></text>
+									<text><![CDATA[Suit - Filed / Wilful default]]></text>
 									<property name="com.jaspersoft.studio.unit.x" value="px"/>
 									<property name="com.jaspersoft.studio.unit.y" value="px"/>
 									<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -1657,7 +1657,7 @@
 									<property name="com.jaspersoft.studio.unit.width" value="px"/>
 									<property name="com.jaspersoft.studio.unit.height" value="px"/>
 								</element>
-								<element kind="textField" uuid="bc7b3323-8288-4b68-b8d8-89d648ca13ac" x="110" y="0" width="101" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right" vTextAlign="Middle">
+								<element kind="textField" uuid="bc7b3323-8288-4b68-b8d8-89d648ca13ac" x="110" y="0" width="101" height="12" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" textAdjust="StretchHeight" hTextAlign="Right" vTextAlign="Middle">
 									<expression><![CDATA[$F{creditFacilityStatus}]]></expression>
 									<property name="com.jaspersoft.studio.unit.x" value="px"/>
 									<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -1665,7 +1665,7 @@
 									<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								</element>
 							</element>
-							<element kind="frame" uuid="bcc55331-4670-48ad-b8f2-289af181eba0" x="0" y="40" width="211" height="12">
+							<element kind="frame" uuid="bcc55331-4670-48ad-b8f2-289af181eba0" positionType="Float" x="0" y="40" width="211" height="12">
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 								<property name="com.jaspersoft.studio.unit.height" value="px"/>
 								<property name="com.jaspersoft.studio.unit.x" value="px"/>

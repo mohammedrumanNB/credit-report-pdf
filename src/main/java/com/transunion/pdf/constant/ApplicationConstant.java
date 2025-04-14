@@ -63,8 +63,8 @@ public class ApplicationConstant {
     public static final String OPEN_ACCOUNT_JASPER_PATH_DIRECT = "src/main/resources/templates/common/jasper/open_account_direct.jasper";
     public static final String CLOSED_ACCOUNT_JASPER_PATH_DIRECT = "src/main/resources/templates/common/jasper/closed_account_direct.jasper";
     public static final String ENQUIRY_TABLE_JASPER_PATH = "src/main/resources/templates/common/jasper/enquiry_table.jasper";
-    public static final String GLOSSARY_1_JASPER_PATH = "src/main/resources/templates/common/jasper/glossary1.jasper";
-    public static final String GLOSSARY_2_JASPER_PATH = "src/main/resources/templates/common/jasper/glossary2.jasper";
+    public static final String GLOSSARY_1_JASPER_PATH = "src/main/resources/templates/common/jasper/glossary-1.jasper";
+    public static final String GLOSSARY_2_JASPER_PATH = "src/main/resources/templates/common/jasper/glossary-2.jasper";
 
 
     //NH JRXML PATH

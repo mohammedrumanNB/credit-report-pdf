@@ -4,11 +4,13 @@ import lombok.Getter;
 
 @Getter
 public enum SummaryIdType {
-    PAN("PAN"),
-    PASSPORT("PASSPORT"),
-    VOTER_ID("VOTER ID"),
-    RATION_CARD("RATION CARD"),
-    DRIVERS_LICENSE("DRIVER'S LICENSE");
+    TaxId("TAX ID"),
+    PassportId("PASSPORT"),
+    VoterId("VOTER ID"),
+    RationCardId("RATION CARD"),
+    DriversLicenseId("DRIVER'S LICENSE ID"),
+    NregaId("NREGA CARD NUMBER"),
+    CkycId("CKYC");
 
     private final String code;
 

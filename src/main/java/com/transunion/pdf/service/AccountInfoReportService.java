@@ -280,7 +280,7 @@ public class AccountInfoReportService {
     }
 
     private static String checkDefaultRateofInterest(BigDecimal roi) {
-        return roi.equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) || roi.equals(BigDecimal.valueOf(-1.00)) || roi.equals(BigDecimal.valueOf(-1.0)) ? ApplicationConstant.DEFAULT_HYPHEN : roi + "%";
+        return ApplicationConstant.DEFAULT_BIG_DECIMAL.compareTo(roi) == 0? ApplicationConstant.DEFAULT_HYPHEN : roi + "%";
     }
 
     private String checkDefaultBigDecimal(BigDecimal decimal) {
