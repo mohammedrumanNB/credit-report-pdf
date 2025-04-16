@@ -1,0 +1,2964 @@
+{
+  "copyrightYear": "2025",
+  "controlNumber": "-",
+  "reportGeneratedDate": "02 Apr 2025",
+  "cibilScoreDate": "02 Apr 2025",
+  "cibilScore": 701,
+  "coverPageName": "JOHN WICK ",
+  "personalInfo": {
+    "fullName": "JOHN WICK ",
+    "gender": "Male",
+    "dateOfBirth": "01 Jan 1990"
+  },
+  "identificationInfoList": [
+    {
+      "identificationType": "Income Tax ID Number (PAN)",
+      "idNumber": "ALDPD1234H",
+      "issueDate": "-",
+      "expiryDate": "-"
+    }
+  ],
+  "emailInfoList": [],
+  "contactInfoList": [],
+  "addressInfoList": [
+    {
+      "addressType": "Residence Address",
+      "completeAddress": "TRANSUNION CIBIL LTD 19TH FLR ONEINDIABULLS TWR 2A B 841SENAPATI BAPAT MARG LOWERPAREL MUMBAI",
+      "residenceCode": "Rented",
+      "dateReported": "14/10/2020"
+    }
+  ],
+  "totalAccountsUnderDisputes": 0,
+  "employmentInfo": {
+    "accountType": "-",
+    "dateReported": "-",
+    "occupation": "-",
+    "income": -1,
+    "monthlyAnnualIncome": "-",
+    "netGrossIncome": "-"
+  },
+  "openAccountInfoList": [
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Housing Loan",
+        "bankName": "HDFC BANK",
+        "accountNumber": "4718630100459923",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 16146,
+        "currentBalance": 7000,
+        "cashLimit": -1,
+        "amountOverdue": 57,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "22/10/2007",
+        "dateLastPayment": "13/04/2012",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "15/11/2021"
+      },
+      "paymentStartDate": "01/12/2018",
+      "paymentEndDate": "01/11/2021",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2021,
+          "janDue": "0",
+          "febDue": "XXX",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "600",
+          "decDue": null
+        },
+        {
+          "year": 2020,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "10"
+        },
+        {
+          "year": 2019,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "XXX",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2018,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Credit Card",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ACHSKJ01039310",
+        "ownerShipType": "Deceased",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 50000,
+        "cashLimit": -1,
+        "amountOverdue": 1500,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "04/10/2022",
+        "dateLastPayment": "06/10/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "09/06/2023"
+      },
+      "paymentStartDate": "01/06/2023",
+      "paymentEndDate": "01/06/2023",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2023,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": "30",
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054123",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054124",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054125",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Account Type in Dispute",
+          "disputeDate": "14/10/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054126",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "03/10/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054127",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Ownership Indicator in Dispute",
+          "disputeDate": "14/10/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054128",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Account Ownership Error",
+          "disputeDate": "22/01/2024"
+        },
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054129",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Current Balance in Dispute",
+          "disputeDate": "14/10/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054130",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Ownership Indicator in Dispute",
+          "disputeDate": "03/10/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054131",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "GECL Loan Unsecured",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ICICI34891054132",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 100000,
+        "currentBalance": 96818,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "16/12/2021",
+        "dateLastPayment": "03/01/2022",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "13/03/2022"
+      },
+      "paymentStartDate": "01/03/2022",
+      "paymentEndDate": "01/03/2022",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2022,
+          "janDue": null,
+          "febDue": null,
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Gold Loan",
+        "bankName": "HDFC BANK",
+        "accountNumber": "52700600001626",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "06/05/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 94000,
+        "currentBalance": 94000,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": 7.85,
+        "repaymentTenure": 1,
+        "emiAmount": 94000,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "03/07/2020",
+        "dateLastPayment": "30/07/2020",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "31/08/2020"
+      },
+      "paymentStartDate": "01/07/2020",
+      "paymentEndDate": "01/08/2020",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2020,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": "STD",
+          "augDue": "STD",
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "No Collateral",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Credit Card",
+        "bankName": "HDFC BANK",
+        "accountNumber": "LTNAN00008005055",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 50000,
+        "currentBalance": 7000,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "02/09/2019",
+        "dateLastPayment": "20/09/2019",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "12/11/2021"
+      },
+      "paymentStartDate": "01/08/2021",
+      "paymentEndDate": "01/11/2021",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2021,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": "0",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Property Loan",
+        "bankName": "HDFC BANK",
+        "accountNumber": "LANAG90000000201",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "25/08/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 560000,
+        "currentBalance": 6000,
+        "cashLimit": -1,
+        "amountOverdue": -1,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "24/04/2019",
+        "dateLastPayment": "29/04/2019",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "23/11/2021"
+      },
+      "paymentStartDate": "01/05/2019",
+      "paymentEndDate": "01/11/2021",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2021,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": null
+        },
+        {
+          "year": 2020,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "XXX",
+          "decDue": "XXX"
+        },
+        {
+          "year": 2019,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": "0",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "XXX",
+          "decDue": "XXX"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Business Loan – General",
+        "bankName": "HDFC BANK",
+        "accountNumber": "LANAG90000000202",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "11/05/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 56000005,
+        "currentBalance": 60000,
+        "cashLimit": -1,
+        "amountOverdue": -1,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "24/04/2019",
+        "dateLastPayment": "29/04/2019",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "18/11/2021"
+      },
+      "paymentStartDate": "01/05/2019",
+      "paymentEndDate": "01/11/2021",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2021,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": null
+        },
+        {
+          "year": 2020,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "XXX",
+          "decDue": "XXX"
+        },
+        {
+          "year": 2019,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": "0",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "XXX",
+          "decDue": "XXX"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Two-wheeler Loan",
+        "bankName": "HDFC BANK",
+        "accountNumber": "0004617862000079459",
+        "ownerShipType": "Joint",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "24/08/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 50000,
+        "currentBalance": 44241,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "01/01/2014",
+        "dateLastPayment": "18/06/2019",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "12/11/2021"
+      },
+      "paymentStartDate": "01/12/2018",
+      "paymentEndDate": "01/11/2021",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2021,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": null
+        },
+        {
+          "year": 2020,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "STD",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "XXX",
+          "decDue": "XXX"
+        },
+        {
+          "year": 2019,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "XXX",
+          "decDue": "XXX"
+        },
+        {
+          "year": 2018,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": "XXX"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Credit Card",
+        "bankName": "HDFC BANK",
+        "accountNumber": "3399385223041673",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "11/05/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 31374,
+        "currentBalance": 16648,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "30/04/2011",
+        "dateLastPayment": "09/05/2012",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "31/05/2012"
+      },
+      "paymentStartDate": "01/04/2011",
+      "paymentEndDate": "01/05/2012",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2012,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2011,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Credit Card",
+        "bankName": "HDFC BANK",
+        "accountNumber": "0005101286929186106",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "11/05/2022"
+        },
+        "creditLimit": 60000,
+        "highCredit": 60675,
+        "currentBalance": -678,
+        "cashLimit": 24000,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "Monthly",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "02/10/2007",
+        "dateLastPayment": "20/04/2013",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "08/05/2016"
+      },
+      "paymentStartDate": "01/06/2013",
+      "paymentEndDate": "01/05/2016",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2016,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2015,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "XXX",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2014,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2013,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Open",
+        "accountType": "Credit Card",
+        "bankName": "HDFC BANK",
+        "accountNumber": "ACS44589482908",
+        "ownerShipType": "Authorized User",
+        "disputeInfo": {
+          "cibilRemarks": "Payment History 1 in Dispute",
+          "disputeDate": "09/01/2024"
+        },
+        "creditLimit": 83959,
+        "highCredit": 12000,
+        "currentBalance": 6000,
+        "cashLimit": 84853,
+        "amountOverdue": 115000,
+        "rateOfInterest": 45.67,
+        "repaymentTenure": 122,
+        "emiAmount": -1,
+        "paymentFrequency": "Monthly",
+        "actualPaymentAmount": 6000,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "15/01/2020",
+        "dateLastPayment": "23/02/2021",
+        "dateClosed": "-",
+        "dateReportedAndCertified": "14/07/2021"
+      },
+      "paymentStartDate": "01/07/2021",
+      "paymentEndDate": "01/07/2021",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2021,
+          "janDue": " ",
+          "febDue": " ",
+          "marDue": " ",
+          "aprDue": " ",
+          "mayDue": " ",
+          "junDue": " ",
+          "julDue": " ",
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2020,
+          "janDue": " ",
+          "febDue": " ",
+          "marDue": " ",
+          "aprDue": " ",
+          "mayDue": " ",
+          "junDue": " ",
+          "julDue": " ",
+          "augDue": " ",
+          "sepDue": " ",
+          "octDue": " ",
+          "novDue": " ",
+          "decDue": " "
+        },
+        {
+          "year": 2019,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": " ",
+          "sepDue": " ",
+          "octDue": " ",
+          "novDue": " ",
+          "decDue": " "
+        }
+      ],
+      "valueOfCollateral": 343536,
+      "typeOfCollateral": "Gold",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "Settled",
+      "writtenOffAmountTotal": 87482,
+      "writtenOffAmountPrincipal": 1344,
+      "settlementAmount": 349829
+    }
+  ],
+  "closedAccountInfoList": [
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Corporate Credit Card",
+        "bankName": "HDFC BANK LICENCECANCELLED",
+        "accountNumber": "0005329730610203601",
+        "ownerShipType": "Joint",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "02/06/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 143875,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": -1,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "11/01/2016",
+        "dateLastPayment": "24/11/2017",
+        "dateClosed": "09/01/2018",
+        "dateReportedAndCertified": "31/03/2018"
+      },
+      "paymentStartDate": "01/01/2016",
+      "paymentEndDate": "01/03/2018",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2018,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2017,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2016,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Consumer Loan",
+        "bankName": "BAJAJ FIN LTD LICENCECANCELLED",
+        "accountNumber": "4000CD02390247",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "02/06/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 31324,
+        "currentBalance": 5000,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "18/04/2014",
+        "dateLastPayment": "02/03/2015",
+        "dateClosed": "27/04/2015",
+        "dateReportedAndCertified": "31/08/2021"
+      },
+      "paymentStartDate": "01/06/2021",
+      "paymentEndDate": "01/08/2021",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2021,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "0",
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Two-wheeler Loan",
+        "bankName": "BAJAJ FIN LTD LICENCECANCELLED",
+        "accountNumber": "L2WDEL02770238",
+        "ownerShipType": "Guarantor",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "13/09/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 68000,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": -1,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "14/11/2013",
+        "dateLastPayment": "-",
+        "dateClosed": "09/11/2015",
+        "dateReportedAndCertified": "03/03/2016"
+      },
+      "paymentStartDate": "01/12/2013",
+      "paymentEndDate": "01/03/2016",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2016,
+          "janDue": "0",
+          "febDue": "XXX",
+          "marDue": "0",
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2015,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "XXX",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "XXX",
+          "decDue": "0"
+        },
+        {
+          "year": 2014,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "XXX",
+          "sepDue": "0",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": "XXX"
+        },
+        {
+          "year": 2013,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Housing Loan",
+        "bankName": "HDFC LICENCECANCELLED",
+        "accountNumber": "219-600740123",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Account Ownership Error",
+          "disputeDate": "25/11/2021"
+        },
+        "creditLimit": -1,
+        "highCredit": 1695660,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "21/12/2010",
+        "dateLastPayment": "26/05/2012",
+        "dateClosed": "31/05/2012",
+        "dateReportedAndCertified": "31/03/2013"
+      },
+      "paymentStartDate": "01/12/2010",
+      "paymentEndDate": "01/05/2012",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2012,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2011,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "29",
+          "aprDue": "30",
+          "mayDue": "0",
+          "junDue": "2",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2010,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Consumer Loan",
+        "bankName": "BAJAJ FIN LTD LICENCECANCELLED",
+        "accountNumber": "4130CD00032786",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "14/06/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 8500,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "27/11/2010",
+        "dateLastPayment": "05/08/2011",
+        "dateClosed": "10/08/2011",
+        "dateReportedAndCertified": "19/11/2011"
+      },
+      "paymentStartDate": "01/12/2010",
+      "paymentEndDate": "01/08/2011",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2011,
+          "janDue": "STD",
+          "febDue": "STD",
+          "marDue": "STD",
+          "aprDue": "STD",
+          "mayDue": "STD",
+          "junDue": "STD",
+          "julDue": "STD",
+          "augDue": "STD",
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2010,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": "STD"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Gold Loan",
+        "bankName": "FEDERAL BANK LICENCECANCELLED",
+        "accountNumber": "16426100000693",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "02/06/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 120000,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "19/08/2010",
+        "dateLastPayment": "03/08/2011",
+        "dateClosed": "03/08/2011",
+        "dateReportedAndCertified": "31/08/2011"
+      },
+      "paymentStartDate": "01/08/2010",
+      "paymentEndDate": "01/08/2011",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2011,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "XXX",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2010,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Gold Loan",
+        "bankName": "FEDERAL BANK LICENCECANCELLED",
+        "accountNumber": "16426100000701",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "13/09/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 60000,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "19/08/2010",
+        "dateLastPayment": "03/08/2011",
+        "dateClosed": "03/08/2011",
+        "dateReportedAndCertified": "31/08/2011"
+      },
+      "paymentStartDate": "01/08/2010",
+      "paymentEndDate": "01/08/2011",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2011,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "XXX",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2010,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Credit Card",
+        "bankName": "SCB LICENCECANCELLED",
+        "accountNumber": "3399385222585153",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "02/06/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 156000,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "20/11/2009",
+        "dateLastPayment": "18/12/2009",
+        "dateClosed": "18/12/2009",
+        "dateReportedAndCertified": "31/10/2013"
+      },
+      "paymentStartDate": "01/11/2009",
+      "paymentEndDate": "01/12/2009",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2009,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Credit Card",
+        "bankName": "AXIS BANK LICENCECANCELLED",
+        "accountNumber": "4074390000252435",
+        "ownerShipType": "Joint",
+        "disputeInfo": {
+          "cibilRemarks": "Account Ownership Error",
+          "disputeDate": "25/11/2021"
+        },
+        "creditLimit": 800001,
+        "highCredit": 403211,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "28/07/2009",
+        "dateLastPayment": "05/07/2011",
+        "dateClosed": "05/08/2021",
+        "dateReportedAndCertified": "18/11/2021"
+      },
+      "paymentStartDate": "01/12/2018",
+      "paymentEndDate": "01/11/2021",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2021,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": null
+        },
+        {
+          "year": 2020,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "XXX",
+          "decDue": "XXX"
+        },
+        {
+          "year": 2019,
+          "janDue": "XXX",
+          "febDue": "XXX",
+          "marDue": "XXX",
+          "aprDue": "XXX",
+          "mayDue": "XXX",
+          "junDue": "XXX",
+          "julDue": "XXX",
+          "augDue": "XXX",
+          "sepDue": "XXX",
+          "octDue": "XXX",
+          "novDue": "XXX",
+          "decDue": "XXX"
+        },
+        {
+          "year": 2018,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": "XXX"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Credit Card",
+        "bankName": "SBI CARD LICENCECANCELLED",
+        "accountNumber": "0005101286924118948",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Account Ownership Error",
+          "disputeDate": "25/11/2021"
+        },
+        "creditLimit": 73000,
+        "highCredit": 11676,
+        "currentBalance": -1,
+        "cashLimit": 29200,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "Monthly",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "24/09/2007",
+        "dateLastPayment": "17/11/2009",
+        "dateClosed": "22/02/2013",
+        "dateReportedAndCertified": "15/11/2014"
+      },
+      "paymentStartDate": "01/05/2011",
+      "paymentEndDate": "01/02/2013",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2013,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2012,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2011,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Credit Card",
+        "bankName": "AXIS BANK LICENCECANCELLED",
+        "accountNumber": "4718630100391613",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": 11000,
+        "highCredit": 12776,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "31/08/2007",
+        "dateLastPayment": "11/02/2011",
+        "dateClosed": "05/04/2011",
+        "dateReportedAndCertified": "31/10/2014"
+      },
+      "paymentStartDate": "01/08/2008",
+      "paymentEndDate": "01/04/2011",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2011,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2010,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2009,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "8",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2008,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Credit Card",
+        "bankName": "ICICI BANK LICENCECANCELLED",
+        "accountNumber": "5176370243304007",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Account Type in Dispute",
+          "disputeDate": "02/06/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 16007,
+        "currentBalance": -93,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "29/05/2007",
+        "dateLastPayment": "03/05/2010",
+        "dateClosed": "19/05/2010",
+        "dateReportedAndCertified": "28/02/2014"
+      },
+      "paymentStartDate": "01/06/2007",
+      "paymentEndDate": "01/05/2010",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2010,
+          "janDue": "37",
+          "febDue": "68",
+          "marDue": "96",
+          "aprDue": "127",
+          "mayDue": "0",
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2009,
+          "janDue": "0",
+          "febDue": "XXX",
+          "marDue": "0",
+          "aprDue": "XXX",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "XXX",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": "XXX"
+        },
+        {
+          "year": 2008,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "8",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2007,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "XXX",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Credit Card",
+        "bankName": "HSBC LICENCECANCELLED",
+        "accountNumber": "4384591394625418",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "20/05/2022"
+        },
+        "creditLimit": -1,
+        "highCredit": 30591,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "Monthly",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "21/05/2007",
+        "dateLastPayment": "29/07/2011",
+        "dateClosed": "31/08/2012",
+        "dateReportedAndCertified": "31/12/2013"
+      },
+      "paymentStartDate": "01/09/2009",
+      "paymentEndDate": "01/08/2012",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2012,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2011,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2010,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        },
+        {
+          "year": 2009,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Credit Card",
+        "bankName": "CITIBANK LICENCECANCELLED",
+        "accountNumber": "5546197095440008",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Account Ownership Error",
+          "disputeDate": "25/11/2021"
+        },
+        "creditLimit": -1,
+        "highCredit": 19280,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "09/05/2006",
+        "dateLastPayment": "19/04/2007",
+        "dateClosed": "23/04/2007",
+        "dateReportedAndCertified": "23/07/2011"
+      },
+      "paymentStartDate": "01/05/2006",
+      "paymentEndDate": "01/04/2007",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2007,
+          "janDue": "30",
+          "febDue": "60",
+          "marDue": "90",
+          "aprDue": "0",
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2006,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Consumer Loan",
+        "bankName": "BAJAJ FIN LTD LICENCECANCELLED",
+        "accountNumber": "4000CD00521792",
+        "ownerShipType": "Individual",
+        "disputeInfo": {
+          "cibilRemarks": "Multiple Disputes in Account (TL) Segment",
+          "disputeDate": "19/08/2021"
+        },
+        "creditLimit": -1,
+        "highCredit": 27901,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": true
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "12/10/2013",
+        "dateLastPayment": "02/08/2014",
+        "dateClosed": "24/09/2014",
+        "dateReportedAndCertified": "30/11/2014"
+      },
+      "paymentStartDate": "01/09/2014",
+      "paymentEndDate": "01/09/2014",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2014,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": "XXX",
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Consumer Loan",
+        "bankName": "BAJAJ FIN LTD LICENCECANCELLED",
+        "accountNumber": "4280CD00050723",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 35800,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "Sanctioned Amount",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "29/06/2012",
+        "dateLastPayment": "05/03/2013",
+        "dateClosed": "18/04/2013",
+        "dateReportedAndCertified": "30/11/2014"
+      },
+      "paymentStartDate": "01/04/2013",
+      "paymentEndDate": "01/04/2013",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2013,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": "XXX",
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": null,
+          "sepDue": null,
+          "octDue": null,
+          "novDue": null,
+          "decDue": null
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    },
+    {
+      "accountDetails": {
+        "accountOpenOrClosed": "Closed",
+        "accountType": "Credit Card",
+        "bankName": "INDUSIND BANK LICENCECANCELLED",
+        "accountNumber": "5160680190016000",
+        "ownerShipType": "Individual",
+        "disputeInfo": null,
+        "creditLimit": -1,
+        "highCredit": 0,
+        "currentBalance": 0,
+        "cashLimit": -1,
+        "amountOverdue": 0,
+        "rateOfInterest": -1.00,
+        "repaymentTenure": -1,
+        "emiAmount": -1,
+        "paymentFrequency": "-",
+        "actualPaymentAmount": -1,
+        "highCreditOrAmountSanctionLabel": "High Credit",
+        "accountUnderDispute": false
+      },
+      "accountDates": {
+        "dateOpenedOrDisbursed": "29/08/2007",
+        "dateLastPayment": "-",
+        "dateClosed": "30/10/2008",
+        "dateReportedAndCertified": "30/04/2009"
+      },
+      "paymentStartDate": "01/08/2007",
+      "paymentEndDate": "01/10/2008",
+      "pastDueMonthlyStatusList": [
+        {
+          "year": 2008,
+          "janDue": "0",
+          "febDue": "0",
+          "marDue": "0",
+          "aprDue": "0",
+          "mayDue": "0",
+          "junDue": "0",
+          "julDue": "0",
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "XXX",
+          "novDue": null,
+          "decDue": null
+        },
+        {
+          "year": 2007,
+          "janDue": null,
+          "febDue": null,
+          "marDue": null,
+          "aprDue": null,
+          "mayDue": null,
+          "junDue": null,
+          "julDue": null,
+          "augDue": "0",
+          "sepDue": "0",
+          "octDue": "0",
+          "novDue": "0",
+          "decDue": "0"
+        }
+      ],
+      "valueOfCollateral": -1,
+      "typeOfCollateral": "-",
+      "suitFiledOrWillfulDefault": "-",
+      "creditFacilityStatus": "-",
+      "writtenOffAmountTotal": -1,
+      "writtenOffAmountPrincipal": -1,
+      "settlementAmount": -1
+    }
+  ],
+  "enquiryInfoList": [
+    {
+      "enquiryYear": "2024",
+      "enquiryDetailsList": [
+        {
+          "dateOfEnquiry": "06 Jun 2024",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "-"
+        },
+        {
+          "dateOfEnquiry": "23 Feb 2024",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "14 Feb 2024",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "14 Feb 2024",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "13 Feb 2024",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "24 Jan 2024",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "23 Jan 2024",
+          "memberName": "FINLEFIN",
+          "enquiryPurpose": "Credit Card"
+        }
+      ]
+    },
+    {
+      "enquiryYear": "2023",
+      "enquiryDetailsList": [
+        {
+          "dateOfEnquiry": "28 Nov 2023",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Business Loan - Unsecured"
+        },
+        {
+          "dateOfEnquiry": "07 Sep 2023",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Housing Loan"
+        },
+        {
+          "dateOfEnquiry": "07 Sep 2023",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Housing Loan"
+        },
+        {
+          "dateOfEnquiry": "10 Aug 2023",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "10 Aug 2023",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "08 Aug 2023",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "08 Aug 2023",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "01 Jun 2023",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Auto Loan Personal"
+        },
+        {
+          "dateOfEnquiry": "22 Mar 2023",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Consumer Loan"
+        },
+        {
+          "dateOfEnquiry": "22 Mar 2023",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "GECL Loan Unsecured"
+        },
+        {
+          "dateOfEnquiry": "22 Mar 2023",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Credit Card"
+        }
+      ]
+    },
+    {
+      "enquiryYear": "2022",
+      "enquiryDetailsList": [
+        {
+          "dateOfEnquiry": "27 Sep 2022",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "GECL Loan Unsecured"
+        },
+        {
+          "dateOfEnquiry": "27 Sep 2022",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "GECL Loan Secured"
+        },
+        {
+          "dateOfEnquiry": "28 Jul 2022",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "GECL Loan Secured"
+        },
+        {
+          "dateOfEnquiry": "14 Jul 2022",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Personal Loan"
+        },
+        {
+          "dateOfEnquiry": "14 Jul 2022",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Housing Loan"
+        },
+        {
+          "dateOfEnquiry": "14 Jul 2022",
+          "memberName": "ICICI BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "13 Jul 2022",
+          "memberName": "AXIS BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "12 Jul 2022",
+          "memberName": "AXIS BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "02 May 2022",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Personal Loan"
+        },
+        {
+          "dateOfEnquiry": "02 May 2022",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Credit Card"
+        },
+        {
+          "dateOfEnquiry": "02 May 2022",
+          "memberName": "HDFC BANK",
+          "enquiryPurpose": "Personal Loan"
+        }
+      ]
+    }
+  ],
+  "personalInfoDisputePresent": false,
+  "personalInfoDisputeInfo": null,
+  "enquiryInfoDisputePresent": false,
+  "enquiryInfoDisputeInfo": null,
+  "summaryInfo": {
+    "name": "JOHN WICK ",
+    "dob": "01 Jan 1990",
+    "gender": "Male",
+    "summaryIdType": "TaxId",
+    "summaryIdNumber": "ALDPD1234H",
+    "email": "darshana.parab@transunion.com",
+    "mobileNumber": "9444215240",
+    "address": "TRANSUNION CIBIL LTD 19TH FLR ONEINDIABULLS TWR 2A B 841SENAPATI BAPAT MARG LOWERPAREL MUMBAI Maharashtra 400013",
+    "totalEnquiries": 29,
+    "enquiries12": 1,
+    "enquiries24": 18,
+    "enquiries36": 29,
+    "currentBalance": 1258391,
+    "amountOverdue": 116557,
+    "totalAccountsUnderDisputes": 27,
+    "closedCreditCards": 9,
+    "closedLoans": 8,
+    "openCreditCards": 5,
+    "openLoans": 15,
+    "latePayment12": {
+      "days1To30": 0,
+      "days31To60": 0,
+      "days61To90": 0,
+      "moreThan90Days": 0
+    },
+    "latePayment36": {
+      "days1To30": 1,
+      "days31To60": 0,
+      "days61To90": 0,
+      "moreThan90Days": 0
+    },
+    "latePaymentRemarkCount12": {
+      "subStandardRemark": 0,
+      "specialMentionRemark": 0,
+      "doubtfulRemark": 0,
+      "lossRemark": 0
+    },
+    "latePaymentRemarkCount36": {
+      "subStandardRemark": 0,
+      "specialMentionRemark": 0,
+      "doubtfulRemark": 0,
+      "lossRemark": 0
+    }
+  }
+}
