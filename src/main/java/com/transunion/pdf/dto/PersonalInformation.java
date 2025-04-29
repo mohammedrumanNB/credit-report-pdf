@@ -19,6 +19,7 @@ public class PersonalInformation {
     private AddressInformation addressInformation;
     private List<ContactInfo> contactInfoList;
     private List<EmailInfo> emailInfoList;
+    private boolean employeeInfoPresent;
     private String accountType;
     private String dateReported;
     private String occupation;

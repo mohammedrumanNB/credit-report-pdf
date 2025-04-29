@@ -19,4 +19,5 @@ public class EmploymentInfo {
     private BigDecimal income = DEFAULT_BIG_DECIMAL;
     private String monthlyAnnualIncome = DEFAULT_HYPHEN;
     private String netGrossIncome = DEFAULT_HYPHEN;
+    private boolean employeeInfoPresent;
 }

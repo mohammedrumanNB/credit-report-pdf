@@ -67,12 +67,15 @@ public class PersonalInfoReportService {
         personalInformation.setAddressInformation(getAddressInformation(addressInfoList));
         personalInformation.setContactInfoList(processContactInfo(contactInfoList));
         personalInformation.setEmailInfoList(emailInfoList);
-        personalInformation.setAccountType(employmentInfo.getAccountType());
-        personalInformation.setDateReported(employmentInfo.getDateReported());
-        personalInformation.setOccupation(employmentInfo.getOccupation());
-        personalInformation.setIncome(getIncome(employmentInfo));
-        personalInformation.setMonthlyAnnualIncome(employmentInfo.getMonthlyAnnualIncome());
-        personalInformation.setNetGrossIncome(employmentInfo.getNetGrossIncome());
+        personalInformation.setEmployeeInfoPresent(employmentInfo.isEmployeeInfoPresent());
+        if(employmentInfo.isEmployeeInfoPresent()) {
+            personalInformation.setAccountType(employmentInfo.getAccountType());
+            personalInformation.setDateReported(employmentInfo.getDateReported());
+            personalInformation.setOccupation(employmentInfo.getOccupation());
+            personalInformation.setIncome(getIncome(employmentInfo));
+            personalInformation.setMonthlyAnnualIncome(employmentInfo.getMonthlyAnnualIncome());
+            personalInformation.setNetGrossIncome(employmentInfo.getNetGrossIncome());
+        }
 
         //Add Dispute if present
         if (pdfData.isPersonalInfoDisputePresent()) {

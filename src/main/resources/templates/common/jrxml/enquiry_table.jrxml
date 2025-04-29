@@ -136,7 +136,7 @@
 						</column>
 						<column kind="single" uuid="31a14691-4b61-42b0-8bc8-9f25d8e3c164" width="240">
 							<detailCell height="20" style="Table_TD">
-								<element kind="textField" uuid="63c0c140-b7b5-4748-8d82-44357720fe1c" x="0" y="0" width="240" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+								<element kind="textField" uuid="63c0c140-b7b5-4748-8d82-44357720fe1c" x="0" y="0" width="240" height="12" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" textAdjust="StretchHeight" vTextAlign="Middle">
 									<expression><![CDATA[$F{memberName}]]></expression>
 								</element>
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>

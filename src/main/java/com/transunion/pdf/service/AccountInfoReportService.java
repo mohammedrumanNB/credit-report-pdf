@@ -62,13 +62,13 @@ public class AccountInfoReportService {
             if (hasOpenAccounts) {
                 accountInformation.setOpenAccountInformationPresent(true);
                 accountInformation.setOpenAccountReport(getOpenAccountReport(pdfVersion));
-                accountInformation.setOpenAccountInfoDataSource(new JRBeanCollectionDataSource(getOpenAccountInformation(openAccountInfoList)));
+                accountInformation.setOpenAccountInfoDataSource(new JRBeanCollectionDataSource(getOpenAccountInformation(openAccountInfoList, pdfVersion)));
             }
 
             if (hasClosedAccounts) {
                 accountInformation.setClosedAccountInformationPresent(true);
                 accountInformation.setClosedAccountReport(getClosedAccountReport(pdfVersion));
-                accountInformation.setClosedAccountInfoDataSource(new JRBeanCollectionDataSource(getClosedAccountInformation(closedAccountInfoList, openAccountInfoList.size())));
+                accountInformation.setClosedAccountInfoDataSource(new JRBeanCollectionDataSource(getClosedAccountInformation(closedAccountInfoList, openAccountInfoList.size(), pdfVersion)));
             }
         }
 
@@ -107,11 +107,11 @@ public class AccountInfoReportService {
         return new JRBeanCollectionDataSource(accountSummaryList);
     }
 
-    private List<AccountInfo> getClosedAccountInformation(List<ClosedAccountInfo> closedAccountInfoList, int size) {
+    private List<AccountInfo> getClosedAccountInformation(List<ClosedAccountInfo> closedAccountInfoList, int size, PdfVersion pdfVersion) {
         List<AccountInfo> accountInfoList = new ArrayList<>();
         int i = size + 1;
         for (ClosedAccountInfo closedAccountInfo : closedAccountInfoList) {
-            AccountInfo accountInfoClosed = getAccountInfoClosed(closedAccountInfo);
+            AccountInfo accountInfoClosed = getAccountInfoClosed(closedAccountInfo, pdfVersion);
             accountInfoClosed.setSrNo(String.format("%02d", i));
             i++;
             accountInfoList.add(accountInfoClosed);
@@ -121,7 +121,7 @@ public class AccountInfoReportService {
 
     }
 
-    private AccountInfo getAccountInfoClosed(ClosedAccountInfo closedAccountInfo) {
+    private AccountInfo getAccountInfoClosed(ClosedAccountInfo closedAccountInfo, PdfVersion pdfVersion) {
 
         AccountDetails accountDetails = closedAccountInfo.getAccountDetails();
         AccountDates accountDates = closedAccountInfo.getAccountDates();
@@ -148,7 +148,7 @@ public class AccountInfoReportService {
                 .cashLimit(checkDefaultBigDecimal(accountDetails.getCashLimit()))
                 .amountOverdue(checkDefaultBigDecimal(accountDetails.getAmountOverdue()))
                 .rateOfInterest(checkDefaultRateofInterest(accountDetails.getRateOfInterest()))
-                .repaymentTenure(accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure() + " Month")
+                .repaymentTenure(getRepaymentTenure(accountDetails, pdfVersion))
                 .emiAmount(checkDefaultBigDecimal(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
                 .actualPaymentAmount(checkDefaultBigDecimal(accountDetails.getActualPaymentAmount()))
@@ -172,6 +172,13 @@ public class AccountInfoReportService {
                 .writtenOffAmountPrincipal(checkDefaultBigDecimal(closedAccountInfo.getWrittenOffAmountPrincipal()))
                 .settlementAmount(checkDefaultBigDecimal(closedAccountInfo.getSettlementAmount()))
                 .build();
+    }
+
+    private static String getRepaymentTenure(AccountDetails accountDetails, PdfVersion pdfVersion) {
+        if (pdfVersion.equals(PdfVersion.INDIRECT)) {
+            return accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure().toString();
+        }
+        return accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure() + " Month";
     }
 
     private JasperReport getClosedAccountReport(PdfVersion pdfVersion) {
@@ -214,11 +221,11 @@ public class AccountInfoReportService {
         }
     }
 
-    private List<AccountInfo> getOpenAccountInformation(List<OpenAccountInfo> openAccountInfoList) {
+    private List<AccountInfo> getOpenAccountInformation(List<OpenAccountInfo> openAccountInfoList, PdfVersion pdfVersion) {
         List<AccountInfo> accountInfoList = new ArrayList<>();
         int i = 1;
         for (OpenAccountInfo openAccountInfo : openAccountInfoList) {
-            AccountInfo accountInfoOpen = getAccountInfoOpen(openAccountInfo);
+            AccountInfo accountInfoOpen = getAccountInfoOpen(openAccountInfo, pdfVersion);
             accountInfoOpen.setSrNo(String.format("%02d", i));
             accountInfoList.add(accountInfoOpen);
             i++;
@@ -227,7 +234,7 @@ public class AccountInfoReportService {
         return accountInfoList;
     }
 
-    private AccountInfo getAccountInfoOpen(OpenAccountInfo openAccountInfo) {
+    private AccountInfo getAccountInfoOpen(OpenAccountInfo openAccountInfo, PdfVersion pdfVersion) {
         AccountDetails accountDetails = openAccountInfo.getAccountDetails();
         AccountDates accountDates = openAccountInfo.getAccountDates();
 
@@ -253,7 +260,7 @@ public class AccountInfoReportService {
                 .cashLimit(checkDefaultBigDecimal(accountDetails.getCashLimit()))
                 .amountOverdue(checkDefaultBigDecimal(accountDetails.getAmountOverdue()))
                 .rateOfInterest(checkDefaultRateofInterest(accountDetails.getRateOfInterest()))
-                .repaymentTenure(accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure() + " Month")
+                .repaymentTenure(getRepaymentTenure(accountDetails, pdfVersion))
                 .emiAmount(checkDefaultBigDecimal(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
                 .actualPaymentAmount(checkDefaultBigDecimal(accountDetails.getActualPaymentAmount()))
@@ -280,7 +287,7 @@ public class AccountInfoReportService {
     }
 
     private static String checkDefaultRateofInterest(BigDecimal roi) {
-        return ApplicationConstant.DEFAULT_BIG_DECIMAL.compareTo(roi) == 0? ApplicationConstant.DEFAULT_HYPHEN : roi + "%";
+        return ApplicationConstant.DEFAULT_BIG_DECIMAL.compareTo(roi) == 0 ? ApplicationConstant.DEFAULT_HYPHEN : roi + "%";
     }
 
     private String checkDefaultBigDecimal(BigDecimal decimal) {

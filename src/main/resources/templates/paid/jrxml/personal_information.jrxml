@@ -138,7 +138,7 @@
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</columnHeader>
 	<detail>
-		<band height="576" splitType="Stretch">
+		<band height="509" splitType="Stretch">
 			<element kind="textField" uuid="b1480e2b-67f3-4856-8d62-fa018c33f9bf" x="0" y="61" width="50" height="5" forecolor="#FFFFFF" fontName="Roboto - 400" fontSize="4.0">
 				<expression><![CDATA["PIP"]]></expression>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -1002,15 +1002,20 @@ INDICATOR]]></text>
 				</element>
 				<box bottomPadding="0"/>
 			</element>
-			<element kind="frame" uuid="041f7874-5c4c-4647-a73e-8b92867eb83b" positionType="Float" x="40" y="494" width="515" height="82" backcolor="#FFFFFF" removeLineWhenBlank="true">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="66">
+			<printWhenExpression><![CDATA[$P{personalInformationParam}.isPersonalInfoDisputePresent()]]></printWhenExpression>
+			<element kind="frame" uuid="041f7874-5c4c-4647-a73e-8b92867eb83b" positionType="Float" x="40" y="0" width="515" height="66" backcolor="#FFFFFF" removeLineWhenBlank="true">
 				<printWhenExpression><![CDATA[$P{personalInformationParam}.isPersonalInfoDisputePresent()]]></printWhenExpression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.element.name" value="disputeFrame"/>
-				<element kind="frame" uuid="f9421446-7535-4a49-acd7-44a08921dfde" x="0" y="16" width="515" height="66" removeLineWhenBlank="true">
+				<element kind="frame" uuid="f9421446-7535-4a49-acd7-44a08921dfde" x="0" y="0" width="515" height="66" removeLineWhenBlank="true">
 					<printWhenExpression><![CDATA[$P{personalInformationParam}.isPersonalInfoDisputePresent()]]></printWhenExpression>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<element kind="rectangle" uuid="e28eee2c-01b0-4d53-88c2-476793ef9f95" positionType="Float" x="0" y="0" width="515" height="66" backcolor="#F2F2FC" radius="8">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -1089,7 +1094,6 @@ INDICATOR]]></text>
 					</element>
 				</element>
 			</element>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>
 	</detail>
 </jasperReport>
