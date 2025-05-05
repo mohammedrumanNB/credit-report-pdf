@@ -5,6 +5,10 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.GeneralPath;
 
 public class ArrowSVG {
+
+
+    private ArrowSVG() {
+    }
     /**
      * Paints the transcoded SVG image on the specified graphics context.
      * Rotates the arrow dynamically to the given angle.
@@ -12,6 +16,7 @@ public class ArrowSVG {
      * @param g     Graphics2D context.
      * @param angle Rotation angle in degrees.
      */
+
     public static void paint(Graphics2D g, double angle) {
         Shape shape = null;
 
@@ -44,22 +49,6 @@ public class ArrowSVG {
         g.fill(rotatedShape);
     }
 
-    // Bounding box methods
-    public static int getOrigX() {
-        return 1;
-    }
-
-    public static int getOrigY() {
-        return 0;
-    }
-
-    public static int getOrigWidth() {
-        return 37;
-    }
-
-    public static int getOrigHeight() {
-        return 5;
-    }
 }
 
 

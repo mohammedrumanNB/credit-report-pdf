@@ -35,19 +35,9 @@ public class CustomChartTheme implements ChartTheme {
 
     private FontUtil fontUtil;
 
-    private String customChartType;
-
-    private String additionalChartData;
-
     @Override
     public JFreeChart createChart(ChartContext chartContext) throws JRException {
         this.chartContext = chartContext;
-        JRChart jrChart = getChart();
-
-        if (jrChart.getPropertiesMap() != null) {
-            this.customChartType = jrChart.getPropertiesMap().getProperty("customChartType");
-            this.additionalChartData = jrChart.getPropertiesMap().getProperty("additionalChartData");
-        }
 
         this.fontUtil = FontUtil.getInstance(chartContext.getJasperReportsContext());
 
@@ -120,6 +110,28 @@ public class CustomChartTheme implements ChartTheme {
 
         //Set how the value is displayed
         JRValueDisplay display = jrPlot.getValueDisplay();
+        valueDisplay(display, chartPlot, jrPlot);
+        //Now define all intervals, setting their range and color
+        List<JRMeterInterval> intervals = jrPlot.getIntervals();
+        if (intervals != null) {
+            for (JRMeterInterval interval : intervals) {
+                chartPlot.addInterval(convertInterval(interval));
+            }
+        }
+
+        //Actually create the chart around the plot
+        JFreeChart jFreeChart = new JFreeChart(evaluateTextExpression(getChart().getTitleExpression()), null, chartPlot, isShowLegend());
+
+        //set all the generic options
+        configureChart(jFreeChart);
+
+        return jFreeChart;
+
+
+    }
+
+    private void valueDisplay(JRValueDisplay display, MeterPlot chartPlot, JRMeterPlot jrPlot) {
+        Color color;
         if (display != null) {
             if (display.getColor() != null) {
                 chartPlot.setValuePaint(display.getColor());
@@ -138,23 +150,6 @@ public class CustomChartTheme implements ChartTheme {
             }
 
         }
-        //Now define all intervals, setting their range and color
-        List<JRMeterInterval> intervals = jrPlot.getIntervals();
-        if (intervals != null) {
-            for (JRMeterInterval interval : intervals) {
-                chartPlot.addInterval(convertInterval(interval));
-            }
-        }
-
-        //Actually create the chart around the plot
-        JFreeChart jFreeChart = new JFreeChart(evaluateTextExpression(getChart().getTitleExpression()), null, chartPlot, isShowLegend());
-
-        //set all the generic options
-        configureChart(jFreeChart);
-
-        return jFreeChart;
-
-
     }
 
     protected Range convertRange(JRDataRange dataRange) throws JRException {
@@ -306,6 +301,11 @@ public class CustomChartTheme implements ChartTheme {
 
         SortedSet<JRChartPlot.JRSeriesColor> seriesColors = getPlot().getSeriesColors();
 
+        seriesColor(plot, seriesColors);
+
+    }
+
+    private static void seriesColor(Plot plot, SortedSet<JRChartPlot.JRSeriesColor> seriesColors) {
         if (seriesColors != null && !seriesColors.isEmpty()) {
             if (seriesColors.size() == 1) {
                 Paint[] colors = new Paint[DefaultDrawingSupplier.DEFAULT_PAINT_SEQUENCE.length + 1];
@@ -340,10 +340,6 @@ public class CustomChartTheme implements ChartTheme {
                 ));
             }
         }
-
-        final CustomChartThemeBundle BUNDLE = new CustomChartThemeBundle();
-
-
     }
 
     @SuppressWarnings("deprecation")

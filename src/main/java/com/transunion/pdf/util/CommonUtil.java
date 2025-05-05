@@ -6,10 +6,12 @@ import com.transunion.pdf.exception.InvalidDataException;
 import com.transunion.pdf.model.*;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Locale;
 
 public class CommonUtil {
+
+    private CommonUtil() {
+    }
 
     public static String formatIndianCurrency(BigDecimal value) {
         NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(new Locale("en", "IN"));
@@ -64,9 +66,6 @@ public class CommonUtil {
 
 
     }
-
-
-
 
 
     public static void validateEmploymentInfo(EmploymentInfo employmentInfo) {

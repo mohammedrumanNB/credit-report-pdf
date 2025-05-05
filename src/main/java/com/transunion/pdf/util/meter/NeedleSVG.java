@@ -10,6 +10,9 @@ import java.awt.geom.GeneralPath;
  */
 public class NeedleSVG {
 
+    private NeedleSVG() {
+    }
+
     /**
      * Paints the transcoded SVG image on the specified graphics context. You
      * can install a custom transformation on the graphics context to scale the
@@ -20,24 +23,12 @@ public class NeedleSVG {
     public static void paint(Graphics2D g) {
         Shape shape = null;
 
-        float origAlpha = 1.0f;
-        Composite origComposite = g.getComposite();
-        if (origComposite instanceof AlphaComposite) {
-            AlphaComposite origAlphaComposite = (AlphaComposite) origComposite;
-            if (origAlphaComposite.getRule() == AlphaComposite.SRC_OVER) {
-                origAlpha = origAlphaComposite.getAlpha();
-            }
-        }
 
-        java.util.LinkedList<AffineTransform> transformations = new java.util.LinkedList<AffineTransform>();
+        java.util.LinkedList<AffineTransform> transformations = new java.util.LinkedList<>();
         AffineTransform transform = new AffineTransform();
         transform.translate(46, 46);
         transformations.add(transform);
 
-
-        //
-
-        // _0
 
         // _0_0
         shape = new GeneralPath();
@@ -56,39 +47,4 @@ public class NeedleSVG {
 
     }
 
-    /**
-     * Returns the X of the bounding box of the original SVG image.
-     *
-     * @return The X of the bounding box of the original SVG image.
-     */
-    public static int getOrigX() {
-        return 1;
-    }
-
-    /**
-     * Returns the Y of the bounding box of the original SVG image.
-     *
-     * @return The Y of the bounding box of the original SVG image.
-     */
-    public static int getOrigY() {
-        return 1;
-    }
-
-    /**
-     * Returns the width of the bounding box of the original SVG image.
-     *
-     * @return The width of the bounding box of the original SVG image.
-     */
-    public static int getOrigWidth() {
-        return 34;
-    }
-
-    /**
-     * Returns the height of the bounding box of the original SVG image.
-     *
-     * @return The height of the bounding box of the original SVG image.
-     */
-    public static int getOrigHeight() {
-        return 17;
-    }
 }

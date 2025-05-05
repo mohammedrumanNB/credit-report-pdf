@@ -4,45 +4,56 @@ import com.transunion.pdf.constant.ApplicationConstant;
 import com.transunion.pdf.dto.PDFData;
 import com.transunion.pdf.enums.PdfVersion;
 import com.transunion.pdf.util.CommonUtil;
+import lombok.RequiredArgsConstructor;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import net.sf.jasperreports.pdf.JRPdfExporter;
 import net.sf.jasperreports.pdf.SimplePdfExporterConfiguration;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class PDFGenerator {
-    @Autowired
-    private MainReportService mainReportService;
 
-    @Autowired
-    private IndexReportService indexReportService;
+    public static final String INDEX_REPORT = "indexReport";
+    public static final String INDEX_PARAM = "indexParam";
+    public static final String CIBIL_SUMMARY_REPORT = "cibilSummaryReport";
+    public static final String CIBIL_SUMMARY_PARAM = "cibilSummaryParam";
+    public static final String PERSONAL_INFORMATION_REPORT = "personalInformationReport";
+    public static final String PERSONAL_INFORMATION_PARAM = "personalInformationParam";
+    public static final String ACCOUNT_INFORMATION_REPORT = "accountInformationReport";
+    public static final String ACCOUNT_INFORMATION_PARAM = "accountInformationParam";
+    public static final String ENQUIRY_INFORMATION_REPORT = "enquiryInformationReport";
+    public static final String ENQUIRY_INFORMATION_PARAM = "enquiryInformationParam";
+    public static final String GLOSSARY_REPORT_1 = "glossaryReport1";
+    public static final String GLOSSARY_REPORT_2 = "glossaryReport2";
+    public static final String GLOSSARY_PARAM = "glossaryParam";
 
-    @Autowired
-    private CibilSummaryReportService cibilSummaryReportService;
+    private final MainReportService mainReportService;
 
-    @Autowired
-    private PersonalInfoReportService personalInfoReportService;
 
-    @Autowired
-    private AccountInfoReportService accountInfoReportService;
+    private final IndexReportService indexReportService;
 
-    @Autowired
-    private EnquiryInfoReportService enquiryInfoReportService;
 
-    @Autowired
-    private GlossaryReportService glossaryReportService;
+    private final CibilSummaryReportService cibilSummaryReportService;
+
+
+    private final PersonalInfoReportService personalInfoReportService;
+
+
+    private final AccountInfoReportService accountInfoReportService;
+
+
+    private final EnquiryInfoReportService enquiryInfoReportService;
+
+
+    private final GlossaryReportService glossaryReportService;
 
     public byte[] generatePdf(PdfVersion pdfVersion, PDFData pdfData, boolean encryptPdf, String userPassword) throws JRException {
 
@@ -54,66 +65,64 @@ public class PDFGenerator {
             case PAID:
                 mainReport = mainReportService.getMainReport(pdfVersion);
 
-                //Prepare map of parameter for all sub report
-                parameters.put("indexReport", indexReportService.getIndexReport(pdfVersion));
-                parameters.put("indexParam", indexReportService.getIndexParam(pdfData));
+                parameters.put(INDEX_REPORT, indexReportService.getIndexReport(pdfVersion));
+                parameters.put(INDEX_PARAM, indexReportService.getIndexParam(pdfData));
 
-                parameters.put("cibilSummaryReport", cibilSummaryReportService.getCibilSummaryReport(pdfVersion));
-                parameters.put("cibilSummaryParam", cibilSummaryReportService.getCibilSummaryParam(pdfData));
+                parameters.put(CIBIL_SUMMARY_REPORT, cibilSummaryReportService.getCibilSummaryReport(pdfVersion));
+                parameters.put(CIBIL_SUMMARY_PARAM, cibilSummaryReportService.getCibilSummaryParam(pdfData));
 
-                parameters.put("personalInformationReport", personalInfoReportService.getPersonalInfoReport(pdfVersion));
-                parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
+                parameters.put(PERSONAL_INFORMATION_REPORT, personalInfoReportService.getPersonalInfoReport(pdfVersion));
+                parameters.put(PERSONAL_INFORMATION_PARAM, personalInfoReportService.getPersonalInformationParam(pdfData));
 
-                parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
+                parameters.put(ACCOUNT_INFORMATION_REPORT, accountInfoReportService.getAccountInfoReport(pdfVersion));
+                parameters.put(ACCOUNT_INFORMATION_PARAM, accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
 
-                parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
-                parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
+                parameters.put(ENQUIRY_INFORMATION_REPORT, enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
+                parameters.put(ENQUIRY_INFORMATION_PARAM, enquiryInfoReportService.getEnquiryInformationParam(pdfData));
 
-                parameters.put("glossaryReport1", glossaryReportService.getGlossaryReport1());
-                parameters.put("glossaryReport2", glossaryReportService.getGlossaryReport2());
-                parameters.put("glossaryParam", glossaryReportService.getGlossaryParam(pdfData));
+                parameters.put(GLOSSARY_REPORT_1, glossaryReportService.getGlossaryReport1());
+                parameters.put(GLOSSARY_REPORT_2, glossaryReportService.getGlossaryReport2());
+                parameters.put(GLOSSARY_PARAM, glossaryReportService.getGlossaryParam(pdfData));
 
                 break;
             case STARTER:
                 mainReport = mainReportService.getMainReport(pdfVersion);
 
-                //Prepare map of parameter for all sub report
-                parameters.put("indexReport", indexReportService.getIndexReport(pdfVersion));
-                parameters.put("indexParam", indexReportService.getIndexParam(pdfData));
+                parameters.put(INDEX_REPORT, indexReportService.getIndexReport(pdfVersion));
+                parameters.put(INDEX_PARAM, indexReportService.getIndexParam(pdfData));
 
-                parameters.put("cibilSummaryReport", cibilSummaryReportService.getCibilSummaryReport(pdfVersion));
-                parameters.put("cibilSummaryParam", cibilSummaryReportService.getCibilSummaryParam(pdfData));
+                parameters.put(CIBIL_SUMMARY_REPORT, cibilSummaryReportService.getCibilSummaryReport(pdfVersion));
+                parameters.put(CIBIL_SUMMARY_PARAM, cibilSummaryReportService.getCibilSummaryParam(pdfData));
 
-                parameters.put("personalInformationReport", personalInfoReportService.getPersonalInfoReport(pdfVersion));
-                parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
+                parameters.put(PERSONAL_INFORMATION_REPORT, personalInfoReportService.getPersonalInfoReport(pdfVersion));
+                parameters.put(PERSONAL_INFORMATION_PARAM, personalInfoReportService.getPersonalInformationParam(pdfData));
 
-                parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
+                parameters.put(ACCOUNT_INFORMATION_REPORT, accountInfoReportService.getAccountInfoReport(pdfVersion));
+                parameters.put(ACCOUNT_INFORMATION_PARAM, accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
 
-                parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
-                parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
+                parameters.put(ENQUIRY_INFORMATION_REPORT, enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
+                parameters.put(ENQUIRY_INFORMATION_PARAM, enquiryInfoReportService.getEnquiryInformationParam(pdfData));
 
-                parameters.put("glossaryReport1", glossaryReportService.getGlossaryReport1());
-                parameters.put("glossaryReport2", glossaryReportService.getGlossaryReport2());
-                parameters.put("glossaryParam", glossaryReportService.getGlossaryParam(pdfData));
+                parameters.put(GLOSSARY_REPORT_1, glossaryReportService.getGlossaryReport1());
+                parameters.put(GLOSSARY_REPORT_2, glossaryReportService.getGlossaryReport2());
+                parameters.put(GLOSSARY_PARAM, glossaryReportService.getGlossaryParam(pdfData));
 
                 break;
             case INDIRECT:
                 mainReport = mainReportService.getMainReport(pdfVersion);
 
                 //Prepare map of parameter for all sub report
-                parameters.put("indexReport", indexReportService.getIndexReport(pdfVersion));
-                parameters.put("indexParam", indexReportService.getIndexParam(pdfData));
+                parameters.put(INDEX_REPORT, indexReportService.getIndexReport(pdfVersion));
+                parameters.put(INDEX_PARAM, indexReportService.getIndexParam(pdfData));
 
-                parameters.put("personalInformationReport", personalInfoReportService.getPersonalInfoReport(pdfVersion));
-                parameters.put("personalInformationParam", personalInfoReportService.getPersonalInformationParam(pdfData));
+                parameters.put(PERSONAL_INFORMATION_REPORT, personalInfoReportService.getPersonalInfoReport(pdfVersion));
+                parameters.put(PERSONAL_INFORMATION_PARAM, personalInfoReportService.getPersonalInformationParam(pdfData));
 
-                parameters.put("accountInformationReport", accountInfoReportService.getAccountInfoReport(pdfVersion));
-                parameters.put("accountInformationParam", accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
+                parameters.put(ACCOUNT_INFORMATION_REPORT, accountInfoReportService.getAccountInfoReport(pdfVersion));
+                parameters.put(ACCOUNT_INFORMATION_PARAM, accountInfoReportService.getAccountInformationParam(pdfData, pdfVersion));
 
-                parameters.put("enquiryInformationReport", enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
-                parameters.put("enquiryInformationParam", enquiryInfoReportService.getEnquiryInformationParam(pdfData));
+                parameters.put(ENQUIRY_INFORMATION_REPORT, enquiryInfoReportService.getEnquiryInfoReport(pdfVersion));
+                parameters.put(ENQUIRY_INFORMATION_PARAM, enquiryInfoReportService.getEnquiryInformationParam(pdfData));
 
                 break;
             default:
@@ -158,17 +167,11 @@ public class PDFGenerator {
             exporter.exportReport();
 
 
-            byte[] pdfBytes = outputStream.toByteArray();
-
-            savePdfToFile(pdfBytes, pdfVersion);
-
-            return pdfBytes;
+            return outputStream.toByteArray();
 
         } catch (JRException e) {
             // Handle JasperReport generation exception, possibly logging or rethrowing a custom exception
             throw new JRException("Failed to generate PDF for version: " + pdfVersion, e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -200,21 +203,8 @@ public class PDFGenerator {
             }
         }
 
-
         return jasperPrint;
     }
 
-    private void savePdfToFile(byte[] pdfBytes, PdfVersion pdfVersion) throws IOException {
-        UUID uuid = UUID.randomUUID();
-        // Determine the file path in the resources directory
-        String fileName = pdfVersion.name().toLowerCase() + "_report_" + uuid.toString().substring(0, 3) + ".pdf";
-        String resourcePath = "src/main/resources/" + fileName;
-
-        // Create the file
-        File pdfFile = new File(resourcePath);
-        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
-            fos.write(pdfBytes);
-        }
-    }
 
 }

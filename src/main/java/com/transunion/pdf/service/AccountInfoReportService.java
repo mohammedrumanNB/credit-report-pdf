@@ -5,6 +5,7 @@ import com.transunion.pdf.dto.AccountInformation;
 import com.transunion.pdf.dto.PDFData;
 import com.transunion.pdf.enums.PdfVersion;
 import com.transunion.pdf.exception.FileNotFoundException;
+import com.transunion.pdf.exception.InvalidDataException;
 import com.transunion.pdf.model.*;
 import com.transunion.pdf.util.CommonUtil;
 import net.sf.jasperreports.engine.JRException;
@@ -20,6 +21,7 @@ import java.util.List;
 
 @Service
 public class AccountInfoReportService {
+
     public JasperReport getAccountInfoReport(PdfVersion pdfVersion) throws JRException {
         String filePath;
         switch (pdfVersion) {
@@ -62,13 +64,13 @@ public class AccountInfoReportService {
             if (hasOpenAccounts) {
                 accountInformation.setOpenAccountInformationPresent(true);
                 accountInformation.setOpenAccountReport(getOpenAccountReport(pdfVersion));
-                accountInformation.setOpenAccountInfoDataSource(new JRBeanCollectionDataSource(getOpenAccountInformation(openAccountInfoList, pdfVersion)));
+                accountInformation.setOpenAccountInfoDataSource(new JRBeanCollectionDataSource(getOpenAccountInformation(openAccountInfoList)));
             }
 
             if (hasClosedAccounts) {
                 accountInformation.setClosedAccountInformationPresent(true);
                 accountInformation.setClosedAccountReport(getClosedAccountReport(pdfVersion));
-                accountInformation.setClosedAccountInfoDataSource(new JRBeanCollectionDataSource(getClosedAccountInformation(closedAccountInfoList, openAccountInfoList.size(), pdfVersion)));
+                accountInformation.setClosedAccountInfoDataSource(new JRBeanCollectionDataSource(getClosedAccountInformation(closedAccountInfoList, openAccountInfoList.size())));
             }
         }
 
@@ -107,11 +109,11 @@ public class AccountInfoReportService {
         return new JRBeanCollectionDataSource(accountSummaryList);
     }
 
-    private List<AccountInfo> getClosedAccountInformation(List<ClosedAccountInfo> closedAccountInfoList, int size, PdfVersion pdfVersion) {
+    private List<AccountInfo> getClosedAccountInformation(List<ClosedAccountInfo> closedAccountInfoList, int size) {
         List<AccountInfo> accountInfoList = new ArrayList<>();
         int i = size + 1;
         for (ClosedAccountInfo closedAccountInfo : closedAccountInfoList) {
-            AccountInfo accountInfoClosed = getAccountInfoClosed(closedAccountInfo, pdfVersion);
+            AccountInfo accountInfoClosed = getAccountInfoClosed(closedAccountInfo);
             accountInfoClosed.setSrNo(String.format("%02d", i));
             i++;
             accountInfoList.add(accountInfoClosed);
@@ -121,7 +123,7 @@ public class AccountInfoReportService {
 
     }
 
-    private AccountInfo getAccountInfoClosed(ClosedAccountInfo closedAccountInfo, PdfVersion pdfVersion) {
+    private AccountInfo getAccountInfoClosed(ClosedAccountInfo closedAccountInfo) {
 
         AccountDetails accountDetails = closedAccountInfo.getAccountDetails();
         AccountDates accountDates = closedAccountInfo.getAccountDates();
@@ -148,7 +150,7 @@ public class AccountInfoReportService {
                 .cashLimit(checkDefaultBigDecimal(accountDetails.getCashLimit()))
                 .amountOverdue(checkDefaultBigDecimal(accountDetails.getAmountOverdue()))
                 .rateOfInterest(checkDefaultRateofInterest(accountDetails.getRateOfInterest()))
-                .repaymentTenure(getRepaymentTenure(accountDetails, pdfVersion))
+                .repaymentTenure(getRepaymentTenure(accountDetails))
                 .emiAmount(checkDefaultBigDecimal(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
                 .actualPaymentAmount(checkDefaultBigDecimal(accountDetails.getActualPaymentAmount()))
@@ -174,11 +176,8 @@ public class AccountInfoReportService {
                 .build();
     }
 
-    private static String getRepaymentTenure(AccountDetails accountDetails, PdfVersion pdfVersion) {
-        if (pdfVersion.equals(PdfVersion.INDIRECT)) {
-            return accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure().toString();
-        }
-        return accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure() + " Month";
+    private static String getRepaymentTenure(AccountDetails accountDetails) {
+        return accountDetails.getRepaymentTenure().equals(ApplicationConstant.DEFAULT_BIG_DECIMAL) ? ApplicationConstant.DEFAULT_HYPHEN : accountDetails.getRepaymentTenure().toString();
     }
 
     private JasperReport getClosedAccountReport(PdfVersion pdfVersion) {
@@ -196,7 +195,7 @@ public class AccountInfoReportService {
                         + ApplicationConstant.CLOSED_ACCOUNT_JASPER_PATH_INDIRECT);
             } else {
                 // Re-throw JRException as a runtime exception if the cause is different
-                throw new RuntimeException("An error occurred while compiling the address report.", e);
+                throw new InvalidDataException(1001, ApplicationConstant.COMPILING_THE_ADDRESS_REPORT);
             }
         }
     }
@@ -216,16 +215,16 @@ public class AccountInfoReportService {
                         + ApplicationConstant.OPEN_ACCOUNT_JASPER_PATH_INDIRECT);
             } else {
                 // Re-throw JRException as a runtime exception if the cause is different
-                throw new RuntimeException("An error occurred while compiling the address report.", e);
+                throw new InvalidDataException(1001, ApplicationConstant.COMPILING_THE_ADDRESS_REPORT);
             }
         }
     }
 
-    private List<AccountInfo> getOpenAccountInformation(List<OpenAccountInfo> openAccountInfoList, PdfVersion pdfVersion) {
+    private List<AccountInfo> getOpenAccountInformation(List<OpenAccountInfo> openAccountInfoList) {
         List<AccountInfo> accountInfoList = new ArrayList<>();
         int i = 1;
         for (OpenAccountInfo openAccountInfo : openAccountInfoList) {
-            AccountInfo accountInfoOpen = getAccountInfoOpen(openAccountInfo, pdfVersion);
+            AccountInfo accountInfoOpen = getAccountInfoOpen(openAccountInfo);
             accountInfoOpen.setSrNo(String.format("%02d", i));
             accountInfoList.add(accountInfoOpen);
             i++;
@@ -234,7 +233,7 @@ public class AccountInfoReportService {
         return accountInfoList;
     }
 
-    private AccountInfo getAccountInfoOpen(OpenAccountInfo openAccountInfo, PdfVersion pdfVersion) {
+    private AccountInfo getAccountInfoOpen(OpenAccountInfo openAccountInfo) {
         AccountDetails accountDetails = openAccountInfo.getAccountDetails();
         AccountDates accountDates = openAccountInfo.getAccountDates();
 
@@ -260,7 +259,7 @@ public class AccountInfoReportService {
                 .cashLimit(checkDefaultBigDecimal(accountDetails.getCashLimit()))
                 .amountOverdue(checkDefaultBigDecimal(accountDetails.getAmountOverdue()))
                 .rateOfInterest(checkDefaultRateofInterest(accountDetails.getRateOfInterest()))
-                .repaymentTenure(getRepaymentTenure(accountDetails, pdfVersion))
+                .repaymentTenure(getRepaymentTenure(accountDetails))
                 .emiAmount(checkDefaultBigDecimal(accountDetails.getEmiAmount()))
                 .paymentFrequency(accountDetails.getPaymentFrequency())
                 .actualPaymentAmount(checkDefaultBigDecimal(accountDetails.getActualPaymentAmount()))
@@ -305,7 +304,7 @@ public class AccountInfoReportService {
                         + ApplicationConstant.PAST_DUE_MONTHLY_JASPER_PATH);
             } else {
                 // Re-throw JRException as a runtime exception if the cause is different
-                throw new RuntimeException("An error occurred while compiling the address report.", e);
+                throw new InvalidDataException(1001, ApplicationConstant.COMPILING_THE_ADDRESS_REPORT);
             }
         }
     }

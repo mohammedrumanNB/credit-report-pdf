@@ -4,7 +4,6 @@ package com.transunion.pdf.util.chartutil;
 import com.transunion.pdf.util.meter.ArrowSVG;
 import com.transunion.pdf.util.meter.DialSVG;
 import com.transunion.pdf.util.meter.NeedleSVG;
-import org.jfree.chart.plot.DialShape;
 import org.jfree.chart.plot.MeterPlot;
 import org.jfree.chart.plot.PlotRenderingInfo;
 import org.jfree.chart.plot.PlotState;
@@ -20,16 +19,10 @@ import java.util.logging.Logger;
 
 public class CustomMeterPlot extends MeterPlot {
 
-    private DialShape shape;
-
-    public CustomMeterPlot() {
-        super();
-        this.shape = DialShape.CIRCLE;
-    }
 
     public CustomMeterPlot(ValueDataset dataset) {
         super(dataset);
-        this.shape = DialShape.CIRCLE; // Initialize the shape
+
     }
 
     @Override
@@ -123,7 +116,7 @@ public class CustomMeterPlot extends MeterPlot {
     }
 
     private double calculateAngle(double score, int startScore, int endScore, int startDegree, int endDegree) {
-        return startDegree + ((score - startScore) / (double) (endScore - startScore) * (endDegree - startDegree));
+        return startDegree + ((score - startScore) / (endScore - startScore) * (endDegree - startDegree));
     }
 }
 

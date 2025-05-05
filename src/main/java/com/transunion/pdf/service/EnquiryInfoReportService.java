@@ -6,6 +6,7 @@ import com.transunion.pdf.dto.EnquiryTableInformation;
 import com.transunion.pdf.dto.PDFData;
 import com.transunion.pdf.enums.PdfVersion;
 import com.transunion.pdf.exception.FileNotFoundException;
+import com.transunion.pdf.exception.InvalidDataException;
 import com.transunion.pdf.model.EnquiryInfo;
 import com.transunion.pdf.util.CommonUtil;
 import net.sf.jasperreports.engine.JRException;
@@ -114,7 +115,7 @@ public class EnquiryInfoReportService {
                         + ApplicationConstant.ENQUIRY_TABLE_JASPER_PATH);
             } else {
                 // Re-throw JRException as a runtime exception if the cause is different
-                throw new RuntimeException("An error occurred while compiling the address report.", e);
+                throw new InvalidDataException(1001, ApplicationConstant.COMPILING_THE_ADDRESS_REPORT);
             }
         }
     }

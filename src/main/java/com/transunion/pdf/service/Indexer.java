@@ -11,6 +11,10 @@ import java.util.Map;
 
 public class Indexer {
 
+    private Indexer() {
+
+    }
+
     public static Map<String, Integer> getSubreportPageNumbers(JasperPrint jasperPrint, List<String> subreportMarkers) {
         Map<String, Integer> subreportPageNumbers = new HashMap<>();
 

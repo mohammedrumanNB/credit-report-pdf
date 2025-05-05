@@ -16,12 +16,13 @@ public class CustomExtensionRegistryFactory implements ExtensionsRegistryFactory
 
 
     private static final ExtensionsRegistry customExtensionsRegistry = new ExtensionsRegistry() {
+
         @Override
         public <T> List<T> getExtensions(Class<T> extensionType) {
             if (ChartThemeBundle.class.equals(extensionType)) {
                 return Collections.singletonList((T) new CustomChartThemeBundle());
             }
-            return null;
+            return Collections.emptyList();
         }
     };
 

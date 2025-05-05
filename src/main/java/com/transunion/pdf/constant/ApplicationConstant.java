@@ -3,6 +3,10 @@ package com.transunion.pdf.constant;
 import java.math.BigDecimal;
 
 public class ApplicationConstant {
+    private ApplicationConstant() {
+    }
+
+    public static final String COMPILING_THE_ADDRESS_REPORT = "An error occurred while compiling the address report.";
 
     //Contact Type Constants
     public static final String CONTACT_NOT_CLASSIFIED = "NOT CLASSIFIED";
@@ -52,7 +56,7 @@ public class ApplicationConstant {
     public static final String CLOSED_ACCOUNT_JRXML_PATH_INDIRECT = "src/main/resources/templates/common/jrxml/closed_account_indirect.jrxml";
     public static final String OPEN_ACCOUNT_JRXML_PATH_DIRECT = "src/main/resources/templates/common/jrxml/open_account_direct.jrxml";
     public static final String CLOSED_ACCOUNT_JRXML_PATH_DIRECT = "src/main/resources/templates/common/jrxml/closed_account_direct.jrxml";
-    public static final String ENQUIRY_TABLE_JRXML_PATH = "src/main/resources/templates/common/jrxml/enquiry table.jrxml";
+    public static final String ENQUIRY_TABLE_JRXML_PATH = "src/main/resources/templates/common/jrxml/enquiry_table.jrxml";
     public static final String GLOSSARY_1_JRXML_PATH = "src/main/resources/templates/common/jrxml/glossary-1.jrxml";
     public static final String GLOSSARY_2_JRXML_PATH = "src/main/resources/templates/common/jrxml/glossary-2.jrxml";
 

@@ -1,7 +1,6 @@
 package com.transunion.pdf.util.meter;
 
 import java.awt.*;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.GeneralPath;
 
 /**
@@ -9,6 +8,9 @@ import java.awt.geom.GeneralPath;
  * <a href="http://ebourg.github.io/flamingo-svg-transcoder/">Flamingo SVG transcoder</a>.
  */
 public class DialSVG {
+
+    private DialSVG() {
+    }
 
     /**
      * Paints the transcoded SVG image on the specified graphics context. You
@@ -21,20 +23,6 @@ public class DialSVG {
         Shape shape = null;
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        float origAlpha = 1.0f;
-        Composite origComposite = g.getComposite();
-        if (origComposite instanceof AlphaComposite) {
-            AlphaComposite origAlphaComposite = (AlphaComposite) origComposite;
-            if (origAlphaComposite.getRule() == AlphaComposite.SRC_OVER) {
-                origAlpha = origAlphaComposite.getAlpha();
-            }
-        }
-
-        java.util.LinkedList<AffineTransform> transformations = new java.util.LinkedList<AffineTransform>();
-
-        //
-
-        // _0
 
         // _0_0
         shape = new GeneralPath();
@@ -100,39 +88,4 @@ public class DialSVG {
 
     }
 
-    /**
-     * Returns the X of the bounding box of the original SVG image.
-     *
-     * @return The X of the bounding box of the original SVG image.
-     */
-    public static int getOrigX() {
-        return 1;
-    }
-
-    /**
-     * Returns the Y of the bounding box of the original SVG image.
-     *
-     * @return The Y of the bounding box of the original SVG image.
-     */
-    public static int getOrigY() {
-        return 0;
-    }
-
-    /**
-     * Returns the width of the bounding box of the original SVG image.
-     *
-     * @return The width of the bounding box of the original SVG image.
-     */
-    public static int getOrigWidth() {
-        return 128;
-    }
-
-    /**
-     * Returns the height of the bounding box of the original SVG image.
-     *
-     * @return The height of the bounding box of the original SVG image.
-     */
-    public static int getOrigHeight() {
-        return 64;
-    }
 }
