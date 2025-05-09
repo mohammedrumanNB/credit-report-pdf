@@ -15,16 +15,16 @@
 	<background splitType="Stretch"/>
 	<columnHeader height="64" splitType="Stretch">
 		<element kind="frame" uuid="9c34ff0d-4804-446c-b689-ff198c15263d" x="0" y="0" width="595" height="64">
-			<element kind="frame" uuid="5a6546b2-dec1-4d71-9822-67b380d49d3c" x="40" y="27" width="515" height="24">
+			<element kind="frame" uuid="5a6546b2-dec1-4d71-9822-67b380d49d3c" x="40" y="16" width="515" height="36">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<element kind="frame" uuid="54f3fc43-c97f-4451-82fc-1e9a43a5b8e9" x="0" y="0" width="260" height="24">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<element kind="frame" uuid="54f3fc43-c97f-4451-82fc-1e9a43a5b8e9" x="0" y="13" width="260" height="24">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<element kind="image" uuid="2beaad12-eee8-4ca5-a87b-5514958e0d53" x="0" y="2" width="43" height="18" linkType="None" linkTarget="Self" bookmarkLevel="1">
 						<expression><![CDATA["icons/cibil-small.png"]]></expression>
 						<anchorNameExpression><![CDATA["Enquiry Anchor"]]></anchorNameExpression>
@@ -91,6 +91,13 @@
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
 					</element>
+				</element>
+				<element kind="staticText" uuid="f92d0453-238b-434c-8011-031320f8b96c" x="276" y="26" width="239" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="7.0" vTextAlign="Middle">
+					<text><![CDATA[(e) Indicates the value provided by bank when you applied for a credit facility.]]></text>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</element>
 			</element>
 			<element kind="line" uuid="8715d2bb-a1a6-4ff7-bbda-8c7b46a347da" x="40" y="63" width="515" height="1" backcolor="#D9D9D9">

@@ -115,15 +115,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</element>
 					<element kind="textField" uuid="7f271175-a01a-47a7-894b-002319e6c8e3" x="0" y="12" width="128" height="15" forecolor="#262626" fontName="Roboto - 600" fontSize="12.0" vTextAlign="Middle">
-						<expression><![CDATA[$P{indexParam}.getControlNumber() != null && $P{indexParam}.getControlNumber().length() == 9 ?
-    $P{indexParam}.getControlNumber().substring(0, 3) + " " +
-    $P{indexParam}.getControlNumber().substring(3, 6) + " " +
-    $P{indexParam}.getControlNumber().substring(6) :
-    $P{indexParam}.getControlNumber() != null && $P{indexParam}.getControlNumber().length() == 10 ?
-    $P{indexParam}.getControlNumber().substring(0, 3) + " " +
-    $P{indexParam}.getControlNumber().substring(3, 6) + " " +
-    $P{indexParam}.getControlNumber().substring(6) : $P{indexParam}.getControlNumber()
-]]></expression>
+						<expression><![CDATA[$P{indexParam}.getControlNumber()]]></expression>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>

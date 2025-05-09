@@ -53,12 +53,12 @@
 	<background splitType="Stretch"/>
 	<columnHeader height="64" splitType="Stretch">
 		<element kind="frame" uuid="5b7b19da-e8d8-4f41-9af2-04bc2cf7ae18" x="0" y="0" width="595" height="64">
-			<element kind="frame" uuid="0763d0aa-b1db-45fd-b73d-5232443698e0" x="40" y="27" width="515" height="24">
+			<element kind="frame" uuid="0763d0aa-b1db-45fd-b73d-5232443698e0" x="40" y="16" width="515" height="36">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<element kind="frame" uuid="789ed293-6f85-4eae-88d0-e14846a5da47" x="0" y="0" width="260" height="24">
+				<element kind="frame" uuid="789ed293-6f85-4eae-88d0-e14846a5da47" x="0" y="13" width="260" height="24">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -137,6 +137,13 @@ $P{accountInformationParam}.getControlNumber()]]></expression>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
 					</element>
+				</element>
+				<element kind="staticText" uuid="798a0b54-054c-4ad5-9db2-0e413a9b604b" x="276" y="26" width="239" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="7.0" vTextAlign="Middle">
+					<text><![CDATA[(e) Indicates the value provided by bank when you applied for a credit facility.]]></text>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</element>
 			</element>
 			<element kind="frame" uuid="74b0b3f4-2d5a-476a-b7d6-c19a469c72c9" x="40" y="63" width="515" height="20">

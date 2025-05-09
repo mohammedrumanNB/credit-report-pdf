@@ -499,14 +499,14 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<element kind="frame" uuid="9c73f592-49ba-4849-881e-38ef025d9487" x="10" y="10" width="99" height="43">
+					<element kind="frame" uuid="9c73f592-49ba-4849-881e-38ef025d9487" x="10" y="10" width="134" height="43">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<element kind="textField" uuid="952cb3e8-b015-470b-bef3-f28ec1c175b6" x="0" y="0" width="80" height="20" forecolor="#005F8D" fontName="Roboto - 600" fontSize="7.0" linkType="LocalAnchor" linkTarget="Self" underline="true" vTextAlign="Middle">
+						<element kind="textField" uuid="952cb3e8-b015-470b-bef3-f28ec1c175b6" x="0" y="0" width="130" height="20" forecolor="#005F8D" fontName="Roboto - 600" fontSize="7.0" linkType="LocalAnchor" linkTarget="Self" underline="true" vTextAlign="Middle">
 							<paragraph lineSpacing="Fixed" lineSpacingSize="7.8"/>
-							<expression><![CDATA["ENQUIRIES ON YOUR  CREDIT PROFILE"]]></expression>
+							<expression><![CDATA["ENQUIRIES FROM LAST 36 MONTHS"]]></expression>
 							<hyperlinkAnchorExpression><![CDATA["Enquiry Anchor"]]></hyperlinkAnchorExpression>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -666,7 +666,7 @@ Checking your CIBIL score directly from CIBIL won’t affect your credit score.]
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<element kind="textField" uuid="50e90df9-2922-4054-949a-9b69b35387d6" x="0" y="0" width="321" height="60" forecolor="#595959" markup="html" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 							<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
-							<expression><![CDATA["These are the open disputes you’ve raised under account information to correct potential inaccuracies in your credit data.<br/> <br/>If you feel the need to raise disputes regarding any discrepancy in this report, use the control number <span style='font-family: Roboto - 700';>" + $P{cibilSummaryParam}.getControlNumber()+ ".</span>"]]></expression>
+							<expression><![CDATA["These are active disputes you've raised under account information to address potential inaccuracies in your credit data for both open and closed accounts.<br/> <br/>If you feel the need to raise disputes regarding any discrepancy in this report, use the control number <span style='font-family: Roboto - 700';>" + $P{cibilSummaryParam}.getControlNumber()+ ".</span>"]]></expression>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						</element>
 					</element>
@@ -1059,24 +1059,24 @@ Checking your CIBIL score directly from CIBIL won’t affect your credit score.]
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<element kind="textField" uuid="d3016e9d-b9a8-48d9-a621-dcdeb9b7ba85" x="0" y="0" width="27" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+					<element kind="textField" uuid="d3016e9d-b9a8-48d9-a621-dcdeb9b7ba85" x="0" y="0" width="50" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 						<expression><![CDATA[$P{cibilSummaryParam}.getGender()]]></expression>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</element>
-					<element kind="line" uuid="d6c23cab-7954-4987-9f74-4404074d63ed" x="33" y="1" width="1" height="8" backcolor="#D9D9D9">
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<element kind="line" uuid="d6c23cab-7954-4987-9f74-4404074d63ed" x="50" y="1" width="1" height="8" backcolor="#D9D9D9">
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<pen lineColor="#D9D9D9"/>
 					</element>
-					<element kind="textField" uuid="9cb599d9-e345-45ff-bdfa-db4239fb2366" x="40" y="0" width="100" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
+					<element kind="textField" uuid="9cb599d9-e345-45ff-bdfa-db4239fb2366" x="56" y="0" width="88" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 						<expression><![CDATA["Born " + $P{cibilSummaryParam}.getDob()]]></expression>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					</element>
 				</element>
 			</element>

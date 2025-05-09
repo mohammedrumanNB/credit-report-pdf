@@ -45,12 +45,12 @@
 	<query language="sql"><![CDATA[]]></query>
 	<columnHeader height="64" splitType="Stretch">
 		<element kind="frame" uuid="a42ac467-f581-44b6-b152-4c987ded491d" x="0" y="0" width="595" height="64">
-			<element kind="frame" uuid="5203935e-01d0-4fe3-83fc-6f2a02bcc3ad" x="40" y="27" width="515" height="23">
+			<element kind="frame" uuid="5203935e-01d0-4fe3-83fc-6f2a02bcc3ad" x="40" y="16" width="515" height="36">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<element kind="frame" uuid="aa8c87b0-9535-4253-b954-f9dffd04d9ab" x="0" y="0" width="257" height="24">
+				<element kind="frame" uuid="aa8c87b0-9535-4253-b954-f9dffd04d9ab" x="0" y="13" width="257" height="24">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -79,7 +79,7 @@
 					</element>
 				</element>
 				<element kind="frame" uuid="491257f8-b544-423b-84bd-37468a199181" x="393" y="1" width="122" height="23">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -122,6 +122,13 @@
 						</element>
 					</element>
 				</element>
+				<element kind="staticText" uuid="595a7cc9-42c2-4394-a7af-057119232b19" x="276" y="26" width="239" height="10" forecolor="#595959" fontName="Roboto - 400" fontSize="7.0" vTextAlign="Middle">
+					<text><![CDATA[(e) Indicates the value provided by bank when you applied for a credit facility.]]></text>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</element>
 			</element>
 			<element kind="frame" uuid="74b0b3f4-2d5a-476a-b7d6-c19a469c72c9" x="40" y="63" width="515" height="20" removeLineWhenBlank="true">
 				<printWhenExpression><![CDATA[$V{PAGE_NUMBER}>1]]></printWhenExpression>
@@ -162,26 +169,31 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</element>
-					<element kind="textField" uuid="b0f6b3b0-cac1-4c39-ae7a-dffff74525c5" x="375" y="5" width="60" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right">
-						<expression><![CDATA[$P{personalInformationParam}.getPersonalInfo().getGender()]]></expression>
+					<element kind="frame" uuid="d548ef7e-ec52-4693-a315-1e0b2907e506" x="375" y="5" width="140" height="10">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</element>
-					<element kind="rectangle" uuid="160d5ffc-afbc-49d5-9509-cd04242270e9" x="441" y="6" width="1" height="7" backcolor="#D9D9D9">
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<pen lineWidth="0.0"/>
-					</element>
-					<element kind="textField" uuid="782e5fdd-362a-4cd0-914f-69e366f4e9a8" x="448" y="5" width="67" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Left">
-						<expression><![CDATA["Born " + $P{personalInformationParam}.getPersonalInfo().getDateOfBirth()]]></expression>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<element kind="textField" uuid="b0f6b3b0-cac1-4c39-ae7a-dffff74525c5" x="19" y="0" width="45" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Right">
+							<expression><![CDATA[$P{personalInformationParam}.getPersonalInfo().getGender()]]></expression>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="rectangle" uuid="160d5ffc-afbc-49d5-9509-cd04242270e9" x="70" y="1" width="1" height="7" backcolor="#D9D9D9">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<pen lineWidth="0.0"/>
+						</element>
+						<element kind="textField" uuid="782e5fdd-362a-4cd0-914f-69e366f4e9a8" x="77" y="0" width="63" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Left">
+							<expression><![CDATA["Born " + $P{personalInformationParam}.getPersonalInfo().getDateOfBirth()]]></expression>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
 					</element>
 				</element>
 			</element>
