@@ -606,8 +606,7 @@
 						</element>
 						<element kind="staticText" uuid="2dbeff5b-3970-4b59-84b5-60c4e00a54d2" x="0" y="40" width="339" height="36" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 							<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
-							<text><![CDATA[Whenever your CIBIL Report is accessed by banks, it reflects as an “enquiry” on your credit report. An enquiry indicates that you are seeking new credit.
-Checking your CIBIL score directly from CIBIL won’t affect your credit score.]]></text>
+							<text><![CDATA[Whenever you submit an application for a loan or credit card, the lender will check your CIBIL Report, which will be noted as "Enquiries" in your report. This may have a marginal impact on your CIBIL Score.]]></text>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>

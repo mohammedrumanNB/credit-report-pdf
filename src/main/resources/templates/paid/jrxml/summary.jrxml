@@ -195,11 +195,14 @@
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<element kind="frame" uuid="049059a7-71ca-40d8-b6e4-7c21bcf7d8d2" x="0" y="0" width="144" height="87">
+					<printWhenExpression><![CDATA[$P{cibilSummaryParam}.getCibilScore()>=300]]></printWhenExpression>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<element kind="rectangle" uuid="3dba64a9-9aa4-49b5-a457-fca84362be88" x="0" y="0" width="144" height="87" backcolor="#E0F6E9">
+						<printWhenExpression><![CDATA[$P{cibilSummaryParam}.getCibilScore()>=300]]></printWhenExpression>
+						<property name="com.jaspersoft.studio.element.name" value="greenRec"/>
 						<pen lineWidth="0.0"/>
 					</element>
 					<element kind="frame" uuid="e8181a42-29ea-4f07-bf43-8d31b2311b13" x="10" y="10" width="61" height="33">
@@ -309,6 +312,38 @@
 						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#008A00"/>
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
+				</element>
+				<element kind="frame" uuid="044fabe5-8e60-493a-87b7-01f42520d60b" x="0" y="0" width="144" height="87">
+					<printWhenExpression><![CDATA[$P{cibilSummaryParam}.getCibilScore()<300]]></printWhenExpression>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="NHFrame"/>
+					<element kind="rectangle" uuid="2a3d0b25-57bd-4533-8648-5239db24b8c8" x="0" y="0" width="144" height="87" backcolor="#F2F2F2">
+						<property name="com.jaspersoft.studio.element.name" value="greyRec"/>
+						<pen lineWidth="0.0"/>
+					</element>
+					<element kind="frame" uuid="b4416ca5-6afb-40ef-a464-da553ad7f0f0" x="10" y="10" width="61" height="33">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<element kind="staticText" uuid="3632d99e-3dbb-4832-ab10-3df404feaeba" x="0" y="0" width="61" height="10" forecolor="#595959" fontName="Roboto - 600" fontSize="7.0" vTextAlign="Middle">
+							<text><![CDATA[YOUR CIBIL SCORE]]></text>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</element>
+						<element kind="textField" uuid="ece45641-64a5-42ba-b35d-be327b2944c7" x="0" y="10" width="61" height="23" forecolor="#262626" fontName="Roboto - 700" fontSize="19.0" vTextAlign="Middle">
+							<expression><![CDATA[$P{cibilSummaryParam}.getCibilScore()<300?"NH":$P{cibilSummaryParam}.getCibilScore()]]></expression>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</element>
+					</element>
 				</element>
 			</element>
 			<element kind="frame" uuid="2dc0093e-e3c9-449b-ad8a-4283a3e22731" x="40" y="261" width="515" height="70">
@@ -606,8 +641,7 @@
 						</element>
 						<element kind="staticText" uuid="2dbeff5b-3970-4b59-84b5-60c4e00a54d2" x="0" y="40" width="339" height="36" forecolor="#595959" fontName="Roboto - 400" fontSize="8.0" vTextAlign="Middle">
 							<paragraph lineSpacing="Fixed" lineSpacingSize="9.0"/>
-							<text><![CDATA[Whenever your CIBIL Report is accessed by banks, it reflects as an “enquiry” on your credit report. An enquiry indicates that you are seeking new credit.
-Checking your CIBIL score directly from CIBIL won’t affect your credit score.]]></text>
+							<text><![CDATA[Whenever you submit an application for a loan or credit card, the lender will check your CIBIL Report, which will be noted as "Enquiries" in your report. This may have a marginal impact on your CIBIL Score.]]></text>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<property name="com.jaspersoft.studio.unit.width" value="px"/>

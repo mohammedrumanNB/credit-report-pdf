@@ -159,7 +159,7 @@
 				<element kind="rectangle" uuid="e4dc0443-c45b-4de5-b5f5-2e11a7690088" x="0" y="0" width="595" height="59" forecolor="#F7F9FA" backcolor="#F7F9FA">
 					<pen lineWidth="0.0" lineColor="#F7F9FA"/>
 				</element>
-				<element kind="frame" uuid="0997de12-d749-4e68-a1cb-333c9630302f" x="40" y="20" width="515" height="19">
+				<element kind="frame" uuid="0997de12-d749-4e68-a1cb-333c9630302f" x="40" y="20" width="527" height="19">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -169,7 +169,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</element>
-					<element kind="frame" uuid="d548ef7e-ec52-4693-a315-1e0b2907e506" x="375" y="5" width="140" height="10">
+					<element kind="frame" uuid="d548ef7e-ec52-4693-a315-1e0b2907e506" x="375" y="5" width="152" height="10">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -187,7 +187,7 @@
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
 							<pen lineWidth="0.0"/>
 						</element>
-						<element kind="textField" uuid="782e5fdd-362a-4cd0-914f-69e366f4e9a8" x="77" y="0" width="63" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Left">
+						<element kind="textField" uuid="782e5fdd-362a-4cd0-914f-69e366f4e9a8" x="77" y="0" width="75" height="10" forecolor="#262626" fontName="Roboto - 400" fontSize="8.0" hTextAlign="Left">
 							<expression><![CDATA["Born " + $P{personalInformationParam}.getPersonalInfo().getDateOfBirth()]]></expression>
 							<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							<property name="com.jaspersoft.studio.unit.y" value="px"/>
