@@ -5,8 +5,8 @@
 	<query language="sql"><![CDATA[]]></query>
 	<background splitType="Stretch"/>
 	<detail>
-		<band height="798">
-			<element kind="rectangle" uuid="62150e49-c6ff-4408-9b58-2ffdcd7c7778" x="391" y="0" width="204" height="798" backcolor="#E6EDF1">
+		<band height="762">
+			<element kind="rectangle" uuid="62150e49-c6ff-4408-9b58-2ffdcd7c7778" x="391" y="0" width="204" height="762" backcolor="#E6EDF1">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -53,7 +53,7 @@
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<pen lineWidth="1.0" lineColor="#CCDBE3"/>
 			</element>
-			<element kind="line" uuid="de50534d-f281-4235-8b88-d21be187b4a1" mode="Opaque" x="427" y="98" width="128" height="1" forecolor="#CCDBE3" backcolor="#CCDBE3">
+			<element kind="line" uuid="de50534d-f281-4235-8b88-d21be187b4a1" positionType="Float" mode="Opaque" x="427" y="98" width="128" height="1" forecolor="#CCDBE3" backcolor="#CCDBE3">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -78,7 +78,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</element>
 			</element>
-			<element kind="frame" uuid="b8e0299a-5994-4032-870a-1dd67e16d71d" x="427" y="122" width="128" height="28">
+			<element kind="frame" uuid="b8e0299a-5994-4032-870a-1dd67e16d71d" positionType="Float" x="427" y="122" width="128" height="28">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -97,7 +97,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</element>
 			</element>
-			<element kind="frame" uuid="fc2e3dee-c975-4604-b122-9c58a8bf6dc3" x="427" y="172" width="128" height="96">
+			<element kind="frame" uuid="fc2e3dee-c975-4604-b122-9c58a8bf6dc3" positionType="Float" x="427" y="172" width="128" height="96">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>

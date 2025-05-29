@@ -112,7 +112,7 @@
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</columnHeader>
 	<detail>
-		<band height="378" splitType="Stretch">
+		<band height="313" splitType="Stretch">
 			<element kind="frame" uuid="b30d7a0a-c00e-49a8-aec7-d93d4bafe044" x="0" y="0" width="595" height="59">
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -191,7 +191,11 @@
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
 			</element>
-			<element kind="frame" uuid="676646d8-fad8-41aa-b1a2-c3bc3a19b615" positionType="Float" x="40" y="277" width="515" height="66">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="66">
+			<printWhenExpression><![CDATA[$P{enquiryInformationParam}.isEnquiryInfoDisputePresent()]]></printWhenExpression>
+			<element kind="frame" uuid="676646d8-fad8-41aa-b1a2-c3bc3a19b615" positionType="Float" x="40" y="0" width="515" height="66">
 				<printWhenExpression><![CDATA[$P{enquiryInformationParam}.isEnquiryInfoDisputePresent()]]></printWhenExpression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -287,7 +291,6 @@
 					</box>
 				</element>
 			</element>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>
 	</detail>
 </jasperReport>
