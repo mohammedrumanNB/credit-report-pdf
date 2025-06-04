@@ -145,7 +145,7 @@
 		<property name="com.jaspersoft.studio.unit.height" value="px"/>
 	</columnHeader>
 	<detail>
-		<band height="509" splitType="Stretch">
+		<band height="493" splitType="Stretch">
 			<element kind="textField" uuid="b1480e2b-67f3-4856-8d62-fa018c33f9bf" x="0" y="61" width="50" height="5" forecolor="#FFFFFF" fontName="Roboto - 400" fontSize="4.0">
 				<expression><![CDATA["PIP"]]></expression>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -1034,9 +1034,9 @@ INDICATOR]]></text>
 			</element>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 		</band>
-		<band height="66">
+		<band height="82">
 			<printWhenExpression><![CDATA[$P{personalInformationParam}.isPersonalInfoDisputePresent()]]></printWhenExpression>
-			<element kind="frame" uuid="041f7874-5c4c-4647-a73e-8b92867eb83b" positionType="Float" x="40" y="0" width="515" height="66" backcolor="#FFFFFF" removeLineWhenBlank="true">
+			<element kind="frame" uuid="041f7874-5c4c-4647-a73e-8b92867eb83b" positionType="Float" x="40" y="16" width="515" height="66" backcolor="#FFFFFF" removeLineWhenBlank="true">
 				<printWhenExpression><![CDATA[$P{personalInformationParam}.isPersonalInfoDisputePresent()]]></printWhenExpression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.y" value="px"/>
